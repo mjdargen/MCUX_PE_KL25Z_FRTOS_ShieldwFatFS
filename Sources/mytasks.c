@@ -466,7 +466,7 @@ void CreateTasks(void) {
   if (FRTOS1_xTaskCreate(
   		FatFS_SD_Task,  /* pointer to the task */
         "FatFS_SD", /* task name for kernel awareness debugging */
-        configMINIMAL_STACK_SIZE + 64, /* task stack size */
+        configMINIMAL_STACK_SIZE + 80, /* task stack size */
         (void*)NULL, /* optional task startup argument */
         tskIDLE_PRIORITY + 0,  /* initial priority */
 				FatFS_SD_taskHandle /* optional task handle to create */
