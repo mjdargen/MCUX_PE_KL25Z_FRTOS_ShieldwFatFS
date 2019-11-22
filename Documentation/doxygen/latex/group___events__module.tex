@@ -1,0 +1,89 @@
+\hypertarget{group___events__module}{}\doxysection{Events module documentation}
+\label{group___events__module}\index{Events module documentation@{Events module documentation}}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___events__module_ga978b77c999725d30847a41f218210fd5}\label{group___events__module_ga978b77c999725d30847a41f218210fd5}} 
+typedef size\+\_\+t {\bfseries Tsize\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___events__module_ga960d094664356278ac5472d45a6ea2f3}\label{group___events__module_ga960d094664356278ac5472d45a6ea2f3}} 
+void \mbox{\hyperlink{group___events__module_ga960d094664356278ac5472d45a6ea2f3}{Cpu\+\_\+\+On\+N\+M\+I\+I\+NT}} (void)
+\begin{DoxyCompactList}\small\item\em This event is called when the Non maskable interrupt had occurred. This event is automatically enabled when the \mbox{[}N\+MI interrupt\mbox{]} property is set to \textquotesingle{}Enabled\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___events__module_ga5bc33eaaac4ab64403a921495db399b0}{A\+S1\+\_\+\+On\+Block\+Received}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This event is called when the requested number of data is moved to the input buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___events__module_gaf23a767b9b4e81efa9e244306792dcfd}{A\+S1\+\_\+\+On\+Block\+Sent}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This event is called after the last character from the output buffer is moved to the transmitter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___events__module_ga1e81c467b899cd40c827a5243d259dee}\label{group___events__module_ga1e81c467b899cd40c827a5243d259dee}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Stack\+Overflow\+Hook} (\mbox{\hyperlink{structtsk_task_control_block}{Task\+Handle\+\_\+t}} px\+Task, char $\ast$pc\+Task\+Name)
+\item 
+\mbox{\Hypertarget{group___events__module_gaf8fe6769cea9aeb943962871b26b203b}\label{group___events__module_gaf8fe6769cea9aeb943962871b26b203b}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Tick\+Hook} (void)
+\item 
+\mbox{\Hypertarget{group___events__module_ga47ee4f5ef904e733b7690af3ef89a1b0}\label{group___events__module_ga47ee4f5ef904e733b7690af3ef89a1b0}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Idle\+Hook} (void)
+\item 
+\mbox{\Hypertarget{group___events__module_ga83b87d2e8c6b269bbdc03cf06d1164a2}\label{group___events__module_ga83b87d2e8c6b269bbdc03cf06d1164a2}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Malloc\+Failed\+Hook} (void)
+\item 
+\mbox{\Hypertarget{group___events__module_gaf4eaa3cd7c10c83d3dcc0042291b2c9d}\label{group___events__module_gaf4eaa3cd7c10c83d3dcc0042291b2c9d}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+On\+Pre\+Sleep\+Processing} (Tick\+Type\+\_\+t expected\+Idle\+Ticks)
+\item 
+\mbox{\Hypertarget{group___events__module_gada4423b60fc6fe7b3aa5e6b4a11b91f0}\label{group___events__module_gada4423b60fc6fe7b3aa5e6b4a11b91f0}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+On\+Post\+Sleep\+Processing} (Tick\+Type\+\_\+t expected\+Idle\+Ticks)
+\item 
+void \mbox{\hyperlink{group___events__module_ga6bc24933aaf9dad765ff9e1259be2ee1}{Dac\+Ldd1\+\_\+\+On\+Complete}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Called at the end of a D\+MA transfer. If the Half complete property in initialization section is enabled, this event is also called when current major iteration count reaches the halfway point. See Set\+Event\+Mask() and Get\+Event\+Mask() methods. This event is enabled only if Interrupt service property and D\+MA property are enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___events__module_ga5bc33eaaac4ab64403a921495db399b0}\label{group___events__module_ga5bc33eaaac4ab64403a921495db399b0}} 
+\index{Events module documentation@{Events module documentation}!AS1\_OnBlockReceived@{AS1\_OnBlockReceived}}
+\index{AS1\_OnBlockReceived@{AS1\_OnBlockReceived}!Events module documentation@{Events module documentation}}
+\doxysubsubsection{\texorpdfstring{AS1\_OnBlockReceived()}{AS1\_OnBlockReceived()}}
+{\footnotesize\ttfamily void A\+S1\+\_\+\+On\+Block\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$}]{User\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+This event is called when the requested number of data is moved to the input buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Data\+Ptr} & -\/ Pointer to the user or R\+T\+OS specific data. This pointer is passed as the parameter of Init method. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___events__module_gaf23a767b9b4e81efa9e244306792dcfd}\label{group___events__module_gaf23a767b9b4e81efa9e244306792dcfd}} 
+\index{Events module documentation@{Events module documentation}!AS1\_OnBlockSent@{AS1\_OnBlockSent}}
+\index{AS1\_OnBlockSent@{AS1\_OnBlockSent}!Events module documentation@{Events module documentation}}
+\doxysubsubsection{\texorpdfstring{AS1\_OnBlockSent()}{AS1\_OnBlockSent()}}
+{\footnotesize\ttfamily void A\+S1\+\_\+\+On\+Block\+Sent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$}]{User\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+This event is called after the last character from the output buffer is moved to the transmitter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Data\+Ptr} & -\/ Pointer to the user or R\+T\+OS specific data. This pointer is passed as the parameter of Init method. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___events__module_ga6bc24933aaf9dad765ff9e1259be2ee1}\label{group___events__module_ga6bc24933aaf9dad765ff9e1259be2ee1}} 
+\index{Events module documentation@{Events module documentation}!DacLdd1\_OnComplete@{DacLdd1\_OnComplete}}
+\index{DacLdd1\_OnComplete@{DacLdd1\_OnComplete}!Events module documentation@{Events module documentation}}
+\doxysubsubsection{\texorpdfstring{DacLdd1\_OnComplete()}{DacLdd1\_OnComplete()}}
+{\footnotesize\ttfamily void Dac\+Ldd1\+\_\+\+On\+Complete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$}]{User\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Called at the end of a D\+MA transfer. If the Half complete property in initialization section is enabled, this event is also called when current major iteration count reaches the halfway point. See Set\+Event\+Mask() and Get\+Event\+Mask() methods. This event is enabled only if Interrupt service property and D\+MA property are enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Data\+Ptr} & -\/ Pointer to the user or R\+T\+OS specific data. This pointer is passed as the parameter of Init method. \\
+\hline
+\end{DoxyParams}

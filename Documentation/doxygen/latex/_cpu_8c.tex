@@ -1,0 +1,83 @@
+\hypertarget{_cpu_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+Cpu.c File Reference}
+\label{_cpu_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/Cpu.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/Cpu.c}}
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}M\+C\+U\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}F\+R\+T\+O\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U\+T\+I\+L1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Audio\+Amp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+D\+R.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+Dpin1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bit\+Io\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+D\+G.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+Dpin2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bit\+Io\+Ldd2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+D\+B.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+Dpin3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bit\+Io\+Ldd3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}F\+A\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}W\+A\+I\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+M\+O\+U\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tm\+Dt1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+F1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+A1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Dac\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Dac\+Ldd1\+\_\+\+D\+M\+A0.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+L\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+S2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+M2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+Data\+\_\+\+Bits.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+P\+M1\+\_\+0.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+D\+\_\+\+N\+C.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+N\+W\+R.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+N\+R\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+N\+R\+S\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+D1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Adc\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+4.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+5.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+7.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}M\+M\+A1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+I2\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+I2\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}H\+B\+L\+E\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+M\+A1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+\_\+\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Events.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries P\+E\+\_\+\+I\+SR} (Cpu\+\_\+\+I\+N\+T\+\_\+\+N\+M\+I\+Interrupt)
+\item 
+{\bfseries P\+E\+\_\+\+I\+SR} (Cpu\+\_\+\+Interrupt)
+\item 
+void {\bfseries \+\_\+\+\_\+init\+\_\+hardware} (void)
+\item 
+void {\bfseries P\+E\+\_\+low\+\_\+level\+\_\+init} (void)
+\item 
+{\bfseries \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((section(\char`\"{}.cfmconfig\char`\"{}))) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint8\+\_\+t {\bfseries S\+R\+\_\+reg}
+\item 
+volatile uint8\+\_\+t {\bfseries S\+R\+\_\+lock} = 0x00U
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVersion}{Version}
+01.\+04 
+\end{DoxyVersion}

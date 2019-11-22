@@ -1,0 +1,57 @@
+\hypertarget{_adc_ldd1_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+Adc\+Ldd1.c File Reference}
+\label{_adc_ldd1_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/AdcLdd1.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/AdcLdd1.c}}
+
+
+This device \char`\"{}\+A\+D\+C\+\_\+\+L\+D\+D\char`\"{} implements an A/D converter, its control methods and interrupt/event handling procedure.  
+
+
+{\ttfamily \#include \char`\"{}Adc\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_adc_ldd1___t_device_data}{Adc\+Ldd1\+\_\+\+T\+Device\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___adc_ldd1__module_gae667536b042ed10bbf59a6ab655e2520}{Adc\+Ldd1\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L0\+\_\+31\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}}~(\mbox{\hyperlink{group___p_e___types__module_ga68b9b7285d322b045dc99ae29c120b7d}{L\+D\+D\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+0\+\_\+\+P\+IN}} $\vert$ \mbox{\hyperlink{group___p_e___types__module_ga3281a80161f65f2886a42af1564edcda}{L\+D\+D\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1\+\_\+\+P\+IN}} $\vert$ \mbox{\hyperlink{group___p_e___types__module_ga1d77d980c0a18586850f29a593705158}{L\+D\+D\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2\+\_\+\+P\+IN}} $\vert$ \mbox{\hyperlink{group___p_e___types__module_ga0a41b2c8308385c4d1d0442b0fa54527}{L\+D\+D\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3\+\_\+\+P\+IN}})
+\item 
+\#define \mbox{\hyperlink{group___adc_ldd1__module_ga76e2c2c848190a43f723097450d2bd44}{Adc\+Ldd1\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+C\+H\+A\+N\+N\+E\+L32\+\_\+63\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}}~0x00U
+\item 
+\#define \mbox{\hyperlink{group___adc_ldd1__module_ga9364f8d60a68e5f5546eb5bf87436569}{Adc\+Ldd1\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}}~0x00U
+\item 
+\#define \mbox{\hyperlink{group___adc_ldd1__module_ga42c6c07d48741426405776dfc62732a6}{Adc\+Ldd1\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+V\+O\+L\+T\+\_\+\+R\+E\+F\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}}~(\mbox{\hyperlink{group___p_e___types__module_ga2aca9e4004ca4eb785f08bd3c07c7f8a}{L\+D\+D\+\_\+\+A\+D\+C\+\_\+\+L\+O\+W\+\_\+\+V\+O\+L\+T\+\_\+\+R\+E\+F\+\_\+\+P\+IN}} $\vert$ \mbox{\hyperlink{group___p_e___types__module_ga1c613e5f56972bb45b94fa9d272f9589}{L\+D\+D\+\_\+\+A\+D\+C\+\_\+\+H\+I\+G\+H\+\_\+\+V\+O\+L\+T\+\_\+\+R\+E\+F\+\_\+\+P\+IN}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_adc_ldd1___t_device_data}{Adc\+Ldd1\+\_\+\+T\+Device\+Data}} $\ast$ {\bfseries Adc\+Ldd1\+\_\+\+T\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___adc_ldd1__module_gafdc37e93f468b5be237479085546273f}{Adc\+Ldd1\+\_\+\+Init}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. This method can be called only once. Before the second call of Init() the Deinit() must be called first. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___adc_ldd1__module_ga00728ff1e652d8d8d778917ca27e37a1}{Adc\+Ldd1\+\_\+\+Start\+Single\+Measurement}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method starts one measurement of the selected group of samples and exits immediately. This is A\+DC SW trigger method. The group of samples for measurement is specified by preceding call to \mbox{[}Select\+Sample\+Group()\mbox{]} or \mbox{[}Create\+Sample\+Group\mbox{]} method. D\+MA disabled\+: The \mbox{[}On\+Measurement\+Complete() \mbox{]} event is invoked after the measurement is done and if the event is enabled. Results of the measurement can be read by the \mbox{[}Get\+Measured\+Values()\mbox{]} method. D\+MA enabled\+: D\+MA request from configured A\+DC is enabled automatically. The \mbox{[}On\+Measurement\+Complete() \mbox{]} event is invoked after the requested number of results are transferred to destination buffer by D\+MA and if the event is enabled. \mbox{[}Get\+Measured\+Values()\mbox{]} method is not available if D\+MA mode is enabled. If the D\+MA transfer was completed before and D\+MA is not recofingured, D\+MA error can occur. See also \mbox{[}Set\+Buffer()\mbox{]} method. The state of the measurement can be also polled by the \mbox{[}Get\+Measurement\+Complete\+Status()\mbox{]} method. The \mbox{[}Discontinuous mode\mbox{]} doesn\textquotesingle{}t support this method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___adc_ldd1__module_ga26924e7e4ca2c272140fbaf6ecf9c18d}{Adc\+Ldd1\+\_\+\+Cancel\+Measurement}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method cancels the measurement in progress. Typically the On\+Measurement\+Complete() event is not invoked for cancelled measurement. If D\+MA mode is enabled, D\+MA request from A\+DC is disabled and D\+MA transfer is cancelled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___adc_ldd1__module_ga86203c058acad0397b653ce3a4a625a4}{Adc\+Ldd1\+\_\+\+Create\+Sample\+Group}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, \mbox{\hyperlink{struct_l_d_d___a_d_c___t_sample}{L\+D\+D\+\_\+\+A\+D\+C\+\_\+\+T\+Sample}} $\ast$Sample\+Group\+Ptr, uint8\+\_\+t Sample\+Count)
+\begin{DoxyCompactList}\small\item\em This method prepares HW for next measurement according to array of samples defined during run-\/time. The array of samples should be prepared prior to calling this method. Pointer to the array is passed into this method in parameter Sample\+Group\+Ptr. The number of samples is defined by parameter Sample\+Count. Once any group is prepared, the measurement can be started multiple times. Note\+: This method works only with the sample groups defined during run-\/time. For design-\/time defined groups use \mbox{[}Select\+Sample\+Group()\mbox{]} method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___adc_ldd1__module_ga30f524b93639b958a529d6f91c41ce6d}{Adc\+Ldd1\+\_\+\+Get\+Measured\+Values}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, \mbox{\hyperlink{group___p_e___types__module_gade8ef9401405bd941b6da738b807f980}{L\+D\+D\+\_\+\+T\+Data}} $\ast$Buffer\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method copies results of the last measurement to the user supplied buffer. Data size depends on the size of measured sample group (see \mbox{[}Select\+Sample\+Group()\mbox{]} or \mbox{[}Create\+Sample\+Group()\mbox{]} method). Data representation is defined by the \mbox{[}Result type\mbox{]} property. Typically this method is called from \mbox{[}On\+Measurement\+Complete\mbox{]} event to get results of the last measurement. This method is not available if D\+MA is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___adc_ldd1__module_ga4df44002c6ba3479f104deedd98b7e4e}{Adc\+Ldd1\+\_\+\+Get\+Measurement\+Complete\+Status}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns whether the measurement is done and the results can be read by the user. It can be used to poll the state of measurement if \mbox{[}Interrupt service/event\mbox{]} is disabled or if \mbox{[}On\+Measurement\+Complete\mbox{]} event is disabled by the \mbox{[}Set\+Event\+Mask()\mbox{]} methods. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___adc_ldd1__module_gab9d49b5f1a7ef34cde56046754ebb62a}{Adc\+Ldd1\+\_\+\+Start\+Calibration}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method starts self calibration process. Calibration is typically used to remove the effects of the gain and offset from a specific reading. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___adc_ldd1__module_gaeec76afa5d4906636d7b7acd8a4008d3}{Adc\+Ldd1\+\_\+\+Get\+Calibration\+Result\+Status}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method should be used for check the last calibration result. If calibration completed normally the method finish calibration process by writing gain calibration values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This device \char`\"{}\+A\+D\+C\+\_\+\+L\+D\+D\char`\"{} implements an A/D converter, its control methods and interrupt/event handling procedure. 
+
+\begin{DoxyVersion}{Version}
+01.\+08 
+\end{DoxyVersion}

@@ -1,0 +1,50 @@
+\hypertarget{group___l_e_d_r__module}{}\doxysection{L\+E\+DR module documentation}
+\label{group___l_e_d_r__module}\index{LEDR module documentation@{LEDR module documentation}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga9316fa6e28d57c6984e05a3c4e9887df}\label{group___l_e_d_r__module_ga9316fa6e28d57c6984e05a3c4e9887df}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Clr\+Val}()~L\+E\+Dpin1\+\_\+\+Clr\+Val() /$\ast$ put the pin on low level $\ast$/
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga77b6a979bbb86d64bafef3919906093e}\label{group___l_e_d_r__module_ga77b6a979bbb86d64bafef3919906093e}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Set\+Val}()~L\+E\+Dpin1\+\_\+\+Set\+Val() /$\ast$ put the pin on high level $\ast$/
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_gab3ef3b59a0e89bab692d88de20598a32}\label{group___l_e_d_r__module_gab3ef3b59a0e89bab692d88de20598a32}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Set\+Input}()~L\+E\+Dpin1\+\_\+\+Set\+Input() /$\ast$ use the pin as input pin $\ast$/
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga628673885ec034799d5285897874165e}\label{group___l_e_d_r__module_ga628673885ec034799d5285897874165e}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Set\+Output}()~L\+E\+Dpin1\+\_\+\+Set\+Output() /$\ast$ use the pin as output pin $\ast$/
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga83f0bba89f733cd155ef477b4415bb2c}\label{group___l_e_d_r__module_ga83f0bba89f733cd155ef477b4415bb2c}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+P\+A\+R\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+N\+A\+B\+L\+ED}~0 /$\ast$ set to 1 if method Parse\+Command() is present, 0 otherwise $\ast$/
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_gae49db5ad7278bfc87218615eb64b28da}\label{group___l_e_d_r__module_gae49db5ad7278bfc87218615eb64b28da}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+On}()~L\+E\+Dpin1\+\_\+\+Clr\+Val()
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_gadcd95bfddd179f7fe7607d5e98925386}\label{group___l_e_d_r__module_gadcd95bfddd179f7fe7607d5e98925386}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Off}()~L\+E\+Dpin1\+\_\+\+Set\+Val()
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga028d5e8836e9b681a63fa69eff843f0b}\label{group___l_e_d_r__module_ga028d5e8836e9b681a63fa69eff843f0b}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Neg}()~L\+E\+Dpin1\+\_\+\+Neg\+Val()
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga299732c846378f213f1055cf13a5092e}\label{group___l_e_d_r__module_ga299732c846378f213f1055cf13a5092e}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Get}()~(!(L\+E\+Dpin1\+\_\+\+Get\+Val()))
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga896743d349a735cba9d76dfea1a01ef3}\label{group___l_e_d_r__module_ga896743d349a735cba9d76dfea1a01ef3}} 
+\#define {\bfseries L\+E\+D\+R\+\_\+\+Put}(val)~((val) ? L\+E\+D\+R\+\_\+\+On() \+: L\+E\+D\+R\+\_\+\+Off())
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_gae15885ac9a4f17c66b39ad000fab1e50}\label{group___l_e_d_r__module_gae15885ac9a4f17c66b39ad000fab1e50}} 
+void {\bfseries L\+E\+D\+R\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga33d2fcff7654ec315ad058ae8c7ace95}\label{group___l_e_d_r__module_ga33d2fcff7654ec315ad058ae8c7ace95}} 
+void {\bfseries L\+E\+D\+R\+\_\+\+Deinit} (void)
+\item 
+\mbox{\Hypertarget{group___l_e_d_r__module_ga2142df2d18937fbf491e05d42af92973}\label{group___l_e_d_r__module_ga2142df2d18937fbf491e05d42af92973}} 
+void {\bfseries L\+E\+D\+R\+\_\+\+Set\+Ratio16} (uint16\+\_\+t ratio)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

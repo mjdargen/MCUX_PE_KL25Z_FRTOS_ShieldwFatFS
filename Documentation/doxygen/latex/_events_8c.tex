@@ -1,0 +1,44 @@
+\hypertarget{_events_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/sources/\+Events.c File Reference}
+\label{_events_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/sources/Events.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/sources/Events.c}}
+
+
+This is user\textquotesingle{}s event module. Put your event handler code here.  
+
+
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Events.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+P\+I\+O\+\_\+defs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}F\+R\+T\+O\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mytasks.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___events__module_ga960d094664356278ac5472d45a6ea2f3}{Cpu\+\_\+\+On\+N\+M\+I\+I\+NT}} (void)
+\begin{DoxyCompactList}\small\item\em This event is called when the Non maskable interrupt had occurred. This event is automatically enabled when the \mbox{[}N\+MI interrupt\mbox{]} property is set to \textquotesingle{}Enabled\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___events__module_ga5bc33eaaac4ab64403a921495db399b0}{A\+S1\+\_\+\+On\+Block\+Received}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This event is called when the requested number of data is moved to the input buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___events__module_gaf23a767b9b4e81efa9e244306792dcfd}{A\+S1\+\_\+\+On\+Block\+Sent}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This event is called after the last character from the output buffer is moved to the transmitter. \end{DoxyCompactList}\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Stack\+Overflow\+Hook} (\mbox{\hyperlink{structtsk_task_control_block}{Task\+Handle\+\_\+t}} px\+Task, char $\ast$pc\+Task\+Name)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Tick\+Hook} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Idle\+Hook} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Malloc\+Failed\+Hook} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+On\+Pre\+Sleep\+Processing} (Tick\+Type\+\_\+t expected\+Idle\+Ticks)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+On\+Post\+Sleep\+Processing} (Tick\+Type\+\_\+t expected\+Idle\+Ticks)
+\item 
+void \mbox{\hyperlink{group___events__module_ga6bc24933aaf9dad765ff9e1259be2ee1}{Dac\+Ldd1\+\_\+\+On\+Complete}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Called at the end of a D\+MA transfer. If the Half complete property in initialization section is enabled, this event is also called when current major iteration count reaches the halfway point. See Set\+Event\+Mask() and Get\+Event\+Mask() methods. This event is enabled only if Interrupt service property and D\+MA property are enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is user\textquotesingle{}s event module. Put your event handler code here. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

@@ -1,0 +1,76 @@
+\hypertarget{_t_p_m1__0_8h}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+T\+P\+M1\+\_\+0.h File Reference}
+\label{_t_p_m1__0_8h}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/TPM1\_0.h@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/TPM1\_0.h}}
+
+
+This Timer\+Unit component provides a low level A\+PI for unified hardware access across various timer devices using the Prescaler-\/\+Counter-\/\+Compare-\/\+Capture timer structure.  
+
+
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+\_\+\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+P\+M\+\_\+\+P\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+T\+P\+M1\+\_\+0\+\_\+\+T\+Value\+Type}
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+C\+N\+T\+\_\+\+I\+N\+P\+\_\+\+F\+R\+E\+Q\+\_\+\+U\+\_\+0}~0x02\+D\+C6\+C00\+UL /$\ast$ Counter input frequency in Hz $\ast$/
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+C\+N\+T\+\_\+\+I\+N\+P\+\_\+\+F\+R\+E\+Q\+\_\+\+R\+\_\+0}~48000768.\+0122882F /$\ast$ Counter input frequency in Hz $\ast$/
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+C\+N\+T\+\_\+\+I\+N\+P\+\_\+\+F\+R\+E\+Q\+\_\+\+C\+O\+U\+NT}~0U   /$\ast$ Count of predefined counter input frequencies $\ast$/
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+T\+I\+C\+KS}~0x9\+C40\+UL   /$\ast$ Initialization value of period in \textquotesingle{}counter ticks\textquotesingle{} $\ast$/
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+H\+A\+N\+N\+E\+LS}~0x01U /$\ast$ Count of predefined channels $\ast$/
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+W\+I\+D\+TH}~0x10U     /$\ast$ Counter width in bits  $\ast$/
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+D\+IR}~\mbox{\hyperlink{group___p_e___types__module_gga89181fe4df1c4701239176768b4a9ce5a0b76fb863426c07c6c997a8d9523257b}{D\+I\+R\+\_\+\+UP}}      /$\ast$ Direction of counting $\ast$/
+\item 
+\#define {\bfseries T\+P\+M1\+\_\+0\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+0\+\_\+\+T\+I\+C\+KS}~0x3415ul /$\ast$ Initialization value of offset as \textquotesingle{}counter ticks\textquotesingle{} for channel 0 $\ast$/
+\item 
+\#define \mbox{\hyperlink{group___t_p_m1__0__module_ga9fa2df39c8db6a48f8fe9a7f054e8c8c}{T\+P\+M1\+\_\+0\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~0x40039000U
+\item 
+\#define \mbox{\hyperlink{group___t_p_m1__0__module_ga5029b2e28e645eac6edd3532555ee5b0}{T\+P\+M1\+\_\+0\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___t_p_m1__0__module_ga3bddffeb7d5323ae3a63a560b4f4cbbd}{T\+P\+M1\+\_\+0\+\_\+\+Get\+Period\+Ticks\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___t_p_m1__0__module_ga44c8ca2b3f099e8ca4de6260f5efb39a}{T\+P\+M1\+\_\+0\+\_\+\+Get\+Counter\+Value\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___t_p_m1__0__module_ga249ea7a7dcca2029fa0f54a65dfbf7bd}{T\+P\+M1\+\_\+0\+\_\+\+Set\+Offset\+Ticks\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___t_p_m1__0__module_ga5b0f0273ecd1c75fd82b1cd25bd4fbe5}{T\+P\+M1\+\_\+0\+\_\+\+Get\+Offset\+Ticks\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___t_p_m1__0__module_ga6b8e59dd1f02cb37ed9ccfdd7cbf5d82}{T\+P\+M1\+\_\+0\+\_\+\+Select\+Output\+Action\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint16\+\_\+t {\bfseries T\+P\+M1\+\_\+0\+\_\+\+T\+Value\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___t_p_m1__0__module_gae908353d8bac11cab8983aed9871c828}{T\+P\+M1\+\_\+0\+\_\+\+Init}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the property \mbox{[}\char`\"{}\+Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}Enable\mbox{]} method). In this case the \mbox{[}Enable\mbox{]} method is not necessary and needn\textquotesingle{}t to be generated. This method can be called only once. Before the second call of Init the \mbox{[}Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___t_p_m1__0__module_ga16cc976c535fa085f8eda187ec3f26b9}{T\+P\+M1\+\_\+0\+\_\+\+Get\+Period\+Ticks}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, T\+P\+M1\+\_\+0\+\_\+\+T\+Value\+Type $\ast$Ticks\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the number of counter ticks before re-\/initialization. See also method \mbox{[}Set\+Period\+Ticks\mbox{]}. This method is available only if the property \mbox{[}\char`\"{}\+Counter restart\char`\"{}\mbox{]} is switched to \textquotesingle{}on-\/match\textquotesingle{} value. \end{DoxyCompactList}\item 
+T\+P\+M1\+\_\+0\+\_\+\+T\+Value\+Type \mbox{\hyperlink{group___t_p_m1__0__module_gab7bcc5b51acce59323add27669c43f75}{T\+P\+M1\+\_\+0\+\_\+\+Get\+Counter\+Value}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the content of counter register. This method can be used both if counter is enabled and if counter is disabled. The method is not available if HW doesn\textquotesingle{}t allow reading of the counter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___t_p_m1__0__module_ga1d9a9576c7a2bfa276533442df4f3925}{T\+P\+M1\+\_\+0\+\_\+\+Set\+Offset\+Ticks}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Channel\+Idx, T\+P\+M1\+\_\+0\+\_\+\+T\+Value\+Type Ticks)
+\begin{DoxyCompactList}\small\item\em Sets the new offset value to channel specified by the parameter Channel\+Idx. It is user responsibility to use value below selected period. This method is available when at least one channel is configured. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___t_p_m1__0__module_gac8de816350a61ed4e188c7e6a097e275}{T\+P\+M1\+\_\+0\+\_\+\+Get\+Offset\+Ticks}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Channel\+Idx, T\+P\+M1\+\_\+0\+\_\+\+T\+Value\+Type $\ast$Ticks\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the number of counter ticks to compare match channel specified by the parameter Channel\+Idx. See also method \mbox{[}Set\+Offset\+Ticks\mbox{]}. This method is available when at least one channel is configured. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___t_p_m1__0__module_ga89ff670a728ee1040bfc81e56bf278e5}{T\+P\+M1\+\_\+0\+\_\+\+Select\+Output\+Action}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Channel\+Idx, \mbox{\hyperlink{group___p_e___types__module_ga2c05e6e8b549483727170a429c03425e}{L\+D\+D\+\_\+\+Timer\+Unit\+\_\+\+T\+Out\+Action}} Compare\+Action, \mbox{\hyperlink{group___p_e___types__module_ga2c05e6e8b549483727170a429c03425e}{L\+D\+D\+\_\+\+Timer\+Unit\+\_\+\+T\+Out\+Action}} Counter\+Action)
+\begin{DoxyCompactList}\small\item\em Sets the type of compare match and counter overflow action on channel output. This method is available when at least one channel is configured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Timer\+Unit component provides a low level A\+PI for unified hardware access across various timer devices using the Prescaler-\/\+Counter-\/\+Compare-\/\+Capture timer structure. 
+
+\begin{DoxyVersion}{Version}
+01.\+11 
+\end{DoxyVersion}

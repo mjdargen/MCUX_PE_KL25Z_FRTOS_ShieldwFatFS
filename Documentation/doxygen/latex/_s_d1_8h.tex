@@ -1,0 +1,135 @@
+\hypertarget{_s_d1_8h}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+S\+D1.h File Reference}
+\label{_s_d1_8h}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/SD1.h@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/SD1.h}}
+
+
+Implements interface to SD card for Fat\+Fs.  
+
+
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+\_\+\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+M2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}W\+A\+I\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+M\+O\+U\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}F\+R\+T\+O\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}diskio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+OW}~0
+\item 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+M\+O\+D\+E\+\_\+\+F\+A\+ST}~1
+\item 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE}~2
+\item 
+\#define {\bfseries S\+D1\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}~512            /$\ast$ user defined block size $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D0}~(0x40+0)              /$\ast$ Resets the SD Memory Card $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D1}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D6}~(0x40+6)              /$\ast$ Checks switchable function (mode 0) and switches card function (mode 1).$\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D8}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D9}~(0x40+9)              /$\ast$ Asks the selected card to send its cardspecific data (C\+SD)$\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D10}~(0x40+10)             /$\ast$ Asks the selected card to send its card identification (C\+ID) $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D12}~(0x40+12)             /$\ast$ Forces the card to stop transmission in Multiple Block Read Operation $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D13}~(0x40+13)             /$\ast$ Asks the selected card to send its status register. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D16}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D17}~(0x40+17)             /$\ast$ Reads a block of the size selected by the S\+E\+T\+\_\+\+B\+L\+O\+C\+K\+L\+EN command.$\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D18}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D24}~(0x40+24)             /$\ast$ Writes a block of the size selected by the S\+E\+T\+\_\+\+B\+L\+O\+C\+K\+L\+EN command. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D25}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D27}~(0x40+27)             /$\ast$ Programming of the programmable bits of the C\+S\+D. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D28}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D29}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D30}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D32}~(0x40+32)             /$\ast$ Sets the address of the first write block to be erased.$\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D33}~(0x40+33)             /$\ast$ Sets the address of the last write block of the continuous range to be erased. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D38}~(0x40+38)             /$\ast$ Erases all previously selected write blocks $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D42}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D55}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D56}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D58}~(0x40+58)             /$\ast$ Reads the O\+CR register of a card. C\+CS bit is assigned to O\+CR\mbox{[}30\mbox{]}. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D59}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+M\+D41}~(0x\+C0+41)            /$\ast$ S\+E\+N\+D\+\_\+\+O\+P\+\_\+\+C\+O\+ND (S\+DC) $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+M\+D13}~(0x\+C0+13)            /$\ast$ S\+D\+\_\+\+S\+T\+A\+T\+US (S\+DC) $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+M\+D23}~(0x\+C0+23)            /$\ast$ S\+E\+T\+\_\+\+W\+R\+\_\+\+B\+L\+K\+\_\+\+E\+R\+A\+S\+E\+\_\+\+C\+O\+U\+NT (S\+DC) $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+is\+Write\+Protected}()~F\+A\+L\+SE                                 /$\ast$ no hardware to detect write protection, thus none $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+Card\+Present}()~T\+R\+UE                                  /$\ast$ no card detection pin, but user wants to report T\+R\+UE $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+S\+T\+A\+T\+US {\bfseries S\+D1\+\_\+disk\+\_\+initialize} (uint8\+\_\+t drv)
+\item 
+D\+S\+T\+A\+T\+US {\bfseries S\+D1\+\_\+disk\+\_\+status} (uint8\+\_\+t drv)
+\item 
+D\+R\+E\+S\+U\+LT {\bfseries S\+D1\+\_\+disk\+\_\+read} (uint8\+\_\+t drv, uint8\+\_\+t $\ast$buff, uint32\+\_\+t sector, unsigned int count)
+\item 
+D\+R\+E\+S\+U\+LT {\bfseries S\+D1\+\_\+disk\+\_\+write} (uint8\+\_\+t drv, const uint8\+\_\+t $\ast$buff, uint32\+\_\+t sector, unsigned int count)
+\item 
+D\+R\+E\+S\+U\+LT {\bfseries S\+D1\+\_\+disk\+\_\+ioctl} (uint8\+\_\+t drv, uint8\+\_\+t ctrl, void $\ast$buff)
+\item 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Init} (void $\ast$unused)
+\item 
+void {\bfseries S\+D1\+\_\+\+Activate} (void)
+\item 
+void {\bfseries S\+D1\+\_\+\+Deactivate} (void)
+\item 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Wait\+Ready} (void)
+\item 
+bool {\bfseries S\+D1\+\_\+\+Receive\+Data\+Block} (uint8\+\_\+t $\ast$data, uint16\+\_\+t nof\+Bytes)
+\item 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Send\+Cmd} (uint8\+\_\+t cmd, uint32\+\_\+t arg)
+\item 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Receive\+Byte} (void)
+\item 
+bool {\bfseries S\+D1\+\_\+\+Send\+Data\+Block} (uint8\+\_\+t $\ast$data, uint8\+\_\+t token, uint16\+\_\+t nof\+Bytes)
+\item 
+void {\bfseries S\+D1\+\_\+\+Set\+Fast\+Mode} (void)
+\item 
+void {\bfseries S\+D1\+\_\+\+Init\+Comm\+Channel} (void)
+\item 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Deinit} (void $\ast$unused)
+\item 
+void {\bfseries S\+M2\+\_\+\+On\+Block\+Received} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\item 
+void {\bfseries S\+D1\+\_\+\+Set\+Slow\+Mode} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements interface to SD card for Fat\+Fs. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

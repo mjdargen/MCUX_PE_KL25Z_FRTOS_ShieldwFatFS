@@ -1,0 +1,121 @@
+\hypertarget{_d_m_a1_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+D\+M\+A1.c File Reference}
+\label{_d_m_a1_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/DMA1.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/DMA1.c}}
+
+
+This embedded component implements initialization and runtime handling of an on-\/chip D\+MA controller.  
+
+
+{\ttfamily \#include \char`\"{}D\+M\+A1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+I\+M\+\_\+\+P\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_d_m_a1___t_chn_dev_const__struct}{D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Const\+\_\+struct}}
+\item 
+struct \mbox{\hyperlink{struct_d_m_a1___t_dev_const__struct}{D\+M\+A1\+\_\+\+T\+Dev\+Const\+\_\+struct}}
+\item 
+struct \mbox{\hyperlink{struct_d_m_a1___t_chn_dev_data__stuct}{D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Data\+\_\+stuct}}
+\item 
+struct \mbox{\hyperlink{struct_d_m_a1___t_device_data}{D\+M\+A1\+\_\+\+T\+Device\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+U\+NT}~0x01U
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+U\+NT}~0x01U
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+D\+Y\+N\+A\+M\+I\+C\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+O\+U\+NT}~0x00U
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+C\+H\+N\+\_\+0\+\_\+\+P\+H\+Y\+\_\+\+N\+UM}~(0U)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+C\+H\+N\+\_\+0\+\_\+\+T\+C\+D\+\_\+\+P\+TR}~((\mbox{\hyperlink{struct_d_m_a1___t_t_c_d__stuct}{D\+M\+A1\+\_\+\+T\+T\+CD}}$\ast$)(void$\ast$)\&D\+M\+A\+\_\+\+S\+A\+R0)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+C\+H\+N\+\_\+0\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+R\+E\+G\+\_\+\+P\+TR}~((uint8\+\_\+t$\ast$)(void$\ast$)\&D\+M\+A\+M\+U\+X0\+\_\+\+C\+H\+C\+F\+G0)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Mux\+Reset}(\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR)~($\ast$\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR = 0U)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Mux\+Disable\+Request}(\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR)~($\ast$\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR \&= (uint8\+\_\+t)$\sim$(uint8\+\_\+t)D\+M\+A\+M\+U\+X\+\_\+\+C\+H\+C\+F\+G\+\_\+\+E\+N\+B\+L\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Mux\+Enable\+Request}(\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR)~($\ast$\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR $\vert$= D\+M\+A\+M\+U\+X\+\_\+\+C\+H\+C\+F\+G\+\_\+\+E\+N\+B\+L\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Mux\+Set\+Request}(\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR,  \+\_\+\+R\+EQ)~($\ast$\+\_\+\+D\+M\+A\+M\+U\+X\+\_\+\+C\+F\+G\+\_\+\+P\+TR = \+\_\+\+R\+EQ)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+C\+H\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+F\+L\+A\+GS}~(D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+D\+\_\+\+M\+A\+SK $\vert$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+E\+S\+\_\+\+M\+A\+SK $\vert$ D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+C\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Start\+Transfer}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg $\vert$= D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+T\+A\+R\+T\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Cancel\+Transfer}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+Reg $\vert$= D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Clear\+Done\+Flag}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+Reg $\vert$= D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+D\+O\+N\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Enable\+Request}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg $\vert$= D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Disable\+Request}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg \&= $\sim$(uint32\+\_\+t)D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+E\+R\+Q\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Get\+Byte\+Count}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+Reg \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Set\+Byte\+Count}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR,  \+\_\+\+Byte\+Count)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+Reg = (\+\_\+\+Byte\+Count \& D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+M\+A\+SK))
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Get\+Status}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+Reg \& $\sim$(uint32\+\_\+t)D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+B\+C\+R\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Get\+Dsr\+Bcr\+Reg}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+S\+R\+\_\+\+B\+C\+R\+\_\+\+Reg)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Set\+Src\+Data\+Transfer\+Size}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR,  \+\_\+\+Size)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg = (\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg \& $\sim$(uint32\+\_\+t)D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+M\+A\+SK) $\vert$ (((uint32\+\_\+t)(\+\_\+\+Size)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT))
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Get\+Src\+Data\+Transfer\+Size}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~((\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+M\+A\+SK) $>$$>$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+S\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Set\+Dst\+Data\+Transfer\+Size}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR,  \+\_\+\+Size)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg = (\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg \& $\sim$(uint32\+\_\+t)D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+M\+A\+SK) $\vert$ (((uint32\+\_\+t)(\+\_\+\+Size)) $<$$<$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT))
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Get\+Dst\+Data\+Transfer\+Size}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~((\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg \& D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+M\+A\+SK) $>$$>$ D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+D\+S\+I\+Z\+E\+\_\+\+S\+H\+I\+FT)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Set\+Src\+Address}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR,  \+\_\+\+Address)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+S\+A\+R\+\_\+\+Reg = \+\_\+\+Address)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Set\+Dst\+Address}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR,  \+\_\+\+Address)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+A\+R\+\_\+\+Reg = \+\_\+\+Address)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Set\+Cycle\+Steal\+Mode}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg $\vert$= D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+M\+A\+SK)
+\item 
+\#define {\bfseries D\+M\+A1\+\_\+\+\_\+\+Set\+Continuous\+Mode}(\+\_\+\+T\+C\+D\+\_\+\+P\+TR)~(\+\_\+\+T\+C\+D\+\_\+\+P\+TR-\/$>$D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+Reg \&= $\sim$(uint32\+\_\+t)D\+M\+A\+\_\+\+D\+C\+R\+\_\+\+C\+S\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_m_a1___t_chn_dev_const__struct}{D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Const\+\_\+struct}} {\bfseries D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Const}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_m_a1___t_chn_dev_const__struct}{D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Const\+\_\+struct}} $\ast$ {\bfseries D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Const\+Ptr}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_m_a1___t_dev_const__struct}{D\+M\+A1\+\_\+\+T\+Dev\+Const\+\_\+struct}} {\bfseries D\+M\+A1\+\_\+\+T\+Dev\+Const}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_m_a1___t_dev_const__struct}{D\+M\+A1\+\_\+\+T\+Dev\+Const\+\_\+struct}} $\ast$ {\bfseries D\+M\+A1\+\_\+\+T\+Dev\+Const\+Ptr}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_m_a1___t_chn_dev_data__stuct}{D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Data\+\_\+stuct}} {\bfseries D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Data}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_m_a1___t_chn_dev_data__stuct}{D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Data\+\_\+stuct}} $\ast$ {\bfseries D\+M\+A1\+\_\+\+T\+Chn\+Dev\+Data\+Ptr}
+\item 
+typedef struct \mbox{\hyperlink{struct_d_m_a1___t_device_data}{D\+M\+A1\+\_\+\+T\+Device\+Data}} $\ast$ {\bfseries D\+M\+A1\+\_\+\+T\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___d_m_a1__module_gac772e5aafdc8f0a0b5c714cc6fa0a3c1}{D\+M\+A1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the associated peripheral(s) and the component internal variables. The method is called automatically as a part of the application initialization code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___d_m_a1__module_ga888a430a1e0e7c75ba12e606a5a94e2b}{D\+M\+A1\+\_\+\+Init\+Channel}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, \mbox{\hyperlink{struct_d_m_a1___t_chn_init__stuct}{D\+M\+A1\+\_\+\+T\+Chn\+Init}} $\ast$Ch\+Int\+Ptr, \mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em The method allocates D\+MA channel for the D\+MA transfer defined by the transfer descriptor input parameter Descriptor\+Ptr. This method must be called before D\+MA channel is initialized. Otherwise E\+R\+R\+\_\+\+N\+O\+T\+A\+V\+A\+IL error code is returned after call of D\+M\+A\+\_\+\+L\+DD channel methods. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___d_m_a1__module_ga34838191f442386bfd2d166b7b9ee2e7}{D\+M\+A1\+\_\+\+Enable\+Request}} (D\+M\+A1\+\_\+\+T\+Chan\+Device\+Data $\ast$Chan\+Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em The method enables D\+MA request from peripheral. Please note that this method doesn\textquotesingle{}t start the transfer. The transfer is started as soon as D\+MA request from peripheral is asserted. \end{DoxyCompactList}\item 
+{\bfseries P\+E\+\_\+\+I\+SR} (D\+M\+A1\+\_\+\+I\+N\+T\+\_\+\+D\+M\+A0\+\_\+\+Transfer\+Complete\+\_\+\+I\+SR)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_d_m_a1___t_dev_const__struct}{D\+M\+A1\+\_\+\+T\+Dev\+Const}} {\bfseries D\+M\+A1\+\_\+\+Dev\+Const}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This embedded component implements initialization and runtime handling of an on-\/chip D\+MA controller. 
+
+\begin{DoxyVersion}{Version}
+01.\+02 
+\end{DoxyVersion}

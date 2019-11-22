@@ -1,0 +1,222 @@
+\hypertarget{group___x_f1__module}{}\doxysection{X\+F1 module documentation}
+\label{group___x_f1__module}\index{XF1 module documentation@{XF1 module documentation}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structparam__s}{param\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{struct_str_out_buffer}{Str\+Out\+Buffer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___x_f1__module_gacaa7b8a7167a8214f499c71c413ddcca}{L\+O\+NG}}~long
+\item 
+\#define \mbox{\hyperlink{group___x_f1__module_ga8747af38b86aa2bbcda2f1b1aa0888c2}{D\+O\+U\+B\+LE}}~double
+\item 
+\#define \mbox{\hyperlink{group___x_f1__module_gae7280f281da2560d38bd890220d80c2e}{L\+O\+N\+G\+L\+O\+NG}}~long long
+\item 
+\#define \mbox{\hyperlink{group___x_f1__module_ga8b78db46aa5044a6311925f8d2278e3a}{F\+L\+O\+A\+T\+\_\+\+L\+O\+NG}}~\mbox{\hyperlink{group___x_f1__module_gae7280f281da2560d38bd890220d80c2e}{L\+O\+N\+G\+L\+O\+NG}}
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga06d4cd6ffde87fdac63b75172c125ae5}\label{group___x_f1__module_ga06d4cd6ffde87fdac63b75172c125ae5}} 
+\#define {\bfseries F\+L\+O\+A\+T\+\_\+\+V\+A\+L\+UE}~llvalue
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga41cf4177f569cb6b87ec5c90c0165769}\label{group___x_f1__module_ga41cf4177f569cb6b87ec5c90c0165769}} 
+\#define {\bfseries F\+L\+O\+A\+T\+\_\+\+T\+Y\+PE}~F\+L\+A\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+O\+N\+G\+L\+O\+NG
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga571fdad8bb4eceab59e2c24c5e8b7340}\label{group___x_f1__module_ga571fdad8bb4eceab59e2c24c5e8b7340}} 
+\#define {\bfseries X\+F1\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}(a,  b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___x_f1__module_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}} \{ \newline
+{\bfseries S\+T\+\_\+\+N\+O\+R\+M\+AL} = 0, 
+{\bfseries S\+T\+\_\+\+P\+E\+R\+C\+E\+NT} = 1, 
+{\bfseries S\+T\+\_\+\+F\+L\+AG} = 2, 
+{\bfseries S\+T\+\_\+\+W\+I\+D\+TH} = 3, 
+\newline
+{\bfseries S\+T\+\_\+\+D\+OT} = 4, 
+{\bfseries S\+T\+\_\+\+P\+R\+E\+C\+IS} = 5, 
+{\bfseries S\+T\+\_\+\+S\+I\+ZE} = 6, 
+{\bfseries S\+T\+\_\+\+T\+Y\+PE} = 7
+ \}
+\item 
+enum \mbox{\hyperlink{group___x_f1__module_gaef66138f2fb6451386211d97c1a96622}{Char\+Class}} \{ \newline
+{\bfseries C\+H\+\_\+\+O\+T\+H\+ER} = 0, 
+{\bfseries C\+H\+\_\+\+P\+E\+R\+C\+E\+NT} = 1, 
+{\bfseries C\+H\+\_\+\+D\+OT} = 2, 
+{\bfseries C\+H\+\_\+\+S\+T\+AR} = 3, 
+\newline
+{\bfseries C\+H\+\_\+\+Z\+E\+RO} = 4, 
+{\bfseries C\+H\+\_\+\+D\+I\+G\+IT} = 5, 
+{\bfseries C\+H\+\_\+\+F\+L\+AG} = 6, 
+{\bfseries C\+H\+\_\+\+S\+I\+ZE} = 7, 
+\newline
+{\bfseries C\+H\+\_\+\+T\+Y\+PE} = 8
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga89901335201c6f5f0c8a967bf458e6a2}\label{group___x_f1__module_ga89901335201c6f5f0c8a967bf458e6a2}} 
+int {\bfseries xsnprintf} (char $\ast$buf, size\+\_\+t max\+\_\+len, const char $\ast$fmt, va\+\_\+list args)
+\item 
+unsigned \mbox{\hyperlink{group___x_f1__module_gad82f9eebca6a56e889c4845f665e6ec5}{X\+F1\+\_\+xformat}} (void($\ast$outchar)(void $\ast$, char), void $\ast$arg, const char $\ast$fmt,...)
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga7e2baf271245dac2dfd44668904a817d}\label{group___x_f1__module_ga7e2baf271245dac2dfd44668904a817d}} 
+int {\bfseries xsprintf} (char $\ast$buf, const char $\ast$fmt, va\+\_\+list args)
+\item 
+unsigned \mbox{\hyperlink{group___x_f1__module_gafbe3cf6f584b9470ee5aadccefb5a679}{X\+F1\+\_\+xvformat}} (void($\ast$outchar)(void $\ast$, char), void $\ast$arg, const char $\ast$fmt, va\+\_\+list \+\_\+args)
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga0395629bfb289c7da253651b5033253a}\label{group___x_f1__module_ga0395629bfb289c7da253651b5033253a}} 
+int {\bfseries X\+F1\+\_\+xsprintf} (char $\ast$buf, const char $\ast$fmt,...)
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga1cb536ef0f4298352b52d2f1a53579dd}\label{group___x_f1__module_ga1cb536ef0f4298352b52d2f1a53579dd}} 
+int {\bfseries X\+F1\+\_\+xsnprintf} (char $\ast$buf, size\+\_\+t max\+\_\+len, const char $\ast$fmt,...)
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga223dde2271c7f98b0cd62d6ba35c5565}\label{group___x_f1__module_ga223dde2271c7f98b0cd62d6ba35c5565}} 
+void {\bfseries X\+F1\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___x_f1__module_ga7e16b3767b12d207d4924398fdea014b}\label{group___x_f1__module_ga7e16b3767b12d207d4924398fdea014b}} 
+void {\bfseries X\+F1\+\_\+\+Deinit} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___x_f1__module_ga8747af38b86aa2bbcda2f1b1aa0888c2}\label{group___x_f1__module_ga8747af38b86aa2bbcda2f1b1aa0888c2}} 
+\index{XF1 module documentation@{XF1 module documentation}!DOUBLE@{DOUBLE}}
+\index{DOUBLE@{DOUBLE}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{DOUBLE}{DOUBLE}}
+{\footnotesize\ttfamily \#define D\+O\+U\+B\+LE~double}
+
+Define the double type if not defined \mbox{\Hypertarget{group___x_f1__module_ga8b78db46aa5044a6311925f8d2278e3a}\label{group___x_f1__module_ga8b78db46aa5044a6311925f8d2278e3a}} 
+\index{XF1 module documentation@{XF1 module documentation}!FLOAT\_LONG@{FLOAT\_LONG}}
+\index{FLOAT\_LONG@{FLOAT\_LONG}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{FLOAT\_LONG}{FLOAT\_LONG}}
+{\footnotesize\ttfamily \#define F\+L\+O\+A\+T\+\_\+\+L\+O\+NG~\mbox{\hyperlink{group___x_f1__module_gae7280f281da2560d38bd890220d80c2e}{L\+O\+N\+G\+L\+O\+NG}}}
+
+Definition to convert integer part of floating point number if supported we use the long long type \mbox{\Hypertarget{group___x_f1__module_gacaa7b8a7167a8214f499c71c413ddcca}\label{group___x_f1__module_gacaa7b8a7167a8214f499c71c413ddcca}} 
+\index{XF1 module documentation@{XF1 module documentation}!LONG@{LONG}}
+\index{LONG@{LONG}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{LONG}{LONG}}
+{\footnotesize\ttfamily \#define L\+O\+NG~long}
+
+Default largest int is long \mbox{\Hypertarget{group___x_f1__module_gae7280f281da2560d38bd890220d80c2e}\label{group___x_f1__module_gae7280f281da2560d38bd890220d80c2e}} 
+\index{XF1 module documentation@{XF1 module documentation}!LONGLONG@{LONGLONG}}
+\index{LONGLONG@{LONGLONG}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{LONGLONG}{LONGLONG}}
+{\footnotesize\ttfamily \#define L\+O\+N\+G\+L\+O\+NG~long long}
+
+Default long long type 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___x_f1__module_gaef66138f2fb6451386211d97c1a96622}\label{group___x_f1__module_gaef66138f2fb6451386211d97c1a96622}} 
+\index{XF1 module documentation@{XF1 module documentation}!CharClass@{CharClass}}
+\index{CharClass@{CharClass}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{CharClass}{CharClass}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___x_f1__module_gaef66138f2fb6451386211d97c1a96622}{Char\+Class}}}
+
+Enum for char class \mbox{\Hypertarget{group___x_f1__module_ga5d74787dedbc4e11c1ab15bf487e61f8}\label{group___x_f1__module_ga5d74787dedbc4e11c1ab15bf487e61f8}} 
+\index{XF1 module documentation@{XF1 module documentation}!State@{State}}
+\index{State@{State}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___x_f1__module_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+Enum for the internal state machine 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___x_f1__module_gad82f9eebca6a56e889c4845f665e6ec5}\label{group___x_f1__module_gad82f9eebca6a56e889c4845f665e6ec5}} 
+\index{XF1 module documentation@{XF1 module documentation}!XF1\_xformat@{XF1\_xformat}}
+\index{XF1\_xformat@{XF1\_xformat}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{XF1\_xformat()}{XF1\_xformat()}}
+{\footnotesize\ttfamily unsigned X\+F1\+\_\+xformat (\begin{DoxyParamCaption}\item[{void($\ast$)(void $\ast$, char)}]{outchar,  }\item[{void $\ast$}]{arg,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Printf like using variable arguments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outchar} & -\/ Pointer to the function to output one new char. \\
+\hline
+{\em arg} & -\/ Argument for the output function. \\
+\hline
+{\em fmt} & -\/ Format options for the list of parameters. \\
+\hline
+{\em ...} & -\/ Arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of char emitted.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+xvformat 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group___x_f1__module_gafbe3cf6f584b9470ee5aadccefb5a679}\label{group___x_f1__module_gafbe3cf6f584b9470ee5aadccefb5a679}} 
+\index{XF1 module documentation@{XF1 module documentation}!XF1\_xvformat@{XF1\_xvformat}}
+\index{XF1\_xvformat@{XF1\_xvformat}!XF1 module documentation@{XF1 module documentation}}
+\doxysubsubsection{\texorpdfstring{XF1\_xvformat()}{XF1\_xvformat()}}
+{\footnotesize\ttfamily unsigned unsigned X\+F1\+\_\+xvformat (\begin{DoxyParamCaption}\item[{void($\ast$)(void $\ast$, char)}]{outchar,  }\item[{void $\ast$}]{arg,  }\item[{const char $\ast$}]{fmt,  }\item[{va\+\_\+list}]{\+\_\+args }\end{DoxyParamCaption})}
+
+Printf like format function.
+
+General format \+:
+
+\%\mbox{[}width\mbox{]}\mbox{[}.precision\mbox{]}\mbox{[}flags\mbox{]}type
+
+
+\begin{DoxyItemize}
+\item width Is the minimum size of the field.
+\item precision Is the maximum size of the field.
+\end{DoxyItemize}
+
+Supported flags \+:
+
+
+\begin{DoxyItemize}
+\item l With integer number the argument will be of type long.
+\item ll With integer number the argument will be of type long long.
+\item Space for positive integer a space will be added before.
+\item z Compatible with C99 the argument is size\+\_\+t (aka sizeof(void $\ast$))
+\item + A + sign prefix positive number.
+\item \# A prefix will be printed (o for octal,0x for hex,0b for binary)
+\item 0 Value will be padded with zero (default is spacwe)
+\item -\/ Left justify as default filed have rigth justification.
+\end{DoxyItemize}
+
+Supported type \+:
+
+
+\begin{DoxyItemize}
+\item s Null terminated string of char.
+\item S Null terminated string of char in upper case.
+\item i Integer number.
+\item d Integer number.
+\item u Unsigned number.
+\item x Unsigned number in hex.
+\item X Unsigned number in hex upper case.
+\item b Binary number
+\item o Octal number
+\item p Pointer will be emitted with the prefix -\/$>$
+\item P Pointer in upper case letter.
+\item f Floating point number.
+\item B Boolean value printed as True / False.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em outchar} & -\/ Pointer to the function to output one char. \\
+\hline
+{\em arg} & -\/ Argument for the output function. \\
+\hline
+{\em fmt} & -\/ Format options for the list of parameters. \\
+\hline
+{\em args} & -\/ List parameters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of char emitted. 
+\end{DoxyReturn}
+Boolean value

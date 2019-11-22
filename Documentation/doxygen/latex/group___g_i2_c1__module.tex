@@ -1,0 +1,116 @@
+\hypertarget{group___g_i2_c1__module}{}\doxysection{G\+I2\+C1 module documentation}
+\label{group___g_i2_c1__module}\index{GI2C1 module documentation@{GI2C1 module documentation}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_g_i2_c1___t_data_state}{G\+I2\+C1\+\_\+\+T\+Data\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga397b9a2812876e9f51ccb0680978f7b6}\label{group___g_i2_c1__module_ga397b9a2812876e9f51ccb0680978f7b6}} 
+\#define {\bfseries G\+I2\+C1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~\mbox{\hyperlink{_g_i2_c1config_8h_ab8138596b15bc81aab26e7e3ceb8c020}{G\+I2\+C1\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}} /$\ast$ size of internal buffer used, set in the component properties $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga38aa8b988c043b512be82c8bb565224b}\label{group___g_i2_c1__module_ga38aa8b988c043b512be82c8bb565224b}} 
+typedef enum G\+I2\+C1\+\_\+\+Enum\+Send\+Flags\+\_\+ {\bfseries G\+I2\+C1\+\_\+\+Enum\+Send\+Flags}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga82cfd799a9ecb5b62980b85fb3281e4b}\label{group___g_i2_c1__module_ga82cfd799a9ecb5b62980b85fb3281e4b}} 
+typedef enum G\+I2\+C1\+\_\+\+Enum\+Start\+Flags\+\_\+ {\bfseries G\+I2\+C1\+\_\+\+Enum\+Start\+Flags}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga5bba94bfa7c6d717e1ead70d89eeb9da}\label{group___g_i2_c1__module_ga5bba94bfa7c6d717e1ead70d89eeb9da}} 
+typedef enum G\+I2\+C1\+\_\+\+Enum\+Ack\+Flags\+\_\+ {\bfseries G\+I2\+C1\+\_\+\+Enum\+Ack\+Flags}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga8dbac66b33749792f3860eeb6288bdbc}\label{group___g_i2_c1__module_ga8dbac66b33749792f3860eeb6288bdbc}} 
+enum {\bfseries G\+I2\+C1\+\_\+\+Enum\+Send\+Flags\+\_\+} \{ {\bfseries G\+I2\+C1\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+OP}, 
+{\bfseries G\+I2\+C1\+\_\+\+D\+O\+\_\+\+N\+O\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+OP}, 
+{\bfseries G\+I2\+C1\+\_\+\+S\+T\+O\+P\+\_\+\+N\+O\+S\+T\+A\+RT}
+ \}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga32ff50025fe8fb4127f3588ff2032d62}\label{group___g_i2_c1__module_ga32ff50025fe8fb4127f3588ff2032d62}} 
+enum {\bfseries G\+I2\+C1\+\_\+\+Enum\+Start\+Flags\+\_\+} \{ {\bfseries G\+I2\+C1\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}, 
+{\bfseries G\+I2\+C1\+\_\+\+D\+O\+\_\+\+N\+O\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}
+ \}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga06884f69572582edb75dc4ee0c2f5feb}\label{group___g_i2_c1__module_ga06884f69572582edb75dc4ee0c2f5feb}} 
+enum {\bfseries G\+I2\+C1\+\_\+\+Enum\+Ack\+Flags\+\_\+} \{ {\bfseries G\+I2\+C1\+\_\+\+S\+E\+N\+D\+\_\+\+L\+A\+S\+T\+\_\+\+A\+CK}, 
+{\bfseries G\+I2\+C1\+\_\+\+D\+O\+\_\+\+N\+O\+T\+\_\+\+L\+A\+S\+T\+\_\+\+A\+CK}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga49fd725c9ab49014dfceb0b56e6e617e}\label{group___g_i2_c1__module_ga49fd725c9ab49014dfceb0b56e6e617e}} 
+void {\bfseries G\+I2\+C1\+\_\+\+Request\+Bus} (void)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga2d08f79a76f50de43047e4b292947ff6}\label{group___g_i2_c1__module_ga2d08f79a76f50de43047e4b292947ff6}} 
+void {\bfseries G\+I2\+C1\+\_\+\+Release\+Bus} (void)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga396142ace74fa33b2e8f75c67982defc}\label{group___g_i2_c1__module_ga396142ace74fa33b2e8f75c67982defc}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Select\+Slave} (uint8\+\_\+t i2c\+Addr)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga98fb70948f30138802b637d560581b37}\label{group___g_i2_c1__module_ga98fb70948f30138802b637d560581b37}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Unselect\+Slave} (void)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_gaad5cd2a4aef82e9dadf756c250108e94}\label{group___g_i2_c1__module_gaad5cd2a4aef82e9dadf756c250108e94}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Block} (void $\ast$data, uint16\+\_\+t data\+Size, G\+I2\+C1\+\_\+\+Enum\+Send\+Flags flags)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga45790012123e26a0a5d9439bef7eca6e}\label{group___g_i2_c1__module_ga45790012123e26a0a5d9439bef7eca6e}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Block} (void $\ast$data, uint16\+\_\+t data\+Size, G\+I2\+C1\+\_\+\+Enum\+Send\+Flags flags)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_gae4c8086e3006d3de51316de34ada9e15}\label{group___g_i2_c1__module_gae4c8086e3006d3de51316de34ada9e15}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Address\+Wait} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$mem\+Addr, uint8\+\_\+t mem\+Addr\+Size, uint16\+\_\+t wait\+Ms, uint8\+\_\+t $\ast$data, uint16\+\_\+t data\+Size)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_gae84ad1c6bd51ae10712b18a9deb32457}\label{group___g_i2_c1__module_gae84ad1c6bd51ae10712b18a9deb32457}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Address} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$mem\+Addr, uint8\+\_\+t mem\+Addr\+Size, uint8\+\_\+t $\ast$data, uint16\+\_\+t data\+Size)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga83d9e896cefaa71661649c34e69351e2}\label{group___g_i2_c1__module_ga83d9e896cefaa71661649c34e69351e2}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Address} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$mem\+Addr, uint8\+\_\+t mem\+Addr\+Size, uint8\+\_\+t $\ast$data, uint16\+\_\+t data\+Size)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga05687654128c49b7c4cc02028aa17a99}\label{group___g_i2_c1__module_ga05687654128c49b7c4cc02028aa17a99}} 
+void {\bfseries C\+I2\+C1\+\_\+\+On\+Master\+Block\+Sent} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga671887872c731a5156b03fd60de911f8}\label{group___g_i2_c1__module_ga671887872c731a5156b03fd60de911f8}} 
+void {\bfseries C\+I2\+C1\+\_\+\+On\+Master\+Block\+Received} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga930f855beaea30272451f81843a8efd5}\label{group___g_i2_c1__module_ga930f855beaea30272451f81843a8efd5}} 
+void {\bfseries G\+I2\+C1\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_gab33db0d0bf6eb71464a420a4612fbc5c}\label{group___g_i2_c1__module_gab33db0d0bf6eb71464a420a4612fbc5c}} 
+void {\bfseries G\+I2\+C1\+\_\+\+Deinit} (void)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga2aeea800ba94535c256f548086daa5f8}\label{group___g_i2_c1__module_ga2aeea800ba94535c256f548086daa5f8}} 
+void $\ast$ {\bfseries G\+I2\+C1\+\_\+\+Get\+Semaphore} (void)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_gae572e3baa831d7412d4f010bb712fb1c}\label{group___g_i2_c1__module_gae572e3baa831d7412d4f010bb712fb1c}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Byte\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint8\+\_\+t $\ast$data)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga1c0f54c788370a11f3ad1447c065fb50}\label{group___g_i2_c1__module_ga1c0f54c788370a11f3ad1447c065fb50}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Byte\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint8\+\_\+t data)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_gab9f0785cf78cc0af0e3d2f94964382c5}\label{group___g_i2_c1__module_gab9f0785cf78cc0af0e3d2f94964382c5}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Word\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint16\+\_\+t $\ast$data)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga5dd17364fccb4c2136d32b3d3310a531}\label{group___g_i2_c1__module_ga5dd17364fccb4c2136d32b3d3310a531}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Word\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint16\+\_\+t data)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga1432b1e1e6f44ea64c2fd2ee5c701108}\label{group___g_i2_c1__module_ga1432b1e1e6f44ea64c2fd2ee5c701108}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Scan\+Device} (uint8\+\_\+t i2c\+Addr)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga83a398532915b74153ba4645b3f19219}\label{group___g_i2_c1__module_ga83a398532915b74153ba4645b3f19219}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Probe\+A\+CK} (void $\ast$data, uint16\+\_\+t data\+Size, G\+I2\+C1\+\_\+\+Enum\+Send\+Flags flags, uint16\+\_\+t Wait\+Time\+US)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga60adc5637b36657d4164e8f83203cf1b}\label{group___g_i2_c1__module_ga60adc5637b36657d4164e8f83203cf1b}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Byte} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$data)
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_gac381ce172b0313f19f8166adfd9f349b}\label{group___g_i2_c1__module_gac381ce172b0313f19f8166adfd9f349b}} 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Byte} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

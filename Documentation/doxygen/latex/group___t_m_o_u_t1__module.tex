@@ -1,0 +1,56 @@
+\hypertarget{group___t_m_o_u_t1__module}{}\doxysection{T\+M\+O\+U\+T1 module documentation}
+\label{group___t_m_o_u_t1__module}\index{TMOUT1 module documentation@{TMOUT1 module documentation}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga0dde7d2e5e6257cba4e16434b175bbbb}\label{group___t_m_o_u_t1__module_ga0dde7d2e5e6257cba4e16434b175bbbb}} 
+\#define {\bfseries T\+M\+O\+U\+T1\+\_\+\+N\+O\+F\+\_\+\+C\+O\+U\+N\+T\+E\+RS}~2         /$\ast$ number of timeout counters available $\ast$/
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga53f8d21ce1e0c79623ba5bdfff0180a3}\label{group___t_m_o_u_t1__module_ga53f8d21ce1e0c79623ba5bdfff0180a3}} 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type}
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga9d640b8305d7948e5953a00041a1739c}\label{group___t_m_o_u_t1__module_ga9d640b8305d7948e5953a00041a1739c}} 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle}
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga8289d16396c7271fe8794af100a3cbaf}\label{group___t_m_o_u_t1__module_ga8289d16396c7271fe8794af100a3cbaf}} 
+\#define {\bfseries T\+M\+O\+U\+T1\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+H\+A\+N\+D\+LE}~0xff  /$\ast$ special handle to indicate that we were running out of handlers $\ast$/
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga423cdc1d6d8e08888aaf1ff06d7872de}\label{group___t_m_o_u_t1__module_ga423cdc1d6d8e08888aaf1ff06d7872de}} 
+\#define {\bfseries T\+M\+O\+U\+T1\+\_\+\+T\+I\+C\+K\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}~(1000/1000)                           /$\ast$ Tick period in milliseconds as defined in R\+T\+OS component properties, at which T\+M\+O\+U\+T1.\+\_\+\+Add\+Tick() is called $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga5b333a4940bb3ddfc831b019c79223f0}\label{group___t_m_o_u_t1__module_ga5b333a4940bb3ddfc831b019c79223f0}} 
+typedef uint32\+\_\+t {\bfseries T\+M\+O\+U\+T1\+\_\+\+Counter\+Type}
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga8894aabbce239a5b3f90aa8e93ae91c0}\label{group___t_m_o_u_t1__module_ga8894aabbce239a5b3f90aa8e93ae91c0}} 
+typedef uint8\+\_\+t {\bfseries T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_gaae921e334d63da8c8a7f0e413335ce23}\label{group___t_m_o_u_t1__module_gaae921e334d63da8c8a7f0e413335ce23}} 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle {\bfseries T\+M\+O\+U\+T1\+\_\+\+Get\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Type nof\+Ticks)
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga48630fa1c81acdbe4f25b1158d8de888}\label{group___t_m_o_u_t1__module_ga48630fa1c81acdbe4f25b1158d8de888}} 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Leave\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_gaa9c22d894b0b3a6dfa7ef30e7f41e997}\label{group___t_m_o_u_t1__module_gaa9c22d894b0b3a6dfa7ef30e7f41e997}} 
+bool {\bfseries T\+M\+O\+U\+T1\+\_\+\+Counter\+Expired} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_gaa2dc00c80fff40c56ecc79e7e77bb567}\label{group___t_m_o_u_t1__module_gaa2dc00c80fff40c56ecc79e7e77bb567}} 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Add\+Tick} (void)
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga1896a273bfaaf250dc2eaa634ebfc1e7}\label{group___t_m_o_u_t1__module_ga1896a273bfaaf250dc2eaa634ebfc1e7}} 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_gaba7c7c37fb4ecf0c6d0cfd148a876d36}\label{group___t_m_o_u_t1__module_gaba7c7c37fb4ecf0c6d0cfd148a876d36}} 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type {\bfseries T\+M\+O\+U\+T1\+\_\+\+Value} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+\mbox{\Hypertarget{group___t_m_o_u_t1__module_ga29a0774c1bb8d0cd9ad2f13e04ba69fb}\label{group___t_m_o_u_t1__module_ga29a0774c1bb8d0cd9ad2f13e04ba69fb}} 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type {\bfseries T\+M\+O\+U\+T1\+\_\+\+Set\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle, T\+M\+O\+U\+T1\+\_\+\+Counter\+Type nof\+Ticks)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

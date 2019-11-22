@@ -1,0 +1,60 @@
+\hypertarget{_s_m2_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+S\+M2.c File Reference}
+\label{_s_m2_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/SM2.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/SM2.c}}
+
+
+This component \char`\"{}\+S\+P\+I\+Master\+\_\+\+L\+D\+D\char`\"{} implements M\+A\+S\+T\+ER part of synchronous serial master-\/slave communication.  
+
+
+{\ttfamily \#include \char`\"{}S\+D1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+M2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_d_d___s_p_i_m_a_s_t_e_r___t_configuration}{L\+D\+D\+\_\+\+S\+P\+I\+M\+A\+S\+T\+E\+R\+\_\+\+T\+Configuration}}
+\item 
+struct \mbox{\hyperlink{struct_s_m2___t_device_data}{S\+M2\+\_\+\+T\+Device\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+E\+V\+E\+N\+T\+S\+\_\+\+M\+A\+SK}~(\mbox{\hyperlink{group___p_e___types__module_ga86acbb58883ee4b3c59516dd9e512cd6}{L\+D\+D\+\_\+\+S\+P\+I\+M\+A\+S\+T\+E\+R\+\_\+\+O\+N\+\_\+\+B\+L\+O\+C\+K\+\_\+\+R\+E\+C\+E\+I\+V\+ED}})
+\item 
+\#define {\bfseries S\+M2\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+P\+I\+N\+\_\+\+M\+A\+SK}~(\mbox{\hyperlink{group___p_e___types__module_gaf3b26357f173ce919277e89a836121ca}{L\+D\+D\+\_\+\+S\+P\+I\+M\+A\+S\+T\+E\+R\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN}} $\vert$ \mbox{\hyperlink{group___p_e___types__module_ga31823c100ddaf6729e0a16f7cea77e7a}{L\+D\+D\+\_\+\+S\+P\+I\+M\+A\+S\+T\+E\+R\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN}} $\vert$ \mbox{\hyperlink{group___p_e___types__module_gad1273260faec4033c18eb56120e8fc7e}{L\+D\+D\+\_\+\+S\+P\+I\+M\+A\+S\+T\+E\+R\+\_\+\+C\+L\+K\+\_\+\+P\+IN}} $\vert$ \mbox{\hyperlink{group___p_e___types__module_ga1639aefd2a946ffd5dc6da6630f9d873}{L\+D\+D\+\_\+\+S\+P\+I\+M\+A\+S\+T\+E\+R\+\_\+\+C\+S\+\_\+0\+\_\+\+P\+IN}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_s_m2___t_device_data}{S\+M2\+\_\+\+T\+Device\+Data}} $\ast$ {\bfseries S\+M2\+\_\+\+T\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___s_m2__module_ga510068c12ac6452bcdf4215b2befa112}{S\+M2\+\_\+\+Init}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. This method can be called only once. Before the second call of Init() the Deinit() must be called first. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_m2__module_ga6806559d8521ee11ceb0c4059a1075a6}{S\+M2\+\_\+\+Deinit}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method deinitializes the device. It switches off the device, frees the device data structure memory, interrupts vectors, etc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___s_m2__module_ga323e9e27aae1a5c076973627fc5a31d7}{S\+M2\+\_\+\+Enable}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method enables S\+PI device. This method is intended to be used together with \mbox{[}Disable()\mbox{]} method to temporary switch On/\+Off the device after the device is initialized. This method is required if the \mbox{[}Enabled in init. code\mbox{]} property is set to \char`\"{}no\char`\"{} value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___s_m2__module_ga52198c81f9897911a60f419c4be58e11}{S\+M2\+\_\+\+Disable}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Disables the S\+PI device. When the device is disabled, some component methods should not be called. If so, error E\+R\+R\+\_\+\+D\+I\+S\+A\+B\+L\+ED may be reported. This method is intended to be used together with \mbox{[}Enable()\mbox{]} method to temporary switch on/off the device after the device is initialized. This method is not required. The \mbox{[}Deinit()\mbox{]} method can be used to switch off and uninstall the device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___s_m2__module_ga8f2d9899f013551a0716c8552a64df35}{S\+M2\+\_\+\+Receive\+Block}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, \mbox{\hyperlink{group___p_e___types__module_gade8ef9401405bd941b6da738b807f980}{L\+D\+D\+\_\+\+T\+Data}} $\ast$Buffer\+Ptr, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em This method specifies the number of data to receive. The method returns E\+R\+R\+\_\+\+B\+U\+SY until the specified number of characters is received. The method \mbox{[}Cancel\+Block\+Reception\mbox{]} can be used to cancel a running receive operation. If a receive operation is not in progress (the method was not called or a previous operation has already finished) all received characters will be lost without any notification. To prevent the loss of data call the method immediately after the last receive operation has finished (e.\+g. from the \mbox{[}On\+Block\+Received\mbox{]} event). This method finishes immediately after calling it -\/ it doesn\textquotesingle{}t wait the end of data reception. Use event \mbox{[}On\+Block\+Received\mbox{]} to check the end of data reception or method Get\+Received\+Data\+Num to check the state of receiving. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___s_m2__module_ga8030badb1ad49a784fefee5b52e3581b}{S\+M2\+\_\+\+Send\+Block}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, \mbox{\hyperlink{group___p_e___types__module_gade8ef9401405bd941b6da738b807f980}{L\+D\+D\+\_\+\+T\+Data}} $\ast$Buffer\+Ptr, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Sends a block of characters. The method returns E\+R\+R\+\_\+\+B\+U\+SY when the previous block transmission is not completed. The method \mbox{[}Cancel\+Block\+Transmission\mbox{]} can be used to cancel a transmit operation. This method finishes immediately after calling it -\/ it doesn\textquotesingle{}t wait the end of data transmission. Use event \mbox{[}On\+Block\+Sent\mbox{]} to check the end of data transmission or method Get\+Sent\+Data\+Num to check the state of sending. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_m2__module_ga7729f8f6fdd70b20a9222ab206093c6e}{S\+M2\+\_\+\+Get\+Received\+Data\+Num}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the number of received characters in the receive buffer. This method is available only if the Receive\+Block method is enabled. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group___s_m2__module_ga5e81e9b1a61c234df03a3589394d9200}{S\+M2\+\_\+\+Get\+Sent\+Data\+Num}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the number of sent characters. This method is available only if method Send\+Block is enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___s_m2__module_ga779bc9ec89a25c5fbbd7234025438197}{S\+M2\+\_\+\+Select\+Configuration}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Chip\+Select, uint8\+\_\+t Attribute\+Set)
+\begin{DoxyCompactList}\small\item\em This method selects attributes of communication from the \mbox{[}Attribute set list\mbox{]} and select a chip select from the \mbox{[}Chip select list\mbox{]}. Once any configuration is selected, a transmission can be started multiple times. This method is available if number of chip selects or number of attribute set is greater than 1. If the device doesn\textquotesingle{}t support chip select functionality the Chip\+Select parameter is ignored. \end{DoxyCompactList}\item 
+{\bfseries P\+E\+\_\+\+I\+SR} (S\+M2\+\_\+\+Interrupt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This component \char`\"{}\+S\+P\+I\+Master\+\_\+\+L\+D\+D\char`\"{} implements M\+A\+S\+T\+ER part of synchronous serial master-\/slave communication. 
+
+\begin{DoxyVersion}{Version}
+01.\+02 
+\end{DoxyVersion}

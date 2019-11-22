@@ -1,0 +1,209 @@
+\hypertarget{group___audio_amp__module}{}\doxysection{Audio\+Amp module documentation}
+\label{group___audio_amp__module}\index{AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_audio_amp___t_device_data}{Audio\+Amp\+\_\+\+T\+Device\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_gaf326b7035f75e8ccfbb70dd6f40d7626}{Audio\+Amp\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~0x400\+F\+F100U
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_gac5638d7f440f9fc35b218d3cf8c800be}{Audio\+Amp\+\_\+\+Device\+Data}}~((\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$)\mbox{\hyperlink{group___p_e___types__module_gaa1c23d559daef5bcd3327ca83fb56f5a}{P\+E\+\_\+\+L\+D\+D\+\_\+\+Get\+Device\+Structure}}(P\+E\+\_\+\+L\+D\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+Audio\+Amp\+\_\+\+ID))
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_gaf4fd6166431513120e47cfde17c85a2e}{Audio\+Amp\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_gaf20acd21a6088929e9c6171a4df0d303}{Audio\+Amp\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_ga97aa2923b5ee7bb5000f349344b6c15c}{Audio\+Amp\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_ga3922654802a9bdac6cec505cf4a29823}{Audio\+Amp\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_gac6b3527acdf2dc7001cbd9e211fedd0c}{Audio\+Amp\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_gae00b60438edc267e38e0920f490e8586}{Audio\+Amp\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~F\+P\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_ga0ff12a8280489c0f0f7d5b6be65d90f7}{Audio\+Amp\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~\mbox{\hyperlink{group___p_o_r_t___peripheral_gab166fe285bbb15b52de610f408fe25d3}{P\+O\+R\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR}}
+\item 
+\#define \mbox{\hyperlink{group___audio_amp__module_gaed98dcd981c8149eb24569fcfc6cdd19}{Audio\+Amp\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK}}~0x20000000U
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___audio_amp__module_gae5dc6c80cebd5e8f201cee3511de6789}\label{group___audio_amp__module_gae5dc6c80cebd5e8f201cee3511de6789}} 
+typedef \mbox{\hyperlink{struct_audio_amp___t_device_data}{Audio\+Amp\+\_\+\+T\+Device\+Data}} $\ast$ {\bfseries Audio\+Amp\+\_\+\+T\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___audio_amp__module_ga1028ec0d37b83d6754980add9aa96b36}{Audio\+Amp\+\_\+\+Init}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable
+    in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___audio_amp__module_gafc6f14152f926a652f009305baced078}{Audio\+Amp\+\_\+\+Get\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the input/output value. If the direction is \mbox{[}input\mbox{]} then the input value of the pin is read and returned. If the direction is \mbox{[}output\mbox{]} then the last written value is read and returned (see $<$\+Safe mode$>$=\char`\"{}\char`\"{}$>$ property for limitations). This method cannot be disabled if direction is \mbox{[}input\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___audio_amp__module_ga64f8396bd965787ac27f0ca1da3a2a38}{Audio\+Amp\+\_\+\+Put\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, bool Val)
+\begin{DoxyCompactList}\small\item\em The specified output value is set. If the direction is {\bfseries{ input}}, the component saves the value to a memory or a register and this value will be written to the pin after switching to the output mode (using {\ttfamily Set\+Dir(\+T\+R\+U\+E)}; see \href{BitIOProperties.html\#SafeMode}{\texttt{ Safe mode}} property for limitations). If the direction is {\bfseries{output}}, it writes the value to the pin. (Method is available only if the direction = \uline{{\ttfamily output}} or \uline{{\ttfamily  input/output}}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___audio_amp__module_ga5ea6348c843c9ef44d8b071f4bab7def}{Audio\+Amp\+\_\+\+Clr\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Clears (set to zero) the output value. It is equivalent to the \mbox{[}Put\+Val(\+F\+A\+L\+S\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___audio_amp__module_ga78d2eb6a0d2f5a4a7cbc8a41937fd1d9}{Audio\+Amp\+\_\+\+Set\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Sets (to one) the output value. It is equivalent to the \mbox{[}Put\+Val(\+T\+R\+U\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___audio_amp__module_ga3922654802a9bdac6cec505cf4a29823}\label{group___audio_amp__module_ga3922654802a9bdac6cec505cf4a29823}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_ClrVal\_METHOD\_ENABLED@{AudioAmp\_ClrVal\_METHOD\_ENABLED}}
+\index{AudioAmp\_ClrVal\_METHOD\_ENABLED@{AudioAmp\_ClrVal\_METHOD\_ENABLED}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_ClrVal\_METHOD\_ENABLED}{AudioAmp\_ClrVal\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Clr\+Val method of the component Audio\+Amp is enabled (generated) \mbox{\Hypertarget{group___audio_amp__module_gac5638d7f440f9fc35b218d3cf8c800be}\label{group___audio_amp__module_gac5638d7f440f9fc35b218d3cf8c800be}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_DeviceData@{AudioAmp\_DeviceData}}
+\index{AudioAmp\_DeviceData@{AudioAmp\_DeviceData}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_DeviceData}{AudioAmp\_DeviceData}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+Device\+Data~((\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$)\mbox{\hyperlink{group___p_e___types__module_gaa1c23d559daef5bcd3327ca83fb56f5a}{P\+E\+\_\+\+L\+D\+D\+\_\+\+Get\+Device\+Structure}}(P\+E\+\_\+\+L\+D\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+Audio\+Amp\+\_\+\+ID))}
+
+Device data structure pointer used when auto initialization property is enabled. This constant can be passed as a first parameter to all component\textquotesingle{}s methods. \mbox{\Hypertarget{group___audio_amp__module_gaf20acd21a6088929e9c6171a4df0d303}\label{group___audio_amp__module_gaf20acd21a6088929e9c6171a4df0d303}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_GetVal\_METHOD\_ENABLED@{AudioAmp\_GetVal\_METHOD\_ENABLED}}
+\index{AudioAmp\_GetVal\_METHOD\_ENABLED@{AudioAmp\_GetVal\_METHOD\_ENABLED}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_GetVal\_METHOD\_ENABLED}{AudioAmp\_GetVal\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Get\+Val method of the component Audio\+Amp is enabled (generated) \mbox{\Hypertarget{group___audio_amp__module_gaf4fd6166431513120e47cfde17c85a2e}\label{group___audio_amp__module_gaf4fd6166431513120e47cfde17c85a2e}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_Init\_METHOD\_ENABLED@{AudioAmp\_Init\_METHOD\_ENABLED}}
+\index{AudioAmp\_Init\_METHOD\_ENABLED@{AudioAmp\_Init\_METHOD\_ENABLED}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_Init\_METHOD\_ENABLED}{AudioAmp\_Init\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Init method of the component Audio\+Amp is enabled (generated) \mbox{\Hypertarget{group___audio_amp__module_gae00b60438edc267e38e0920f490e8586}\label{group___audio_amp__module_gae00b60438edc267e38e0920f490e8586}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_MODULE\_BASE\_ADDRESS@{AudioAmp\_MODULE\_BASE\_ADDRESS}}
+\index{AudioAmp\_MODULE\_BASE\_ADDRESS@{AudioAmp\_MODULE\_BASE\_ADDRESS}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_MODULE\_BASE\_ADDRESS}{AudioAmp\_MODULE\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS~F\+P\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR}
+
+Name of macro used as the base address \mbox{\Hypertarget{group___audio_amp__module_gaed98dcd981c8149eb24569fcfc6cdd19}\label{group___audio_amp__module_gaed98dcd981c8149eb24569fcfc6cdd19}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_PORT\_MASK@{AudioAmp\_PORT\_MASK}}
+\index{AudioAmp\_PORT\_MASK@{AudioAmp\_PORT\_MASK}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_PORT\_MASK}{AudioAmp\_PORT\_MASK}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK~0x20000000U}
+
+Mask of the allocated pin from the port \mbox{\Hypertarget{group___audio_amp__module_ga0ff12a8280489c0f0f7d5b6be65d90f7}\label{group___audio_amp__module_ga0ff12a8280489c0f0f7d5b6be65d90f7}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_PORTCONTROL\_BASE\_ADDRESS@{AudioAmp\_PORTCONTROL\_BASE\_ADDRESS}}
+\index{AudioAmp\_PORTCONTROL\_BASE\_ADDRESS@{AudioAmp\_PORTCONTROL\_BASE\_ADDRESS}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_PORTCONTROL\_BASE\_ADDRESS}{AudioAmp\_PORTCONTROL\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS~\mbox{\hyperlink{group___p_o_r_t___peripheral_gab166fe285bbb15b52de610f408fe25d3}{P\+O\+R\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR}}}
+
+Name of macro used as the base address \mbox{\Hypertarget{group___audio_amp__module_gaf326b7035f75e8ccfbb70dd6f40d7626}\label{group___audio_amp__module_gaf326b7035f75e8ccfbb70dd6f40d7626}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_PRPH\_BASE\_ADDRESS@{AudioAmp\_PRPH\_BASE\_ADDRESS}}
+\index{AudioAmp\_PRPH\_BASE\_ADDRESS@{AudioAmp\_PRPH\_BASE\_ADDRESS}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_PRPH\_BASE\_ADDRESS}{AudioAmp\_PRPH\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS~0x400\+F\+F100U}
+
+Peripheral base address of a device allocated by the component. This constant can be used directly in P\+DD macros. \mbox{\Hypertarget{group___audio_amp__module_ga97aa2923b5ee7bb5000f349344b6c15c}\label{group___audio_amp__module_ga97aa2923b5ee7bb5000f349344b6c15c}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_PutVal\_METHOD\_ENABLED@{AudioAmp\_PutVal\_METHOD\_ENABLED}}
+\index{AudioAmp\_PutVal\_METHOD\_ENABLED@{AudioAmp\_PutVal\_METHOD\_ENABLED}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_PutVal\_METHOD\_ENABLED}{AudioAmp\_PutVal\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Put\+Val method of the component Audio\+Amp is enabled (generated) \mbox{\Hypertarget{group___audio_amp__module_gac6b3527acdf2dc7001cbd9e211fedd0c}\label{group___audio_amp__module_gac6b3527acdf2dc7001cbd9e211fedd0c}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_SetVal\_METHOD\_ENABLED@{AudioAmp\_SetVal\_METHOD\_ENABLED}}
+\index{AudioAmp\_SetVal\_METHOD\_ENABLED@{AudioAmp\_SetVal\_METHOD\_ENABLED}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_SetVal\_METHOD\_ENABLED}{AudioAmp\_SetVal\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define Audio\+Amp\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Set\+Val method of the component Audio\+Amp is enabled (generated) 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___audio_amp__module_ga5ea6348c843c9ef44d8b071f4bab7def}\label{group___audio_amp__module_ga5ea6348c843c9ef44d8b071f4bab7def}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_ClrVal@{AudioAmp\_ClrVal}}
+\index{AudioAmp\_ClrVal@{AudioAmp\_ClrVal}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_ClrVal()}{AudioAmp\_ClrVal()}}
+{\footnotesize\ttfamily void Audio\+Amp\+\_\+\+Clr\+Val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$}]{Device\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Clears (set to zero) the output value. It is equivalent to the \mbox{[}Put\+Val(\+F\+A\+L\+S\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Pointer to device data structure returned by $<$\+Init$>$ method. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___audio_amp__module_gafc6f14152f926a652f009305baced078}\label{group___audio_amp__module_gafc6f14152f926a652f009305baced078}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_GetVal@{AudioAmp\_GetVal}}
+\index{AudioAmp\_GetVal@{AudioAmp\_GetVal}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_GetVal()}{AudioAmp\_GetVal()}}
+{\footnotesize\ttfamily bool Audio\+Amp\+\_\+\+Get\+Val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$}]{Device\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Returns the input/output value. If the direction is \mbox{[}input\mbox{]} then the input value of the pin is read and returned. If the direction is \mbox{[}output\mbox{]} then the last written value is read and returned (see $<$\+Safe mode$>$=\char`\"{}\char`\"{}$>$ property for limitations). This method cannot be disabled if direction is \mbox{[}input\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Device data structure pointer returned by $<$\+Init$>$ method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Input or output value. Possible values\+: $<$false$>$ -\/ logical \char`\"{}0\char`\"{} (Low level) $<$true$>$ -\/ logical \char`\"{}1\char`\"{} (High level) 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___audio_amp__module_ga1028ec0d37b83d6754980add9aa96b36}\label{group___audio_amp__module_ga1028ec0d37b83d6754980add9aa96b36}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_Init@{AudioAmp\_Init}}
+\index{AudioAmp\_Init@{AudioAmp\_Init}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_Init()}{AudioAmp\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ Audio\+Amp\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$}]{User\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable
+    in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Data\+Ptr} & -\/ Pointer to the user or R\+T\+OS specific data. This pointer will be passed as an event or callback parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Pointer to the dynamically allocated private structure or N\+U\+LL if there was an error. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___audio_amp__module_ga64f8396bd965787ac27f0ca1da3a2a38}\label{group___audio_amp__module_ga64f8396bd965787ac27f0ca1da3a2a38}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_PutVal@{AudioAmp\_PutVal}}
+\index{AudioAmp\_PutVal@{AudioAmp\_PutVal}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_PutVal()}{AudioAmp\_PutVal()}}
+{\footnotesize\ttfamily void Audio\+Amp\+\_\+\+Put\+Val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$}]{Device\+Data\+Ptr,  }\item[{bool}]{Val }\end{DoxyParamCaption})}
+
+
+
+The specified output value is set. If the direction is {\bfseries{ input}}, the component saves the value to a memory or a register and this value will be written to the pin after switching to the output mode (using {\ttfamily Set\+Dir(\+T\+R\+U\+E)}; see \href{BitIOProperties.html\#SafeMode}{\texttt{ Safe mode}} property for limitations). If the direction is {\bfseries{output}}, it writes the value to the pin. (Method is available only if the direction = \uline{{\ttfamily output}} or \uline{{\ttfamily  input/output}}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Device data structure pointer returned by $<$\+Init$>$ method. \\
+\hline
+{\em Val} & -\/ Output value. Possible values\+: $<$false$>$ -\/ logical \char`\"{}0\char`\"{} (Low level) $<$true$>$ -\/ logical \char`\"{}1\char`\"{} (High level) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___audio_amp__module_ga78d2eb6a0d2f5a4a7cbc8a41937fd1d9}\label{group___audio_amp__module_ga78d2eb6a0d2f5a4a7cbc8a41937fd1d9}} 
+\index{AudioAmp module documentation@{AudioAmp module documentation}!AudioAmp\_SetVal@{AudioAmp\_SetVal}}
+\index{AudioAmp\_SetVal@{AudioAmp\_SetVal}!AudioAmp module documentation@{AudioAmp module documentation}}
+\doxysubsubsection{\texorpdfstring{AudioAmp\_SetVal()}{AudioAmp\_SetVal()}}
+{\footnotesize\ttfamily void Audio\+Amp\+\_\+\+Set\+Val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$}]{Device\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Sets (to one) the output value. It is equivalent to the \mbox{[}Put\+Val(\+T\+R\+U\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Pointer to device data structure returned by $<$\+Init$>$ method. \\
+\hline
+\end{DoxyParams}

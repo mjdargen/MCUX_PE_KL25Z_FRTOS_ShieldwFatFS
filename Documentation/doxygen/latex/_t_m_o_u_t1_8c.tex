@@ -1,0 +1,38 @@
+\hypertarget{_t_m_o_u_t1_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+T\+M\+O\+U\+T1.c File Reference}
+\label{_t_m_o_u_t1_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/TMOUT1.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/TMOUT1.c}}
+
+
+The module implements timeout functionality. With this implementation, it is possible to wait for a given time, and the time is counted by a periodic interrupt.  
+
+
+{\ttfamily \#include \char`\"{}T\+M\+O\+U\+T1.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries T\+M\+O\+U\+T1\+\_\+\+N\+O\+F\+\_\+\+C\+O\+U\+N\+T\+E\+RS}~2         /$\ast$ number of timeout counters available $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle {\bfseries T\+M\+O\+U\+T1\+\_\+\+Get\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Type nof\+Ticks)
+\item 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Leave\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+bool {\bfseries T\+M\+O\+U\+T1\+\_\+\+Counter\+Expired} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Add\+Tick} (void)
+\item 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Init} (void)
+\item 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type {\bfseries T\+M\+O\+U\+T1\+\_\+\+Value} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type {\bfseries T\+M\+O\+U\+T1\+\_\+\+Set\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle, T\+M\+O\+U\+T1\+\_\+\+Counter\+Type nof\+Ticks)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The module implements timeout functionality. With this implementation, it is possible to wait for a given time, and the time is counted by a periodic interrupt. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

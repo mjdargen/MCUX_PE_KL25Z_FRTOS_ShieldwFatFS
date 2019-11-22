@@ -1,0 +1,92 @@
+\hypertarget{struct_l_d_d___s_d_h_c___t_card_caps}{}\doxysection{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps Struct Reference}
+\label{struct_l_d_d___s_d_h_c___t_card_caps}\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+
+
+{\ttfamily \#include $<$P\+E\+\_\+\+Types.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_a79fc1f5a77986075f37dfc967fc7e839}{Data\+Widths}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_a4af30c5df5445720a0da2f6abdcc9629}{Operations}}
+\item 
+bool \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_a382fb9e854ee58ba00f5e390345dad9c}{High\+Speed}}
+\item 
+bool \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_aecde13a16eb437017641776270f9479c}{High\+Capacity}}
+\item 
+bool \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_a283a376bda2540641d83cde61d1e0188}{Low\+Voltage}}
+\item 
+\mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_access}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Access}} \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_ae5a39842e7b8c28f9246d3fc1b9a8f54}{Read}}
+\item 
+\mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_access}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Access}} \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_ad28c378a6b9edfbd726a8019d5c8be79}{Write}}
+\item 
+\mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_erase}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Erase}} \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_afc5bbe5bce7267f930d6e8501ac5d2ea}{Erase}}
+\item 
+\mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_write_protect}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Write\+Protect}} \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_caps_a32ecbbace3b435b1d70a57b09bf9662b}{Write\+Protect}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Card capabilities 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_a79fc1f5a77986075f37dfc967fc7e839}\label{struct_l_d_d___s_d_h_c___t_card_caps_a79fc1f5a77986075f37dfc967fc7e839}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!DataWidths@{DataWidths}}
+\index{DataWidths@{DataWidths}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{DataWidths}{DataWidths}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+Data\+Widths}
+
+Bit mask of supported data bus widths \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_afc5bbe5bce7267f930d6e8501ac5d2ea}\label{struct_l_d_d___s_d_h_c___t_card_caps_afc5bbe5bce7267f930d6e8501ac5d2ea}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!Erase@{Erase}}
+\index{Erase@{Erase}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{Erase}{Erase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_erase}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Erase}} L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+Erase}
+
+Card data erasion capabilities \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_aecde13a16eb437017641776270f9479c}\label{struct_l_d_d___s_d_h_c___t_card_caps_aecde13a16eb437017641776270f9479c}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!HighCapacity@{HighCapacity}}
+\index{HighCapacity@{HighCapacity}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{HighCapacity}{HighCapacity}}
+{\footnotesize\ttfamily bool L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+High\+Capacity}
+
+Indicates whether the card requires block addressing instead of byte addressing \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_a382fb9e854ee58ba00f5e390345dad9c}\label{struct_l_d_d___s_d_h_c___t_card_caps_a382fb9e854ee58ba00f5e390345dad9c}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!HighSpeed@{HighSpeed}}
+\index{HighSpeed@{HighSpeed}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{HighSpeed}{HighSpeed}}
+{\footnotesize\ttfamily bool L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+High\+Speed}
+
+Indicates whether the card supports high clock configuration (SD bus clock frequency higher than about 25M\+Hz) \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_a283a376bda2540641d83cde61d1e0188}\label{struct_l_d_d___s_d_h_c___t_card_caps_a283a376bda2540641d83cde61d1e0188}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!LowVoltage@{LowVoltage}}
+\index{LowVoltage@{LowVoltage}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{LowVoltage}{LowVoltage}}
+{\footnotesize\ttfamily bool L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+Low\+Voltage}
+
+Indicates whether the card supports the host\textquotesingle{}s low voltage range \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_a4af30c5df5445720a0da2f6abdcc9629}\label{struct_l_d_d___s_d_h_c___t_card_caps_a4af30c5df5445720a0da2f6abdcc9629}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!Operations@{Operations}}
+\index{Operations@{Operations}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{Operations}{Operations}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+Operations}
+
+Bit mask of supported operations \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_ae5a39842e7b8c28f9246d3fc1b9a8f54}\label{struct_l_d_d___s_d_h_c___t_card_caps_ae5a39842e7b8c28f9246d3fc1b9a8f54}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!Read@{Read}}
+\index{Read@{Read}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{Read}{Read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_access}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Access}} L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+Read}
+
+Card data read access capabilities \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_ad28c378a6b9edfbd726a8019d5c8be79}\label{struct_l_d_d___s_d_h_c___t_card_caps_ad28c378a6b9edfbd726a8019d5c8be79}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!Write@{Write}}
+\index{Write@{Write}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{Write}{Write}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_access}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Access}} L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+Write}
+
+Card data write access capabilities \mbox{\Hypertarget{struct_l_d_d___s_d_h_c___t_card_caps_a32ecbbace3b435b1d70a57b09bf9662b}\label{struct_l_d_d___s_d_h_c___t_card_caps_a32ecbbace3b435b1d70a57b09bf9662b}} 
+\index{LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}!WriteProtect@{WriteProtect}}
+\index{WriteProtect@{WriteProtect}!LDD\_SDHC\_TCardCaps@{LDD\_SDHC\_TCardCaps}}
+\doxysubsubsection{\texorpdfstring{WriteProtect}{WriteProtect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_d_d___s_d_h_c___t_card_write_protect}{L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Write\+Protect}} L\+D\+D\+\_\+\+S\+D\+H\+C\+\_\+\+T\+Card\+Caps\+::\+Write\+Protect}
+
+Write protection properties 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\mbox{\hyperlink{_p_e___types_8h}{P\+E\+\_\+\+Types.\+h}}\end{DoxyCompactItemize}

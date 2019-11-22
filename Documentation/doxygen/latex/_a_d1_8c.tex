@@ -1,0 +1,53 @@
+\hypertarget{_a_d1_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+A\+D1.c File Reference}
+\label{_a_d1_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/AD1.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/AD1.c}}
+
+
+This device \char`\"{}\+A\+D\+C\char`\"{} implements an A/D converter, its control methods and interrupt/event handling procedure.  
+
+
+{\ttfamily \#include \char`\"{}A\+D1.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+T\+OP}~0x00U          /$\ast$ S\+T\+OP state           $\ast$/
+\item 
+\#define {\bfseries M\+E\+A\+S\+U\+RE}~0x01U          /$\ast$ M\+E\+S\+U\+RE state         $\ast$/
+\item 
+\#define {\bfseries C\+O\+N\+T\+I\+N\+U\+O\+US}~0x02U          /$\ast$ C\+O\+N\+T\+I\+N\+U\+O\+US state     $\ast$/
+\item 
+\#define {\bfseries S\+I\+N\+G\+LE}~0x03U          /$\ast$ S\+I\+N\+G\+LE state         $\ast$/
+\item 
+\#define {\bfseries C\+A\+L\+I\+B\+R\+A\+T\+I\+NG}~0x04U          /$\ast$ C\+A\+L\+I\+B\+R\+A\+T\+I\+NG state    $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries A\+D1\+\_\+\+H\+W\+En\+Di} (void)
+\item 
+byte \mbox{\hyperlink{group___a_d1__module_ga4818b46a0b9775d9795d92513481dacb}{P\+E\+\_\+\+A\+D1\+\_\+\+Measure}} (void)
+\begin{DoxyCompactList}\small\item\em This method performs one measurement on all channels that are set in the component inspector. (Note\+: If the \mbox{[}number of conversions\mbox{]} is more than one the conversion of A/D channels is performed specified number of times.) \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{group___a_d1__module_ga9bdf55493a77633187fd82506c5b156c}{A\+D1\+\_\+\+Measure\+Chan}} (bool Wait\+For\+Result, byte Channel)
+\begin{DoxyCompactList}\small\item\em This method performs measurement on one channel. (Note\+: If the \mbox{[}number of conversions\mbox{]} is more than one the conversion of the A/D channel is performed specified number of times.) \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{group___a_d1__module_gabdd15b1c1e2b3a51eb6b1109fd0c6d75}{A\+D1\+\_\+\+Get\+Value16}} (word $\ast$Values)
+\begin{DoxyCompactList}\small\item\em This method returns the last measured values of all channels. Compared with \mbox{[}Get\+Value\mbox{]} method this method returns more accurate result if the \mbox{[}number of conversions\mbox{]} is greater than 1 and \mbox{[}AD resolution\mbox{]} is less than 16 bits. In addition, the user code dependency on \mbox{[}AD resolution\mbox{]} is eliminated. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{group___a_d1__module_ga9f1968423c91071c3647d00c2533117d}{A\+D1\+\_\+\+Get\+Chan\+Value16}} (byte Channel, word $\ast$Value)
+\begin{DoxyCompactList}\small\item\em This method returns the last measured value of the required channel. Compared with \mbox{[}Get\+Chan\+Value\mbox{]} method this method returns more accurate result if the \mbox{[}number of conversions\mbox{]} is greater than 1 and \mbox{[}AD resolution\mbox{]} is less than 16 bits. In addition, the user code dependency on \mbox{[}AD resolution\mbox{]} is eliminated. \end{DoxyCompactList}\item 
+byte {\bfseries P\+E\+\_\+\+A\+D1\+\_\+\+Calibrate} (void)
+\item 
+void {\bfseries A\+D1\+\_\+\+Init} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ {\bfseries Adc\+Ldd1\+\_\+\+Device\+Data\+Ptr}
+\item 
+volatile word {\bfseries A\+D1\+\_\+\+OutV} \mbox{[}A\+D1\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+G\+R\+O\+U\+P\+\_\+\+S\+I\+ZE\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This device \char`\"{}\+A\+D\+C\char`\"{} implements an A/D converter, its control methods and interrupt/event handling procedure. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

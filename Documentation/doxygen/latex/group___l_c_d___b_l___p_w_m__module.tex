@@ -1,0 +1,142 @@
+\hypertarget{group___l_c_d___b_l___p_w_m__module}{}\doxysection{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+WM module documentation}
+\label{group___l_c_d___b_l___p_w_m__module}\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_c_d___b_l___p_w_m___t_device_data}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+T\+Device\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_gace6a11e892466500d47d1f45f042bc53}\label{group___l_c_d___b_l___p_w_m__module_gace6a11e892466500d47d1f45f042bc53}} 
+\#define {\bfseries C\+H\+A\+N\+N\+EL}~0x00U
+\item 
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_ga11a75f67f0749537f794bea2557c1b49}\label{group___l_c_d___b_l___p_w_m__module_ga11a75f67f0749537f794bea2557c1b49}} 
+\#define {\bfseries L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+V\+A\+L\+UE}~0x9\+C40\+UL /$\ast$ Initial period value in ticks of the timer. $\ast$/
+\item 
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_ga1f1d6582bb36e5e9eeda608472a72665}\label{group___l_c_d___b_l___p_w_m__module_ga1f1d6582bb36e5e9eeda608472a72665}} 
+\#define {\bfseries L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+V\+A\+L\+U\+E\+\_\+0}~0x9\+C40\+UL /$\ast$ Period value in ticks of the timer in clock configuration 0. $\ast$/
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___b_l___p_w_m__module_ga5e179ca63978986f004949ef06701209}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~0x40039000U
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___b_l___p_w_m__module_gad8b718602029b625dacbb4589bf173a8}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___b_l___p_w_m__module_gaa3e6d7ebe6e61619f370d4f32c986850}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Ratio16\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___l_c_d___b_l___p_w_m__module_gae8b87face1c9cf8a9081ff1139de68a0}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Duty\+M\+S\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_gaf387dbef3e53a43d86cd10c8b1922147}\label{group___l_c_d___b_l___p_w_m__module_gaf387dbef3e53a43d86cd10c8b1922147}} 
+typedef \mbox{\hyperlink{struct_l_c_d___b_l___p_w_m___t_device_data}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+T\+Device\+Data}} $\ast$ {\bfseries L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+T\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___l_c_d___b_l___p_w_m__module_ga4d07d93f63ea78e5703fe9de16b1af73}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Init}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the property \mbox{[}\char`\"{}\+Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}Enable\mbox{]} method). In this case the \mbox{[}Enable\mbox{]} method is not necessary and needn\textquotesingle{}t to be generated. This method can be called only once. Before the second call of Init the \mbox{[}Deinit\mbox{]} must be called first. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___l_c_d___b_l___p_w_m__module_gad558aaa0ebeb6fd0199d125f414a5a90}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Ratio16}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint16\+\_\+t Ratio)
+\begin{DoxyCompactList}\small\item\em This method sets a new duty-\/cycle ratio. Ratio is expressed as a 16-\/bit unsigned integer number. 0 -\/ F\+F\+FF value is proportional to ratio 0 -\/ 100\%. The method is available only if it is not selected list of predefined values in \mbox{[}Starting pulse width\mbox{]} property. Note\+: Calculated duty depends on the timer possibilities and on the selected period. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___l_c_d___b_l___p_w_m__module_gaf79547ee371456bf3af955c4e1bee28c}{L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Duty\+MS}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint16\+\_\+t Time)
+\begin{DoxyCompactList}\small\item\em This method sets the new duty value of the output signal. The duty is expressed in milliseconds as a 16-\/bit unsigned integer number. The method is available only if it is not selected list of predefined values in \mbox{[}Starting pulse width\mbox{]} property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_gad8b718602029b625dacbb4589bf173a8}\label{group___l_c_d___b_l___p_w_m__module_gad8b718602029b625dacbb4589bf173a8}} 
+\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}!LCD\_BL\_PWM\_Init\_METHOD\_ENABLED@{LCD\_BL\_PWM\_Init\_METHOD\_ENABLED}}
+\index{LCD\_BL\_PWM\_Init\_METHOD\_ENABLED@{LCD\_BL\_PWM\_Init\_METHOD\_ENABLED}!LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_PWM\_Init\_METHOD\_ENABLED}{LCD\_BL\_PWM\_Init\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Init method of the component L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+WM is enabled (generated) \mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_ga5e179ca63978986f004949ef06701209}\label{group___l_c_d___b_l___p_w_m__module_ga5e179ca63978986f004949ef06701209}} 
+\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}!LCD\_BL\_PWM\_PRPH\_BASE\_ADDRESS@{LCD\_BL\_PWM\_PRPH\_BASE\_ADDRESS}}
+\index{LCD\_BL\_PWM\_PRPH\_BASE\_ADDRESS@{LCD\_BL\_PWM\_PRPH\_BASE\_ADDRESS}!LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_PWM\_PRPH\_BASE\_ADDRESS}{LCD\_BL\_PWM\_PRPH\_BASE\_ADDRESS}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS~0x40039000U}
+
+Peripheral base address of a device allocated by the component. This constant can be used directly in P\+DD macros. \mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_gae8b87face1c9cf8a9081ff1139de68a0}\label{group___l_c_d___b_l___p_w_m__module_gae8b87face1c9cf8a9081ff1139de68a0}} 
+\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}!LCD\_BL\_PWM\_SetDutyMS\_METHOD\_ENABLED@{LCD\_BL\_PWM\_SetDutyMS\_METHOD\_ENABLED}}
+\index{LCD\_BL\_PWM\_SetDutyMS\_METHOD\_ENABLED@{LCD\_BL\_PWM\_SetDutyMS\_METHOD\_ENABLED}!LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_PWM\_SetDutyMS\_METHOD\_ENABLED}{LCD\_BL\_PWM\_SetDutyMS\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Duty\+M\+S\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Set\+Duty\+MS method of the component L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+WM is enabled (generated) \mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_gaa3e6d7ebe6e61619f370d4f32c986850}\label{group___l_c_d___b_l___p_w_m__module_gaa3e6d7ebe6e61619f370d4f32c986850}} 
+\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}!LCD\_BL\_PWM\_SetRatio16\_METHOD\_ENABLED@{LCD\_BL\_PWM\_SetRatio16\_METHOD\_ENABLED}}
+\index{LCD\_BL\_PWM\_SetRatio16\_METHOD\_ENABLED@{LCD\_BL\_PWM\_SetRatio16\_METHOD\_ENABLED}!LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_PWM\_SetRatio16\_METHOD\_ENABLED}{LCD\_BL\_PWM\_SetRatio16\_METHOD\_ENABLED}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Ratio16\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}
+
+Set\+Ratio16 method of the component L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+WM is enabled (generated) 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_ga4d07d93f63ea78e5703fe9de16b1af73}\label{group___l_c_d___b_l___p_w_m__module_ga4d07d93f63ea78e5703fe9de16b1af73}} 
+\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}!LCD\_BL\_PWM\_Init@{LCD\_BL\_PWM\_Init}}
+\index{LCD\_BL\_PWM\_Init@{LCD\_BL\_PWM\_Init}!LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_PWM\_Init()}{LCD\_BL\_PWM\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$}]{User\+Data\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the property \mbox{[}\char`\"{}\+Enable in init. code\char`\"{}\mbox{]} is set to \char`\"{}yes\char`\"{} value then the device is also enabled (see the description of the \mbox{[}Enable\mbox{]} method). In this case the \mbox{[}Enable\mbox{]} method is not necessary and needn\textquotesingle{}t to be generated. This method can be called only once. Before the second call of Init the \mbox{[}Deinit\mbox{]} must be called first. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Data\+Ptr} & -\/ Pointer to the user or R\+T\+OS specific data. This pointer will be passed as an event or callback parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Pointer to the dynamically allocated private structure or N\+U\+LL if there was an error. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_gaf79547ee371456bf3af955c4e1bee28c}\label{group___l_c_d___b_l___p_w_m__module_gaf79547ee371456bf3af955c4e1bee28c}} 
+\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}!LCD\_BL\_PWM\_SetDutyMS@{LCD\_BL\_PWM\_SetDutyMS}}
+\index{LCD\_BL\_PWM\_SetDutyMS@{LCD\_BL\_PWM\_SetDutyMS}!LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_PWM\_SetDutyMS()}{LCD\_BL\_PWM\_SetDutyMS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Duty\+MS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$}]{Device\+Data\+Ptr,  }\item[{uint16\+\_\+t}]{Time }\end{DoxyParamCaption})}
+
+
+
+This method sets the new duty value of the output signal. The duty is expressed in milliseconds as a 16-\/bit unsigned integer number. The method is available only if it is not selected list of predefined values in \mbox{[}Starting pulse width\mbox{]} property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Device data structure pointer returned by \mbox{[}Init\mbox{]} method. \\
+\hline
+{\em Time} & -\/ Duty to set \mbox{[}in milliseconds\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Error code, possible codes\+: E\+R\+R\+\_\+\+OK -\/ OK E\+R\+R\+\_\+\+S\+P\+E\+ED -\/ The component does not work in the active clock configuration E\+R\+R\+\_\+\+M\+A\+TH -\/ Overflow during evaluation E\+R\+R\+\_\+\+P\+A\+R\+A\+M\+\_\+\+R\+A\+N\+GE -\/ Parameter out of range 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___l_c_d___b_l___p_w_m__module_gad558aaa0ebeb6fd0199d125f414a5a90}\label{group___l_c_d___b_l___p_w_m__module_gad558aaa0ebeb6fd0199d125f414a5a90}} 
+\index{LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}!LCD\_BL\_PWM\_SetRatio16@{LCD\_BL\_PWM\_SetRatio16}}
+\index{LCD\_BL\_PWM\_SetRatio16@{LCD\_BL\_PWM\_SetRatio16}!LCD\_BL\_PWM module documentation@{LCD\_BL\_PWM module documentation}}
+\doxysubsubsection{\texorpdfstring{LCD\_BL\_PWM\_SetRatio16()}{LCD\_BL\_PWM\_SetRatio16()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M\+\_\+\+Set\+Ratio16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$}]{Device\+Data\+Ptr,  }\item[{uint16\+\_\+t}]{Ratio }\end{DoxyParamCaption})}
+
+
+
+This method sets a new duty-\/cycle ratio. Ratio is expressed as a 16-\/bit unsigned integer number. 0 -\/ F\+F\+FF value is proportional to ratio 0 -\/ 100\%. The method is available only if it is not selected list of predefined values in \mbox{[}Starting pulse width\mbox{]} property. Note\+: Calculated duty depends on the timer possibilities and on the selected period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+Data\+Ptr} & -\/ Device data structure pointer returned by \mbox{[}Init\mbox{]} method. \\
+\hline
+{\em Ratio} & -\/ Ratio to set. 0 -\/ 65535 value is proportional to ratio 0 -\/ 100\% \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\begin{DoxyItemize}
+\item Error code, possible codes\+: E\+R\+R\+\_\+\+OK -\/ OK E\+R\+R\+\_\+\+S\+P\+E\+ED -\/ The component does not work in the active clock configuration 
+\end{DoxyItemize}
+\end{DoxyReturn}

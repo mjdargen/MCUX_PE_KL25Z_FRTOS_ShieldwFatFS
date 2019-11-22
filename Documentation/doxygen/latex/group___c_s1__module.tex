@@ -1,0 +1,72 @@
+\hypertarget{group___c_s1__module}{}\doxysection{C\+S1 module documentation}
+\label{group___c_s1__module}\index{CS1 module documentation@{CS1 module documentation}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___c_s1__module_gaee7f03127014fe509003f75c2c1f0dc0}\label{group___c_s1__module_gaee7f03127014fe509003f75c2c1f0dc0}} 
+\#define {\bfseries C\+S1\+\_\+\+Critical\+Variable\+Drv}()~C\+S1\+\_\+\+Critical\+Variable()
+\item 
+\mbox{\Hypertarget{group___c_s1__module_ga4223c328a86a18fe41809a4efe6a6ceb}\label{group___c_s1__module_ga4223c328a86a18fe41809a4efe6a6ceb}} 
+\#define {\bfseries C\+S1\+\_\+\+Enter\+Critical\+Drv}()~C\+S1\+\_\+\+Enter\+Critical()
+\item 
+\mbox{\Hypertarget{group___c_s1__module_ga45fb3d48218d21f7139c9bebc1c4dbc6}\label{group___c_s1__module_ga45fb3d48218d21f7139c9bebc1c4dbc6}} 
+\#define {\bfseries C\+S1\+\_\+\+Exit\+Critical\+Drv}()~C\+S1\+\_\+\+Exit\+Critical()
+\item 
+\mbox{\Hypertarget{group___c_s1__module_ga6656bf8cb7badce9ab7876d747423f9a}\label{group___c_s1__module_ga6656bf8cb7badce9ab7876d747423f9a}} 
+\#define {\bfseries C\+S1\+\_\+\+Critical\+Variable}()~uint8\+\_\+t cpu\+SR; /$\ast$ variable to store current status $\ast$/
+\item 
+\#define {\bfseries C\+S1\+\_\+\+Enter\+Critical}()
+\item 
+\#define {\bfseries C\+S1\+\_\+\+Exit\+Critical}()
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___c_s1__module_ga82b6d417a4d0545159cb26902dde0fe4}\label{group___c_s1__module_ga82b6d417a4d0545159cb26902dde0fe4}} 
+void {\bfseries C\+S1\+\_\+\+Deinit} (void)
+\item 
+\mbox{\Hypertarget{group___c_s1__module_ga460ac768d9a98675ea7e66a07bd81f65}\label{group___c_s1__module_ga460ac768d9a98675ea7e66a07bd81f65}} 
+void {\bfseries C\+S1\+\_\+\+Init} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___c_s1__module_gafb1280065dc69e29aab948520ada2ae3}\label{group___c_s1__module_gafb1280065dc69e29aab948520ada2ae3}} 
+\index{CS1 module documentation@{CS1 module documentation}!CS1\_EnterCritical@{CS1\_EnterCritical}}
+\index{CS1\_EnterCritical@{CS1\_EnterCritical}!CS1 module documentation@{CS1 module documentation}}
+\doxysubsubsection{\texorpdfstring{CS1\_EnterCritical}{CS1\_EnterCritical}}
+{\footnotesize\ttfamily \#define C\+S1\+\_\+\+Enter\+Critical(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{                                  \(\backslash\)}
+\DoxyCodeLine{      \textcolor{comment}{/*lint -\/save  -\/esym(529,cpuSR) Symbol 'cpuSR' not subsequently referenced. */}\(\backslash\)}
+\DoxyCodeLine{      \_\_asm (                             \(\backslash\)}
+\DoxyCodeLine{      \textcolor{stringliteral}{"mrs   r0, PRIMASK     \(\backslash\)n\(\backslash\)t"}        \(\backslash\)}
+\DoxyCodeLine{      \textcolor{stringliteral}{"cpsid i               \(\backslash\)n\(\backslash\)t"}        \(\backslash\)}
+\DoxyCodeLine{      \textcolor{stringliteral}{"strb r0, \%[output]   \(\backslash\)n\(\backslash\)t"}         \(\backslash\)}
+\DoxyCodeLine{      : [output] \textcolor{stringliteral}{"=m"} (cpuSR) :: \textcolor{stringliteral}{"r0"});   \(\backslash\)}
+\DoxyCodeLine{      \_\_asm (\textcolor{stringliteral}{""} ::: \textcolor{stringliteral}{"memory"});            \(\backslash\)}
+\DoxyCodeLine{      \textcolor{comment}{/*lint -\/restore Symbol 'cpuSR' not subsequently referenced. */}\(\backslash\)}
+\DoxyCodeLine{      \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___c_s1__module_ga48a8a47ea57e3c648ab060d5323b237e}\label{group___c_s1__module_ga48a8a47ea57e3c648ab060d5323b237e}} 
+\index{CS1 module documentation@{CS1 module documentation}!CS1\_ExitCritical@{CS1\_ExitCritical}}
+\index{CS1\_ExitCritical@{CS1\_ExitCritical}!CS1 module documentation@{CS1 module documentation}}
+\doxysubsubsection{\texorpdfstring{CS1\_ExitCritical}{CS1\_ExitCritical}}
+{\footnotesize\ttfamily \#define C\+S1\+\_\+\+Exit\+Critical(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\{                                  \(\backslash\)}
+\DoxyCodeLine{     \_\_asm (                            \(\backslash\)}
+\DoxyCodeLine{     \textcolor{stringliteral}{"ldrb r0, \%[input]    \(\backslash\)n\(\backslash\)t"}        \(\backslash\)}
+\DoxyCodeLine{     \textcolor{stringliteral}{"msr PRIMASK,r0        \(\backslash\)n\(\backslash\)t"}       \(\backslash\)}
+\DoxyCodeLine{     ::[input] \textcolor{stringliteral}{"m"} (cpuSR) : \textcolor{stringliteral}{"r0"});     \(\backslash\)}
+\DoxyCodeLine{     \} \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}

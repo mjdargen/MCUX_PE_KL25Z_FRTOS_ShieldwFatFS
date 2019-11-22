@@ -1,0 +1,87 @@
+\hypertarget{struct_t_p_m___mem_map}{}\doxysection{T\+P\+M\+\_\+\+Mem\+Map Struct Reference}
+\label{struct_t_p_m___mem_map}\index{TPM\_MemMap@{TPM\_MemMap}}
+
+
+{\ttfamily \#include $<$M\+K\+L25\+Z4.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_p_m___mem_map_af4ec20dde961637160e35e7ab113d9da}{SC}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_p_m___mem_map_ac86225aa77135d95142aa86b8c0fe010}{C\+NT}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_p_m___mem_map_af46c48b6009bc12f49d484ee9859bcf9}{M\+OD}}
+\item 
+\mbox{\Hypertarget{struct_t_p_m___mem_map_a68c02e879c87ee9506172faa4d873c3f}\label{struct_t_p_m___mem_map_a68c02e879c87ee9506172faa4d873c3f}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{struct_t_p_m___mem_map_a62c97f42d3dcb6b93f06ca42e3fe7fba}{CnSC}}\\
+\>uint32\_t \mbox{\hyperlink{struct_t_p_m___mem_map_a352e4ab0141e02eff068ec3047693065}{CnV}}\\
+\} {\bfseries CONTROLS} \mbox{[}6\mbox{]}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{struct_t_p_m___mem_map_ab36427a89ccceaa5fce62275f286f205}\label{struct_t_p_m___mem_map_ab36427a89ccceaa5fce62275f286f205}} 
+uint8\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} \mbox{[}20\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_p_m___mem_map_abf85830377235aa5b5d58cc0f86d06b7}{S\+T\+A\+T\+US}}
+\item 
+\mbox{\Hypertarget{struct_t_p_m___mem_map_a499e989c62e9a964e2fdb7ef685ea038}\label{struct_t_p_m___mem_map_a499e989c62e9a964e2fdb7ef685ea038}} 
+uint8\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+1} \mbox{[}48\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_p_m___mem_map_ad54647b8ab5b1dab6948a3d5a13ea8d7}{C\+O\+NF}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+T\+PM -\/ Peripheral register structure 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_t_p_m___mem_map_a62c97f42d3dcb6b93f06ca42e3fe7fba}\label{struct_t_p_m___mem_map_a62c97f42d3dcb6b93f06ca42e3fe7fba}} 
+\index{TPM\_MemMap@{TPM\_MemMap}!CnSC@{CnSC}}
+\index{CnSC@{CnSC}!TPM\_MemMap@{TPM\_MemMap}}
+\doxysubsubsection{\texorpdfstring{CnSC}{CnSC}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+P\+M\+\_\+\+Mem\+Map\+::\+Cn\+SC}
+
+Channel (n) Status and Control, array offset\+: 0xC, array step\+: 0x8 \mbox{\Hypertarget{struct_t_p_m___mem_map_ac86225aa77135d95142aa86b8c0fe010}\label{struct_t_p_m___mem_map_ac86225aa77135d95142aa86b8c0fe010}} 
+\index{TPM\_MemMap@{TPM\_MemMap}!CNT@{CNT}}
+\index{CNT@{CNT}!TPM\_MemMap@{TPM\_MemMap}}
+\doxysubsubsection{\texorpdfstring{CNT}{CNT}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+P\+M\+\_\+\+Mem\+Map\+::\+C\+NT}
+
+Counter, offset\+: 0x4 \mbox{\Hypertarget{struct_t_p_m___mem_map_a352e4ab0141e02eff068ec3047693065}\label{struct_t_p_m___mem_map_a352e4ab0141e02eff068ec3047693065}} 
+\index{TPM\_MemMap@{TPM\_MemMap}!CnV@{CnV}}
+\index{CnV@{CnV}!TPM\_MemMap@{TPM\_MemMap}}
+\doxysubsubsection{\texorpdfstring{CnV}{CnV}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+P\+M\+\_\+\+Mem\+Map\+::\+CnV}
+
+Channel (n) Value, array offset\+: 0x10, array step\+: 0x8 \mbox{\Hypertarget{struct_t_p_m___mem_map_ad54647b8ab5b1dab6948a3d5a13ea8d7}\label{struct_t_p_m___mem_map_ad54647b8ab5b1dab6948a3d5a13ea8d7}} 
+\index{TPM\_MemMap@{TPM\_MemMap}!CONF@{CONF}}
+\index{CONF@{CONF}!TPM\_MemMap@{TPM\_MemMap}}
+\doxysubsubsection{\texorpdfstring{CONF}{CONF}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+P\+M\+\_\+\+Mem\+Map\+::\+C\+O\+NF}
+
+Configuration, offset\+: 0x84 \mbox{\Hypertarget{struct_t_p_m___mem_map_af46c48b6009bc12f49d484ee9859bcf9}\label{struct_t_p_m___mem_map_af46c48b6009bc12f49d484ee9859bcf9}} 
+\index{TPM\_MemMap@{TPM\_MemMap}!MOD@{MOD}}
+\index{MOD@{MOD}!TPM\_MemMap@{TPM\_MemMap}}
+\doxysubsubsection{\texorpdfstring{MOD}{MOD}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+P\+M\+\_\+\+Mem\+Map\+::\+M\+OD}
+
+Modulo, offset\+: 0x8 \mbox{\Hypertarget{struct_t_p_m___mem_map_af4ec20dde961637160e35e7ab113d9da}\label{struct_t_p_m___mem_map_af4ec20dde961637160e35e7ab113d9da}} 
+\index{TPM\_MemMap@{TPM\_MemMap}!SC@{SC}}
+\index{SC@{SC}!TPM\_MemMap@{TPM\_MemMap}}
+\doxysubsubsection{\texorpdfstring{SC}{SC}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+P\+M\+\_\+\+Mem\+Map\+::\+SC}
+
+Status and Control, offset\+: 0x0 \mbox{\Hypertarget{struct_t_p_m___mem_map_abf85830377235aa5b5d58cc0f86d06b7}\label{struct_t_p_m___mem_map_abf85830377235aa5b5d58cc0f86d06b7}} 
+\index{TPM\_MemMap@{TPM\_MemMap}!STATUS@{STATUS}}
+\index{STATUS@{STATUS}!TPM\_MemMap@{TPM\_MemMap}}
+\doxysubsubsection{\texorpdfstring{STATUS}{STATUS}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+P\+M\+\_\+\+Mem\+Map\+::\+S\+T\+A\+T\+US}
+
+Capture and Compare Status, offset\+: 0x50 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Static\+\_\+\+Code/\+I\+O\+\_\+\+Map/\mbox{\hyperlink{_m_k_l25_z4_8h}{M\+K\+L25\+Z4.\+h}}\end{DoxyCompactItemize}

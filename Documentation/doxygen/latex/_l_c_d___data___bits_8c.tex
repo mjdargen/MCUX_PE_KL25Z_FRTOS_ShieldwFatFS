@@ -1,0 +1,44 @@
+\hypertarget{_l_c_d___data___bits_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+L\+C\+D\+\_\+\+Data\+\_\+\+Bits.c File Reference}
+\label{_l_c_d___data___bits_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/LCD\_Data\_Bits.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/LCD\_Data\_Bits.c}}
+
+
+The H\+AL Bits\+IO component provides a low level A\+PI for unified access to general purpose digital input/output 32 pins across various device designs.  
+
+
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+Data\+\_\+\+Bits.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_c_d___data___bits___t_device_data}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+T\+Device\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_l_c_d___data___bits___t_device_data}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+T\+Device\+Data}} $\ast$ {\bfseries L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+T\+Device\+Data\+Ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___l_c_d___data___bits__module_gaaad0562a7a3f2bb5ad2a90f5eff90b5a}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+Init}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This method initializes the associated peripheral(s) and the component internal variables. The method is called automatically as a part of the application initialization code. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group___l_c_d___data___bits__module_ga30f781a42bba0dceca8d7f487a519c0f}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+Get\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the value of the Input/\+Output component. If the direction is \mbox{[}input\mbox{]} then reads the input value of the pins and returns it. If the direction is \mbox{[}output\mbox{]} then returns the last written value (see \mbox{[}Safe mode\mbox{]} property for limitations). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___l_c_d___data___bits__module_gaf2ea7256190ff134f9390922d55d4c5d}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+Put\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint32\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em Specified value is passed to the Input/\+Output component. If the direction is \mbox{[}input\mbox{]} saves the value to a memory or a register, this value will be written to the pins after switching to the output mode -\/ using \mbox{[}Set\+Dir(\+T\+R\+U\+E)\mbox{]} (see \mbox{[}Safe mode\mbox{]} property for limitations). If the direction is \mbox{[}output\mbox{]} it writes the value to the pins. (Method is available only if the Direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___l_c_d___data___bits__module_ga72bcb275bf27e55d38db972130035b24}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+Get\+Bit}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Bit, bool $\ast$Bit\+Val)
+\begin{DoxyCompactList}\small\item\em Returns the value of the specified bit/pin of the Input/\+Output component. If the direction is \mbox{[}input\mbox{]} then it reads the input value of the pin and returns it. If the direction is \mbox{[}output\mbox{]} then it returns the last written value (see \mbox{[}Safe mode\mbox{]} property for limitations). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___l_c_d___data___bits__module_ga59a5841e10d6ed18516ffc9da486e993}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+Put\+Bit}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Bit, bool Val)
+\begin{DoxyCompactList}\small\item\em Specified value is passed to the specified bit/pin of the Input/\+Output component. If the direction is \mbox{[}input\mbox{]} it saves the value to a memory or register, this value will be written to the pin after switching to the output mode -\/ using \mbox{[}Set\+Dir(\+T\+R\+U\+E)\mbox{]} (see \mbox{[}Safe mode\mbox{]} property for limitations). If the direction is \mbox{[}output\mbox{]} it writes the value to the pin. (Method is available only if the Direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___l_c_d___data___bits__module_gac9b46bc287c8c87cca0c30de5be46eec}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+Set\+Bit}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Bit)
+\begin{DoxyCompactList}\small\item\em Sets (to one) the specified bit of the Input/\+Output component. It is the same as \mbox{[}Put\+Bit(\+Bit, T\+R\+U\+E)\mbox{]}. (Method is available only if the Direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___p_e___types__module_ga24c2b045fd04e79e85f261ce4df35588}{L\+D\+D\+\_\+\+T\+Error}} \mbox{\hyperlink{group___l_c_d___data___bits__module_ga89dcecb66789ed5892a8419faf9df477}{L\+C\+D\+\_\+\+Data\+\_\+\+Bits\+\_\+\+Clr\+Bit}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, uint8\+\_\+t Bit)
+\begin{DoxyCompactList}\small\item\em Clears (sets to zero) the specified bit of the Input/\+Output component. It is the same as \mbox{[}Put\+Bit(\+Bit, F\+A\+L\+S\+E)\mbox{]}. (Method is available only if the Direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The H\+AL Bits\+IO component provides a low level A\+PI for unified access to general purpose digital input/output 32 pins across various device designs. 
+
+\begin{DoxyVersion}{Version}
+01.\+05 R\+T\+OS drivers using H\+AL Bits\+IO A\+PI are simpler and more portable to various microprocessors. 
+\end{DoxyVersion}

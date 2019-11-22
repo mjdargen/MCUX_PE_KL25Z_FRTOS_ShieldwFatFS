@@ -1,0 +1,72 @@
+\hypertarget{_f_r_t_o_s1_8c}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+F\+R\+T\+O\+S1.c File Reference}
+\label{_f_r_t_o_s1_8c}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/FRTOS1.c@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/FRTOS1.c}}
+
+
+This component implements the Free\+R\+T\+OS Realtime Operating System.  
+
+
+{\ttfamily \#include \char`\"{}F\+R\+T\+O\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}port\+Ticks.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a08cd45a0bcd7b0ab66da0ccff0c40b54}\label{_f_r_t_o_s1_8c_a08cd45a0bcd7b0ab66da0ccff0c40b54}} 
+\#define {\bfseries S\+H\+E\+L\+L\+\_\+\+M\+A\+X\+\_\+\+N\+O\+F\+\_\+\+T\+A\+S\+KS}~8 /$\ast$ maximum number of tasks, as specified in the properties $\ast$/
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a46053c09f6f8f7a97abd55c1e5d1c1ef}\label{_f_r_t_o_s1_8c_a46053c09f6f8f7a97abd55c1e5d1c1ef}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+T\+CB}~(sizeof(\char`\"{}T\+CB \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a2f9dff1a1f3b416bf0aa6d0b3ea21c58}\label{_f_r_t_o_s1_8c_a2f9dff1a1f3b416bf0aa6d0b3ea21c58}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+T\+IC}~(sizeof(\char`\"{}yes(2) \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a0d5e9a9d7f5fc50b653892923e6e2d5c}\label{_f_r_t_o_s1_8c_a0d5e9a9d7f5fc50b653892923e6e2d5c}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+H\+A\+N\+D\+LE}~(sizeof(\char`\"{}0x20000398 \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_aed6c60d1b523286e64f47e063117f9c5}\label{_f_r_t_o_s1_8c_aed6c60d1b523286e64f47e063117f9c5}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+N\+A\+ME}~(config\+M\+A\+X\+\_\+\+T\+A\+S\+K\+\_\+\+N\+A\+M\+E\+\_\+\+L\+EN+1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a897719787c95493d42a2a3eafaa2bd72}\label{_f_r_t_o_s1_8c_a897719787c95493d42a2a3eafaa2bd72}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+TE}~(sizeof(\char`\"{}Suspended\char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a35f583019d9fcf753a858b93e99c04b3}\label{_f_r_t_o_s1_8c_a35f583019d9fcf753a858b93e99c04b3}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+P\+R\+IO}~(sizeof(\char`\"{}(10,12) \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a5b8f295f34b0fedc6f5ae5ff6885dc57}\label{_f_r_t_o_s1_8c_a5b8f295f34b0fedc6f5ae5ff6885dc57}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+B\+EG}~(sizeof(\char`\"{}0x20000398 \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_ae7d0bd2e5229132eea928a6c97de0513}\label{_f_r_t_o_s1_8c_ae7d0bd2e5229132eea928a6c97de0513}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+E\+ND}~(sizeof(\char`\"{}0x20000398 \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_aa2dd466ff5cf4259d37638b8bc1866fc}\label{_f_r_t_o_s1_8c_aa2dd466ff5cf4259d37638b8bc1866fc}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}~(sizeof(\char`\"{}12000 B \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a77f24c2093868782ef8594dc34e7a40a}\label{_f_r_t_o_s1_8c_a77f24c2093868782ef8594dc34e7a40a}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+T\+OP}~(sizeof(\char`\"{}0x200006\+FC (  132 B) \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a462df74de422c496b42f724994d6d275}\label{_f_r_t_o_s1_8c_a462df74de422c496b42f724994d6d275}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+S\+T\+A\+C\+K\+\_\+\+M\+A\+RK}~(sizeof(\char`\"{}12345 B \char`\"{})-\/1)
+\item 
+\mbox{\Hypertarget{_f_r_t_o_s1_8c_a52dbb96b0ff7223a05fd1b532398c632}\label{_f_r_t_o_s1_8c_a52dbb96b0ff7223a05fd1b532398c632}} 
+\#define {\bfseries P\+A\+D\+\_\+\+S\+T\+A\+T\+\_\+\+T\+A\+S\+K\+\_\+\+R\+U\+N\+T\+I\+ME}~(sizeof(\char`\"{}0x20000398 (100\%)\char`\"{})-\/1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t {\bfseries F\+R\+T\+O\+S1\+\_\+\+Parse\+Command} (const unsigned char $\ast$cmd, bool $\ast$handled, const \mbox{\hyperlink{struct_c_l_s1___std_i_o_type}{C\+L\+S1\+\_\+\+Std\+I\+O\+Type}} $\ast$io)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+\+Init} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+\+Deinit} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+\+App\+Configure\+Timer\+For\+Runtime\+Stats} (void)
+\item 
+uint32\+\_\+t {\bfseries F\+R\+T\+O\+S1\+\_\+\+App\+Get\+Runtime\+Counter\+Value\+From\+I\+SR} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This component implements the Free\+R\+T\+OS Realtime Operating System. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

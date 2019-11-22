@@ -1,0 +1,71 @@
+\hypertarget{struct_d_m_a___mem_map}{}\doxysection{D\+M\+A\+\_\+\+Mem\+Map Struct Reference}
+\label{struct_d_m_a___mem_map}\index{DMA\_MemMap@{DMA\_MemMap}}
+
+
+{\ttfamily \#include $<$M\+K\+L25\+Z4.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_d_m_a___mem_map_ac2655fa4a2c9e21906cf4e769379e83a}\label{struct_d_m_a___mem_map_ac2655fa4a2c9e21906cf4e769379e83a}} 
+uint8\+\_\+t {\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+0} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_d_m_a___mem_map_ad0a9d45f9199d8eca2d26db5b7f08c31}\label{struct_d_m_a___mem_map_ad0a9d45f9199d8eca2d26db5b7f08c31}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>uint32\_t \mbox{\hyperlink{struct_d_m_a___mem_map_a800d089db050cc5c5376f4fd1b8607f4}{SAR}}\\
+\>uint32\_t \mbox{\hyperlink{struct_d_m_a___mem_map_a22aca0a7ea6ca1da1a58f0fe6f32166f}{DAR}}\\
+\mbox{\Hypertarget{struct_d_m_a___mem_map_1_1_0d8_a77bd650655fa37c8cbfa488d89301121}\label{struct_d_m_a___mem_map_1_1_0d8_a77bd650655fa37c8cbfa488d89301121}} 
+\>union \{\\
+\>\>uint32\_t \mbox{\hyperlink{struct_d_m_a___mem_map_ad1e76cea4d92082ca9ed0d760ce5cefe}{DSR\_BCR}}\\
+\>\>struct \{\\
+\>\>\>uint8\_t {\bfseries RESERVED\_0} \mbox{[}3\mbox{]}\\
+\>\>\>uint8\_t \mbox{\hyperlink{struct_d_m_a___mem_map_a386ac5fd0aa8748b87f2de231c917b07}{DSR}}\\
+\>\>\} {\bfseries DMA\_DSR\_ACCESS8BIT}\\
+\>\} \\
+\>uint32\_t \mbox{\hyperlink{struct_d_m_a___mem_map_a844c0fef8183d262baec56c84a07c070}{DCR}}\\
+\} {\bfseries DMA} \mbox{[}4\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+MA -\/ Peripheral register structure 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_d_m_a___mem_map_a22aca0a7ea6ca1da1a58f0fe6f32166f}\label{struct_d_m_a___mem_map_a22aca0a7ea6ca1da1a58f0fe6f32166f}} 
+\index{DMA\_MemMap@{DMA\_MemMap}!DAR@{DAR}}
+\index{DAR@{DAR}!DMA\_MemMap@{DMA\_MemMap}}
+\doxysubsubsection{\texorpdfstring{DAR}{DAR}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+AR}
+
+Destination Address Register, array offset\+: 0x104, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___mem_map_a844c0fef8183d262baec56c84a07c070}\label{struct_d_m_a___mem_map_a844c0fef8183d262baec56c84a07c070}} 
+\index{DMA\_MemMap@{DMA\_MemMap}!DCR@{DCR}}
+\index{DCR@{DCR}!DMA\_MemMap@{DMA\_MemMap}}
+\doxysubsubsection{\texorpdfstring{DCR}{DCR}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+CR}
+
+D\+MA Control Register, array offset\+: 0x10C, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___mem_map_a386ac5fd0aa8748b87f2de231c917b07}\label{struct_d_m_a___mem_map_a386ac5fd0aa8748b87f2de231c917b07}} 
+\index{DMA\_MemMap@{DMA\_MemMap}!DSR@{DSR}}
+\index{DSR@{DSR}!DMA\_MemMap@{DMA\_MemMap}}
+\doxysubsubsection{\texorpdfstring{DSR}{DSR}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+SR}
+
+D\+M\+A\+\_\+\+D\+S\+R0 register...D\+M\+A\+\_\+\+D\+S\+R3 register., array offset\+: 0x10B, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___mem_map_ad1e76cea4d92082ca9ed0d760ce5cefe}\label{struct_d_m_a___mem_map_ad1e76cea4d92082ca9ed0d760ce5cefe}} 
+\index{DMA\_MemMap@{DMA\_MemMap}!DSR\_BCR@{DSR\_BCR}}
+\index{DSR\_BCR@{DSR\_BCR}!DMA\_MemMap@{DMA\_MemMap}}
+\doxysubsubsection{\texorpdfstring{DSR\_BCR}{DSR\_BCR}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+D\+S\+R\+\_\+\+B\+CR}
+
+D\+MA Status Register / Byte Count Register, array offset\+: 0x108, array step\+: 0x10 \mbox{\Hypertarget{struct_d_m_a___mem_map_a800d089db050cc5c5376f4fd1b8607f4}\label{struct_d_m_a___mem_map_a800d089db050cc5c5376f4fd1b8607f4}} 
+\index{DMA\_MemMap@{DMA\_MemMap}!SAR@{SAR}}
+\index{SAR@{SAR}!DMA\_MemMap@{DMA\_MemMap}}
+\doxysubsubsection{\texorpdfstring{SAR}{SAR}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+M\+A\+\_\+\+Mem\+Map\+::\+S\+AR}
+
+Source Address Register, array offset\+: 0x100, array step\+: 0x10 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Static\+\_\+\+Code/\+I\+O\+\_\+\+Map/\mbox{\hyperlink{_m_k_l25_z4_8h}{M\+K\+L25\+Z4.\+h}}\end{DoxyCompactItemize}

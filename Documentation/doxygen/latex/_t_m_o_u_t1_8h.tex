@@ -1,0 +1,54 @@
+\hypertarget{_t_m_o_u_t1_8h}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+T\+M\+O\+U\+T1.h File Reference}
+\label{_t_m_o_u_t1_8h}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/TMOUT1.h@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/TMOUT1.h}}
+
+
+The module implements timeout functionality. With this implementation, it is possible to wait for a given time, and the time is counted by a periodic interrupt.  
+
+
+{\ttfamily \#include \char`\"{}M\+C\+U\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+M\+O\+U\+T1config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}F\+R\+T\+O\+S1.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle}
+\item 
+\#define {\bfseries T\+M\+O\+U\+T1\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+H\+A\+N\+D\+LE}~0xff  /$\ast$ special handle to indicate that we were running out of handlers $\ast$/
+\item 
+\#define {\bfseries T\+M\+O\+U\+T1\+\_\+\+T\+I\+C\+K\+\_\+\+P\+E\+R\+I\+O\+D\+\_\+\+MS}~(1000/1000)                           /$\ast$ Tick period in milliseconds as defined in R\+T\+OS component properties, at which T\+M\+O\+U\+T1.\+\_\+\+Add\+Tick() is called $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t {\bfseries T\+M\+O\+U\+T1\+\_\+\+Counter\+Type}
+\item 
+typedef uint8\+\_\+t {\bfseries T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle {\bfseries T\+M\+O\+U\+T1\+\_\+\+Get\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Type nof\+Ticks)
+\item 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Leave\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+bool {\bfseries T\+M\+O\+U\+T1\+\_\+\+Counter\+Expired} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Add\+Tick} (void)
+\item 
+void {\bfseries T\+M\+O\+U\+T1\+\_\+\+Init} (void)
+\item 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type {\bfseries T\+M\+O\+U\+T1\+\_\+\+Value} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle)
+\item 
+T\+M\+O\+U\+T1\+\_\+\+Counter\+Type {\bfseries T\+M\+O\+U\+T1\+\_\+\+Set\+Counter} (T\+M\+O\+U\+T1\+\_\+\+Counter\+Handle handle, T\+M\+O\+U\+T1\+\_\+\+Counter\+Type nof\+Ticks)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The module implements timeout functionality. With this implementation, it is possible to wait for a given time, and the time is counted by a periodic interrupt. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

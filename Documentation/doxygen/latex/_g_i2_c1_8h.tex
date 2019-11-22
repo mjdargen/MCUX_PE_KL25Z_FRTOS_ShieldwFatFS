@@ -1,0 +1,97 @@
+\hypertarget{_g_i2_c1_8h}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+G\+I2\+C1.h File Reference}
+\label{_g_i2_c1_8h}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/GI2C1.h@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/GI2C1.h}}
+
+
+This component implements a generic I2C driver wrapper to work both with L\+DD and non-\/\+L\+DD I2C components.  
+
+
+{\ttfamily \#include \char`\"{}M\+C\+U\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+I2\+C1config.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries G\+I2\+C1\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~\mbox{\hyperlink{_g_i2_c1config_8h_ab8138596b15bc81aab26e7e3ceb8c020}{G\+I2\+C1\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}} /$\ast$ size of internal buffer used, set in the component properties $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum G\+I2\+C1\+\_\+\+Enum\+Send\+Flags\+\_\+ {\bfseries G\+I2\+C1\+\_\+\+Enum\+Send\+Flags}
+\item 
+typedef enum G\+I2\+C1\+\_\+\+Enum\+Start\+Flags\+\_\+ {\bfseries G\+I2\+C1\+\_\+\+Enum\+Start\+Flags}
+\item 
+typedef enum G\+I2\+C1\+\_\+\+Enum\+Ack\+Flags\+\_\+ {\bfseries G\+I2\+C1\+\_\+\+Enum\+Ack\+Flags}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga8dbac66b33749792f3860eeb6288bdbc}\label{group___g_i2_c1__module_ga8dbac66b33749792f3860eeb6288bdbc}} 
+enum {\bfseries G\+I2\+C1\+\_\+\+Enum\+Send\+Flags\+\_\+} \{ {\bfseries G\+I2\+C1\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+OP}, 
+{\bfseries G\+I2\+C1\+\_\+\+D\+O\+\_\+\+N\+O\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+OP}, 
+{\bfseries G\+I2\+C1\+\_\+\+S\+T\+O\+P\+\_\+\+N\+O\+S\+T\+A\+RT}
+ \}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga32ff50025fe8fb4127f3588ff2032d62}\label{group___g_i2_c1__module_ga32ff50025fe8fb4127f3588ff2032d62}} 
+enum {\bfseries G\+I2\+C1\+\_\+\+Enum\+Start\+Flags\+\_\+} \{ {\bfseries G\+I2\+C1\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}, 
+{\bfseries G\+I2\+C1\+\_\+\+D\+O\+\_\+\+N\+O\+T\+\_\+\+S\+E\+N\+D\+\_\+\+S\+T\+A\+RT}
+ \}
+\item 
+\mbox{\Hypertarget{group___g_i2_c1__module_ga06884f69572582edb75dc4ee0c2f5feb}\label{group___g_i2_c1__module_ga06884f69572582edb75dc4ee0c2f5feb}} 
+enum {\bfseries G\+I2\+C1\+\_\+\+Enum\+Ack\+Flags\+\_\+} \{ {\bfseries G\+I2\+C1\+\_\+\+S\+E\+N\+D\+\_\+\+L\+A\+S\+T\+\_\+\+A\+CK}, 
+{\bfseries G\+I2\+C1\+\_\+\+D\+O\+\_\+\+N\+O\+T\+\_\+\+L\+A\+S\+T\+\_\+\+A\+CK}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries C\+I2\+C1\+\_\+\+On\+Master\+Block\+Sent} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\item 
+void {\bfseries C\+I2\+C1\+\_\+\+On\+Master\+Block\+Received} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\item 
+void {\bfseries G\+I2\+C1\+\_\+\+Init} (void)
+\item 
+void {\bfseries G\+I2\+C1\+\_\+\+Deinit} (void)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Address} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$mem\+Addr, uint8\+\_\+t mem\+Addr\+Size, uint8\+\_\+t $\ast$data, uint16\+\_\+t data\+Size)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Address} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$mem\+Addr, uint8\+\_\+t mem\+Addr\+Size, uint8\+\_\+t $\ast$data, uint16\+\_\+t data\+Size)
+\item 
+void $\ast$ {\bfseries G\+I2\+C1\+\_\+\+Get\+Semaphore} (void)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Block} (void $\ast$data, uint16\+\_\+t data\+Size, G\+I2\+C1\+\_\+\+Enum\+Send\+Flags flags)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Block} (void $\ast$data, uint16\+\_\+t data\+Size, G\+I2\+C1\+\_\+\+Enum\+Send\+Flags flags)
+\item 
+void {\bfseries G\+I2\+C1\+\_\+\+Request\+Bus} (void)
+\item 
+void {\bfseries G\+I2\+C1\+\_\+\+Release\+Bus} (void)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Select\+Slave} (uint8\+\_\+t i2c\+Addr)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Unselect\+Slave} (void)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Byte\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint8\+\_\+t $\ast$data)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Byte\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint8\+\_\+t data)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Scan\+Device} (uint8\+\_\+t i2c\+Addr)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Probe\+A\+CK} (void $\ast$data, uint16\+\_\+t data\+Size, G\+I2\+C1\+\_\+\+Enum\+Send\+Flags flags, uint16\+\_\+t Wait\+Time\+US)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Word\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint16\+\_\+t $\ast$data)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Word\+Address8} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t mem\+Addr, uint16\+\_\+t data)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Byte} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$data)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Write\+Byte} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t data)
+\item 
+uint8\+\_\+t {\bfseries G\+I2\+C1\+\_\+\+Read\+Address\+Wait} (uint8\+\_\+t i2c\+Addr, uint8\+\_\+t $\ast$mem\+Addr, uint8\+\_\+t mem\+Addr\+Size, uint16\+\_\+t wait\+Ms, uint8\+\_\+t $\ast$data, uint16\+\_\+t data\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This component implements a generic I2C driver wrapper to work both with L\+DD and non-\/\+L\+DD I2C components. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

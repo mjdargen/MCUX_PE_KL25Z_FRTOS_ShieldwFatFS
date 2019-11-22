@@ -1,0 +1,406 @@
+\hypertarget{group___f_r_t_o_s1__module}{}\doxysection{F\+R\+T\+O\+S1 module documentation}
+\label{group___f_r_t_o_s1__module}\index{FRTOS1 module documentation@{FRTOS1 module documentation}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga7f7bad2d2773d90a6f489fc082f5a468}\label{group___f_r_t_o_s1__module_ga7f7bad2d2773d90a6f489fc082f5a468}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+\+P\+A\+R\+S\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+N\+A\+B\+L\+ED}~(config\+U\+S\+E\+\_\+\+S\+H\+E\+LL) /$\ast$ set to 1 if method Parse\+Command() is present, 0 otherwise $\ast$/
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga8175ab6e3cdee169c1b207249c018fbc}\label{group___f_r_t_o_s1__module_ga8175ab6e3cdee169c1b207249c018fbc}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E\+\_\+\+P\+E\+X\+\_\+\+R\+T\+O\+S\+\_\+\+M\+A\+C\+R\+OS}~1  /$\ast$ set to 1 to generate the R\+T\+OS macros P\+E\+X\+\_\+\+R\+T\+O\+S\+\_\+\+I\+N\+IT() and P\+E\+X\+\_\+\+R\+T\+O\+S\+\_\+\+S\+T\+A\+RT() $\ast$/
+\item 
+\#define {\bfseries P\+E\+X\+\_\+\+R\+T\+O\+S\+\_\+\+I\+N\+IT}()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga78984a86d3c0738dfba6c7cffb1f9766}\label{group___f_r_t_o_s1__module_ga78984a86d3c0738dfba6c7cffb1f9766}} 
+\#define {\bfseries P\+E\+X\+\_\+\+R\+T\+O\+S\+\_\+\+S\+T\+A\+RT}()~F\+R\+T\+O\+S1\+\_\+v\+Task\+Start\+Scheduler()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gabee351bd31e8f22c295e36727dc0da2a}\label{group___f_r_t_o_s1__module_gabee351bd31e8f22c295e36727dc0da2a}} 
+\#define {\bfseries F\+R\+E\+E\+R\+T\+O\+S\+\_\+\+C\+P\+U\+\_\+\+C\+O\+R\+T\+E\+X\+\_\+M}~0 /$\ast$ Cortex M0+ core $\ast$/
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac3c1de9aa16951baa6a82649a5708f0a}\label{group___f_r_t_o_s1__module_gac3c1de9aa16951baa6a82649a5708f0a}} 
+\#define {\bfseries \+\_\+\+\_\+\+B\+W\+User\+Type\+\_\+\+Tsize\+\_\+t}
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga55bf9a88570413122c2313f4c889b1e4}\label{group___f_r_t_o_s1__module_ga55bf9a88570413122c2313f4c889b1e4}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Create}(pv\+Task\+Code,  pc\+Name,  us\+Stack\+Depth,  pv\+Parameters,  ux\+Priority,  pv\+Created\+Task)~x\+Task\+Create(pv\+Task\+Code, pc\+Name, us\+Stack\+Depth, pv\+Parameters, ux\+Priority, pv\+Created\+Task)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga90728be2b398eb6c4b265e7db4f7985a}\label{group___f_r_t_o_s1__module_ga90728be2b398eb6c4b265e7db4f7985a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Delete}(px\+Task)~v\+Task\+Delete(px\+Task)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaf792f2c8cca61f076134b057f6029677}\label{group___f_r_t_o_s1__module_gaf792f2c8cca61f076134b057f6029677}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Start\+Scheduler}()~v\+Task\+Start\+Scheduler()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gae5068fcbc0ac5513a978a8ba03ef53e3}\label{group___f_r_t_o_s1__module_gae5068fcbc0ac5513a978a8ba03ef53e3}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+task\+Y\+I\+E\+LD}()~task\+Y\+I\+E\+LD()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaddc0c0064f175a3c83b24c83caf32128}\label{group___f_r_t_o_s1__module_gaddc0c0064f175a3c83b24c83caf32128}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+task\+E\+N\+T\+E\+R\+\_\+\+C\+R\+I\+T\+I\+C\+AL}()~task\+E\+N\+T\+E\+R\+\_\+\+C\+R\+I\+T\+I\+C\+AL()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga1f3d51d9c8451ecf09eae1c5c816c54f}\label{group___f_r_t_o_s1__module_ga1f3d51d9c8451ecf09eae1c5c816c54f}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+task\+E\+X\+I\+T\+\_\+\+C\+R\+I\+T\+I\+C\+AL}()~task\+E\+X\+I\+T\+\_\+\+C\+R\+I\+T\+I\+C\+AL()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga89a659441dfc2c89b84234f8c3c205c7}\label{group___f_r_t_o_s1__module_ga89a659441dfc2c89b84234f8c3c205c7}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+task\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}()~task\+D\+I\+S\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga0c37f432c9538a279a6813a430a017aa}\label{group___f_r_t_o_s1__module_ga0c37f432c9538a279a6813a430a017aa}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+task\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS}()~task\+E\+N\+A\+B\+L\+E\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+TS()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga473cb2c53465e4f4e41c98c28cadcbce}\label{group___f_r_t_o_s1__module_ga473cb2c53465e4f4e41c98c28cadcbce}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Suspend\+All}()~v\+Task\+Suspend\+All()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga0b808ab2b4a42ef92dc5b7df25094b13}\label{group___f_r_t_o_s1__module_ga0b808ab2b4a42ef92dc5b7df25094b13}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Resume\+All}()~x\+Task\+Resume\+All()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga31e207c0eb1a496de7069e8ba6573287}\label{group___f_r_t_o_s1__module_ga31e207c0eb1a496de7069e8ba6573287}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Delay}(x\+Ticks\+To\+Delay)~v\+Task\+Delay(x\+Ticks\+To\+Delay)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaac0258bd4992309055d82679f3ed2c71}\label{group___f_r_t_o_s1__module_gaac0258bd4992309055d82679f3ed2c71}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Delay\+Until}(px\+Previous\+Wake\+Time,  x\+Time\+Increment)~v\+Task\+Delay\+Until(px\+Previous\+Wake\+Time, x\+Time\+Increment)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gab9e7a0524de943a16f69ee914a73f8c6}\label{group___f_r_t_o_s1__module_gab9e7a0524de943a16f69ee914a73f8c6}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+ux\+Task\+Priority\+Get}(px\+Task)~ux\+Task\+Priority\+Get(px\+Task)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga23d9e89eba01c0ee9728034c78d496a4}\label{group___f_r_t_o_s1__module_ga23d9e89eba01c0ee9728034c78d496a4}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Priority\+Set}(px\+Task,  ux\+New\+Priority)~v\+Task\+Priority\+Set(px\+Task, ux\+New\+Priority)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga6593f05f6a61d2cbcc758280687799e4}\label{group___f_r_t_o_s1__module_ga6593f05f6a61d2cbcc758280687799e4}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Take\+Recursive}(x\+Mutex,  x\+Block\+Time)~x\+Semaphore\+Take\+Recursive(x\+Mutex, x\+Block\+Time)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga4f388c91ba2f9499d9e6a5f0423e1312}\label{group___f_r_t_o_s1__module_ga4f388c91ba2f9499d9e6a5f0423e1312}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Give\+Recursive}(x\+Mutex)~x\+Semaphore\+Give\+Recursive(x\+Mutex)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga317f1f005a09cdbe6847dfb5f70d615d}\label{group___f_r_t_o_s1__module_ga317f1f005a09cdbe6847dfb5f70d615d}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Recursive\+Mutex}()~x\+Semaphore\+Create\+Recursive\+Mutex()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga4951eb3c0e567bbfa7fe61c2285ede9d}\label{group___f_r_t_o_s1__module_ga4951eb3c0e567bbfa7fe61c2285ede9d}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Suspend}(px\+Task\+To\+Suspend)~v\+Task\+Suspend(px\+Task\+To\+Suspend)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga3c579d386291c86d2a541b60269d37cf}\label{group___f_r_t_o_s1__module_ga3c579d386291c86d2a541b60269d37cf}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Resume}(px\+Task\+To\+Resume)~v\+Task\+Resume(px\+Task\+To\+Resume)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gab8e8fcdf8b7ab36ee13bdefd97034ec2}\label{group___f_r_t_o_s1__module_gab8e8fcdf8b7ab36ee13bdefd97034ec2}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Mutex}()~x\+Semaphore\+Create\+Mutex()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga29d5d4c3ac382b41af7ead92376a5c2b}\label{group___f_r_t_o_s1__module_ga29d5d4c3ac382b41af7ead92376a5c2b}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Take}(x\+Mutex,  x\+Block\+Time)~x\+Semaphore\+Take(x\+Mutex, x\+Block\+Time)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga7f2fc0243afeed67a15187eece8a3455}\label{group___f_r_t_o_s1__module_ga7f2fc0243afeed67a15187eece8a3455}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Give}(x\+Mutex)~x\+Semaphore\+Give(x\+Mutex)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac7aa17de6801646d6be7adf73f5abe9d}\label{group___f_r_t_o_s1__module_gac7aa17de6801646d6be7adf73f5abe9d}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Semaphore\+Create\+Binary}(x\+Semaphore)~v\+Semaphore\+Create\+Binary(x\+Semaphore)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaa431f20bcfa36f69179bdb80a798e40a}\label{group___f_r_t_o_s1__module_gaa431f20bcfa36f69179bdb80a798e40a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Counting}(ux\+Max\+Count,  ux\+Initial\+Count)~x\+Semaphore\+Create\+Counting(ux\+Max\+Count, ux\+Initial\+Count)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga18a83a2ccf4fa347a7def57ab5da9a24}\label{group___f_r_t_o_s1__module_ga18a83a2ccf4fa347a7def57ab5da9a24}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Give\+From\+I\+SR}(x\+Semaphore,  px\+Higher\+Priority\+Task\+Woken)~x\+Semaphore\+Give\+From\+I\+SR(x\+Semaphore, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gabcd302b8e84702f8103fe5f5b3400cf2}\label{group___f_r_t_o_s1__module_gabcd302b8e84702f8103fe5f5b3400cf2}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Semaphore\+Delete}(x\+Semaphore)~v\+Semaphore\+Delete(x\+Semaphore)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gae4c58c8c2b39744a411f695db4d2338f}\label{group___f_r_t_o_s1__module_gae4c58c8c2b39744a411f695db4d2338f}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+List}(pc\+Write\+Buffer,  buf\+Size)~v\+Task\+List(pc\+Write\+Buffer, buf\+Size)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga142a1a9cfad95cf49afe6405ee62c89d}\label{group___f_r_t_o_s1__module_ga142a1a9cfad95cf49afe6405ee62c89d}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+pv\+Port\+Malloc}(x\+Wanted\+Size)~pv\+Port\+Malloc(x\+Wanted\+Size)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga03852f53f5819af76e27fbdb63c7db05}\label{group___f_r_t_o_s1__module_ga03852f53f5819af76e27fbdb63c7db05}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Port\+Free}(pv)~v\+Port\+Free(pv)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga64e1272667e382a1f6f34303551ba5a0}\label{group___f_r_t_o_s1__module_ga64e1272667e382a1f6f34303551ba5a0}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Get\+Tick\+Count}()~x\+Task\+Get\+Tick\+Count()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga4c65a3925f657617b2bb70baad5b01ac}\label{group___f_r_t_o_s1__module_ga4c65a3925f657617b2bb70baad5b01ac}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Get\+Scheduler\+State}()~x\+Task\+Get\+Scheduler\+State()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga69f4c16b76c4b4f247d578fe6a2b5c01}\label{group___f_r_t_o_s1__module_ga69f4c16b76c4b4f247d578fe6a2b5c01}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+ux\+Task\+Get\+Stack\+High\+Water\+Mark}(x\+Task)~ux\+Task\+Get\+Stack\+High\+Water\+Mark(x\+Task)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga5e6c4a5e6515fba1103b45d23a0b674d}\label{group___f_r_t_o_s1__module_ga5e6c4a5e6515fba1103b45d23a0b674d}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+ux\+Task\+Get\+Number\+Of\+Tasks}()~ux\+Task\+Get\+Number\+Of\+Tasks()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gacaa93d7e961f88d533dbd67e33336b82}\label{group___f_r_t_o_s1__module_gacaa93d7e961f88d533dbd67e33336b82}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Get\+Run\+Time\+Stats}(pc\+Write\+Buffer,  buf\+Size)~v\+Task\+Get\+Run\+Time\+Stats(pc\+Write\+Buffer, buf\+Size)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga1b1f79bf76eddf7de775d1dad57ff762}\label{group___f_r_t_o_s1__module_ga1b1f79bf76eddf7de775d1dad57ff762}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Port\+Get\+Free\+Heap\+Size}()~x\+Port\+Get\+Free\+Heap\+Size()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac8252acb1e18de782bb342837c8c8494}\label{group___f_r_t_o_s1__module_gac8252acb1e18de782bb342837c8c8494}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Create}(ux\+Queue\+Length,  ux\+Item\+Size)~x\+Queue\+Create(ux\+Queue\+Length, ux\+Item\+Size)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaf9606ddcf23b9e935c653dcbce5876ef}\label{group___f_r_t_o_s1__module_gaf9606ddcf23b9e935c653dcbce5876ef}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Send\+To\+Front}(x\+Queue,  pv\+Item\+To\+Queue,  x\+Ticks\+To\+Wait)~x\+Queue\+Send\+To\+Front(x\+Queue, pv\+Item\+To\+Queue, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga2dafade8e0fcf46fe21f9b1d2607321c}\label{group___f_r_t_o_s1__module_ga2dafade8e0fcf46fe21f9b1d2607321c}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Send\+To\+Back}(x\+Queue,  pv\+Item\+To\+Queue,  x\+Ticks\+To\+Wait)~x\+Queue\+Send\+To\+Back(x\+Queue, pv\+Item\+To\+Queue, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gad7427f2ce5bedcbb303ab1c78f1b08e8}\label{group___f_r_t_o_s1__module_gad7427f2ce5bedcbb303ab1c78f1b08e8}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Receive}(x\+Queue,  pv\+Buffer,  x\+Ticks\+To\+Wait)~x\+Queue\+Receive(x\+Queue, pv\+Buffer, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gab392410953e79e4f03f1e842fc42911e}\label{group___f_r_t_o_s1__module_gab392410953e79e4f03f1e842fc42911e}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Peek}(x\+Queue,  pv\+Buffer,  x\+Ticks\+To\+Wait)~x\+Queue\+Peek(x\+Queue, pv\+Buffer, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga388235cc97c9014b4f9006b1bdfeea28}\label{group___f_r_t_o_s1__module_ga388235cc97c9014b4f9006b1bdfeea28}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Queue\+Delete}(px\+Queue\+To\+Delete)~v\+Queue\+Delete(px\+Queue\+To\+Delete)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac773bdbaf0114e0fd5e474aaf45d920e}\label{group___f_r_t_o_s1__module_gac773bdbaf0114e0fd5e474aaf45d920e}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+ux\+Queue\+Messages\+Waiting}(x\+Queue)~ux\+Queue\+Messages\+Waiting(x\+Queue)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga4a6dd9ea24d057b81d2278d783b33358}\label{group___f_r_t_o_s1__module_ga4a6dd9ea24d057b81d2278d783b33358}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+ux\+Queue\+Messages\+Waitingfrom\+I\+SR}(x\+Queue)~ux\+Queue\+Messages\+Waitingfrom\+I\+SR(x\+Queue)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga704b51f1302338d677287f77fc9f2a99}\label{group___f_r_t_o_s1__module_ga704b51f1302338d677287f77fc9f2a99}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Receive\+From\+I\+SR}(x\+Queue,  pv\+Buffer,  px\+Higher\+Priority\+Task\+Woken)~x\+Queue\+Receive\+From\+I\+SR(x\+Queue, pv\+Buffer, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga8197f076cd857ec5476ab2d359edc72a}\label{group___f_r_t_o_s1__module_ga8197f076cd857ec5476ab2d359edc72a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Send\+To\+Front\+From\+I\+SR}(x\+Queue,  pv\+Item\+To\+Queue,  px\+Higher\+Priority\+Task\+Woken)~x\+Queue\+Send\+To\+Front\+From\+I\+SR(x\+Queue, pv\+Item\+To\+Queue, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gabd9e044ab8e80092cdb4be700154733a}\label{group___f_r_t_o_s1__module_gabd9e044ab8e80092cdb4be700154733a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Send\+To\+Back\+From\+I\+SR}(x\+Queue,  pv\+Item\+To\+Queue,  px\+Higher\+Priority\+Task\+Woken)~x\+Queue\+Send\+To\+Back\+From\+I\+SR(x\+Queue, pv\+Item\+To\+Queue,px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga93f84683e0388ccd7a44fc1e9117116e}\label{group___f_r_t_o_s1__module_ga93f84683e0388ccd7a44fc1e9117116e}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Resume\+From\+I\+SR}(px\+Task\+To\+Resume)~x\+Task\+Resume\+From\+I\+SR(px\+Task\+To\+Resume)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga2cfa9d51a66095c9a35136aca0a5d686}\label{group___f_r_t_o_s1__module_ga2cfa9d51a66095c9a35136aca0a5d686}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Reset}(x\+Queue)~x\+Queue\+Reset(x\+Queue)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga93d06bc11bdc64cf1be4a5624db9cde5}\label{group___f_r_t_o_s1__module_ga93d06bc11bdc64cf1be4a5624db9cde5}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Get\+Mutex\+Holder}(x\+Semaphore)~x\+Semaphore\+Get\+Mutex\+Holder(x\+Semaphore)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gacd326292cbd616697e16439191b295af}\label{group___f_r_t_o_s1__module_gacd326292cbd616697e16439191b295af}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Take\+From\+I\+SR}(x\+Semaphore,  px\+Higher\+Priority\+Task\+Woken)~x\+Semaphore\+Take\+From\+I\+SR(x\+Semaphore, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga00e81c9fe52fbff9d494f57b10fbd362}\label{group___f_r_t_o_s1__module_ga00e81c9fe52fbff9d494f57b10fbd362}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Get\+Application\+Task\+Tag}(x\+Task)~x\+Task\+Get\+Application\+Task\+Tag(x\+Task)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga318247066ea3821975a588f1c45e4423}\label{group___f_r_t_o_s1__module_ga318247066ea3821975a588f1c45e4423}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Set\+Application\+Task\+Tag}(x\+Task,  px\+Hook\+Function)~v\+Task\+Set\+Application\+Task\+Tag(x\+Task, px\+Hook\+Function)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga0d404ee76d0ebf0a8c05cc93758c9482}\label{group___f_r_t_o_s1__module_ga0d404ee76d0ebf0a8c05cc93758c9482}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Get\+Current\+Task\+Handle}()~x\+Task\+Get\+Current\+Task\+Handle()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga719ba1f67fd6fe47bdb913b189d11613}\label{group___f_r_t_o_s1__module_ga719ba1f67fd6fe47bdb913b189d11613}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Get\+Idle\+Task\+Handle}()~x\+Task\+Get\+Idle\+Task\+Handle()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga5287b9ac0fb65f22ea43233129941081}\label{group___f_r_t_o_s1__module_ga5287b9ac0fb65f22ea43233129941081}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+pc\+Task\+Get\+Task\+Name}(x\+Task\+To\+Query)~pc\+Task\+Get\+Task\+Name(x\+Task\+To\+Query)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga94767df0ea5aaacb1f77ec1ab6d70b89}\label{group___f_r_t_o_s1__module_ga94767df0ea5aaacb1f77ec1ab6d70b89}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Get\+Tick\+Count\+From\+I\+SR}()~x\+Task\+Get\+Tick\+Count\+From\+I\+SR()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaa75c7697f32374cfee66357b7c452dfe}\label{group___f_r_t_o_s1__module_gaa75c7697f32374cfee66357b7c452dfe}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Call\+Application\+Task\+Hook}(x\+Task,  pv\+Parameter)~x\+Task\+Call\+Application\+Task\+Hook(x\+Task, pv\+Parameter)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga25b51ac12e32ed1b5da8495eb752ac27}\label{group___f_r_t_o_s1__module_ga25b51ac12e32ed1b5da8495eb752ac27}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Peek\+From\+I\+SR}(x\+Queue,  pv\+Buffer,  x\+Ticks\+To\+Wait)~x\+Queue\+Peek\+From\+I\+SR(x\+Queue, pv\+Buffer, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga88c586d43b510fdf5a316b0ee1e028f7}\label{group___f_r_t_o_s1__module_ga88c586d43b510fdf5a316b0ee1e028f7}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Overwrite}(x\+Queue,  pv\+Item\+To\+Queue)~x\+Queue\+Overwrite(x\+Queue, pv\+Item\+To\+Queue)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga20061a4cc11e7fffd173618f77452ce0}\label{group___f_r_t_o_s1__module_ga20061a4cc11e7fffd173618f77452ce0}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Overwrite\+From\+I\+SR}(x\+Queue,  pv\+Item\+To\+Queue,  px\+Higher\+Priority\+Task\+Woken)~x\+Queue\+Overwrite\+From\+I\+SR(x\+Queue, pv\+Item\+To\+Queue, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gabe4547ea6de76b95d8851f20d18d0b8a}\label{group___f_r_t_o_s1__module_gabe4547ea6de76b95d8851f20d18d0b8a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Queue\+Add\+To\+Registry}(x\+Queue,  pc\+Queue\+Name)~v\+Queue\+Add\+To\+Registry(x\+Queue, pc\+Queue\+Name)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga84040ca0e6ace32d61c5cc5a54acc205}\label{group___f_r_t_o_s1__module_ga84040ca0e6ace32d61c5cc5a54acc205}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Queue\+Unregister\+Queue}(x\+Queue)~v\+Queue\+Unregister\+Queue(x\+Queue)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gacd5e9efd0bfea7b8f039e35005631439}\label{group___f_r_t_o_s1__module_gacd5e9efd0bfea7b8f039e35005631439}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Is\+Queue\+Full\+From\+I\+SR}(x\+Queue)~x\+Queue\+Is\+Queue\+Full\+From\+I\+SR(x\+Queue)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaf9752f7b1658c9ca5975583fa5e7cc5a}\label{group___f_r_t_o_s1__module_gaf9752f7b1658c9ca5975583fa5e7cc5a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Is\+Queue\+Empty\+From\+I\+SR}(x\+Queue)~x\+Queue\+Is\+Queue\+Empty\+From\+I\+SR(x\+Queue)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga8a23ed0874763be44263ff417691b7f0}\label{group___f_r_t_o_s1__module_ga8a23ed0874763be44263ff417691b7f0}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Create}()~x\+Event\+Group\+Create()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaaaf9b14121ed276e0f561a5a8e1cc861}\label{group___f_r_t_o_s1__module_gaaaf9b14121ed276e0f561a5a8e1cc861}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Wait\+Bits}(x\+Event\+Group,  ux\+Bits\+To\+Wait\+For,  x\+Clear\+On\+Exit,  x\+Wait\+For\+All\+Bits,  x\+Ticks\+To\+Wait)~x\+Event\+Group\+Wait\+Bits(x\+Event\+Group, ux\+Bits\+To\+Wait\+For, x\+Clear\+On\+Exit, x\+Wait\+For\+All\+Bits, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gacfc13f0806c012d7ce1f45a53652e8d8}\label{group___f_r_t_o_s1__module_gacfc13f0806c012d7ce1f45a53652e8d8}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Set\+Bits}(x\+Event\+Group,  ux\+Bits\+To\+Set)~x\+Event\+Group\+Set\+Bits(x\+Event\+Group, ux\+Bits\+To\+Set)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga026d10dcfbf5bb1c651994daeca7d015}\label{group___f_r_t_o_s1__module_ga026d10dcfbf5bb1c651994daeca7d015}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Set\+Bits\+From\+I\+SR}(x\+Event\+Group,  ux\+Bits\+To\+Set,  px\+Higher\+Priority\+Task\+Woken)~x\+Event\+Group\+Set\+Bits\+From\+I\+SR(x\+Event\+Group, ux\+Bits\+To\+Set, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga41690bf5d30d550652e67350237c6585}\label{group___f_r_t_o_s1__module_ga41690bf5d30d550652e67350237c6585}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Clear\+Bits}(x\+Event\+Group,  ux\+Bits\+To\+Set)~x\+Event\+Group\+Clear\+Bits(x\+Event\+Group, ux\+Bits\+To\+Set)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga130498ee79ddbd8867a976cf384a47b2}\label{group___f_r_t_o_s1__module_ga130498ee79ddbd8867a976cf384a47b2}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Clear\+Bits\+From\+I\+SR}(x\+Event\+Group,  ux\+Bits\+To\+Set)~x\+Event\+Group\+Clear\+Bits\+From\+I\+SR(x\+Event\+Group, ux\+Bits\+To\+Set)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gae2840ba8082df53fca51d57763cc7b0c}\label{group___f_r_t_o_s1__module_gae2840ba8082df53fca51d57763cc7b0c}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Get\+Bits}(x\+Event\+Group)~x\+Event\+Group\+Get\+Bits(x\+Event\+Group)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga864e1abb78f3c4ef96e55fa5edf61d86}\label{group___f_r_t_o_s1__module_ga864e1abb78f3c4ef96e55fa5edf61d86}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Get\+Bits\+From\+I\+SR}(x\+Event\+Group)~x\+Event\+Group\+Get\+Bits\+From\+I\+SR(x\+Event\+Group)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga7154669843c8ffcb0b8047558cfe33eb}\label{group___f_r_t_o_s1__module_ga7154669843c8ffcb0b8047558cfe33eb}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Sync}(x\+Event\+Group,  ux\+Bits\+To\+Set,  ux\+Bits\+To\+Wait\+For,  x\+Ticks\+To\+Wait)~x\+Event\+Group\+Sync(x\+Event\+Group, ux\+Bits\+To\+Set, ux\+Bits\+To\+Wait\+For, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga998dd1002dc0119219ef6ccd6bf5e5b7}\label{group___f_r_t_o_s1__module_ga998dd1002dc0119219ef6ccd6bf5e5b7}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Create}(pc\+Timer\+Name,  x\+Timer\+Period,  ux\+Auto\+Reload,  pv\+Timer\+ID,  px\+Callback\+Function)~x\+Timer\+Create(pc\+Timer\+Name, x\+Timer\+Period, ux\+Auto\+Reload, pv\+Timer\+ID, px\+Callback\+Function)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac2a1918e4cb5def0bb5e75d2800ffae8}\label{group___f_r_t_o_s1__module_gac2a1918e4cb5def0bb5e75d2800ffae8}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Is\+Timer\+Active}(x\+Timer)~x\+Timer\+Is\+Timer\+Active(x\+Timer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gadde1abf221f90cfea859799e54320aba}\label{group___f_r_t_o_s1__module_gadde1abf221f90cfea859799e54320aba}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Start}(x\+Timer,  x\+Block\+Time)~x\+Timer\+Start(x\+Timer, x\+Block\+Time)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gabb40a93c1aac5b401432f89a7844bcd4}\label{group___f_r_t_o_s1__module_gabb40a93c1aac5b401432f89a7844bcd4}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Stop}(x\+Timer,  x\+Block\+Time)~x\+Timer\+Stop(x\+Timer, x\+Block\+Time)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga9575ef52338eb3c6f66e019595582fc9}\label{group___f_r_t_o_s1__module_ga9575ef52338eb3c6f66e019595582fc9}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Change\+Period}(x\+Timer,  x\+New\+Period,  x\+Block\+Time)~x\+Timer\+Change\+Period(x\+Timer, x\+New\+Period, x\+Block\+Time)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga4d68b3fec5c82215774a6243b14feace}\label{group___f_r_t_o_s1__module_ga4d68b3fec5c82215774a6243b14feace}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Delete}(x\+Timer,  x\+Block\+Time)~x\+Timer\+Delete(x\+Timer, x\+Block\+Time)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga64fb9b2acbe89ba94210906b511f85a7}\label{group___f_r_t_o_s1__module_ga64fb9b2acbe89ba94210906b511f85a7}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Reset}(x\+Timer,  x\+Block\+Time)~x\+Timer\+Reset(x\+Timer, x\+Block\+Time)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga6b25b13dac5c52cb4b3446715b0de4b5}\label{group___f_r_t_o_s1__module_ga6b25b13dac5c52cb4b3446715b0de4b5}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Start\+From\+I\+SR}(x\+Timer,  px\+Higher\+Priority\+Task\+Woken)~x\+Timer\+Start\+From\+I\+SR(x\+Timer, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaa0fc454ad8976c63fae1e5e73e835029}\label{group___f_r_t_o_s1__module_gaa0fc454ad8976c63fae1e5e73e835029}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Stop\+From\+I\+SR}(x\+Timer,  px\+Higher\+Priority\+Task\+Woken)~x\+Timer\+Stop\+From\+I\+SR(x\+Timer, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga3774e7903c882b320eba3dd4abb349db}\label{group___f_r_t_o_s1__module_ga3774e7903c882b320eba3dd4abb349db}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Change\+Period\+From\+I\+SR}(x\+Timer,  x\+New\+Period,  px\+Higher\+Priority\+Task\+Woken)~x\+Timer\+Change\+Period\+From\+I\+SR(x\+Timer, x\+New\+Period, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga42fcc986fc89e580b9ceb148b0d8bbe9}\label{group___f_r_t_o_s1__module_ga42fcc986fc89e580b9ceb148b0d8bbe9}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Reset\+From\+I\+SR}(x\+Timer,  px\+Higher\+Priority\+Task\+Woken)~x\+Timer\+Reset\+From\+I\+SR(x\+Timer, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac7adcb919368fb838c08db51a4527a92}\label{group___f_r_t_o_s1__module_gac7adcb919368fb838c08db51a4527a92}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+pv\+Timer\+Get\+Timer\+ID}(x\+Timer)~pv\+Timer\+Get\+Timer\+ID(x\+Timer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga7ed8fb2b7f99b344ac287c969c50194c}\label{group___f_r_t_o_s1__module_ga7ed8fb2b7f99b344ac287c969c50194c}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Get\+Timer\+Daemon\+Task\+Handle}()~x\+Timer\+Get\+Timer\+Daemon\+Task\+Handle()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga24e3ac503fa0d8a6b279b2f268b903bf}\label{group___f_r_t_o_s1__module_ga24e3ac503fa0d8a6b279b2f268b903bf}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+pc\+Timer\+Get\+Timer\+Name}(x\+Timer)~pc\+Timer\+Get\+Timer\+Name(x\+Timer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga6c21b01372d4e1ae37373834463931b9}\label{group___f_r_t_o_s1__module_ga6c21b01372d4e1ae37373834463931b9}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Pend\+Function\+Call}(x\+Function\+To\+Pend,  pv\+Parameter1,  ul\+Parameter2,  x\+Ticks\+To\+Wait)~x\+Timer\+Pend\+Function\+Call(x\+Function\+To\+Pend, pv\+Parameter1, ul\+Parameter2, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga4363dc4e6778d35b6690ccd1b00360f4}\label{group___f_r_t_o_s1__module_ga4363dc4e6778d35b6690ccd1b00360f4}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Timer\+Pend\+Function\+Call\+From\+I\+SR}(x\+Function\+To\+Pend,  pv\+Parameter1,  ul\+Parameter2,  px\+Higher\+Priority\+Task\+Woken)~x\+Timer\+Pend\+Function\+Call\+From\+I\+SR(x\+Function\+To\+Pend, pv\+Parameter1, ul\+Parameter2, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga21518a501d4f0f93d5621994c584d46a}\label{group___f_r_t_o_s1__module_ga21518a501d4f0f93d5621994c584d46a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Notify\+Give}(x\+Task\+To\+Notify)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaf1433e0d6225f6cc3a1c444062f733c8}\label{group___f_r_t_o_s1__module_gaf1433e0d6225f6cc3a1c444062f733c8}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+ul\+Task\+Notify\+Take}(x\+Clear\+Count\+On\+Exit,  x\+Ticks\+To\+Wait)~ul\+Task\+Notify\+Take(x\+Clear\+Count\+On\+Exit, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga73c2c7768f269d024adee0678786e15e}\label{group___f_r_t_o_s1__module_ga73c2c7768f269d024adee0678786e15e}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Notify\+Give\+From\+I\+SR}(x\+Task\+To\+Notify,  px\+Higher\+Priority\+Task\+Woken)~v\+Task\+Notify\+Give\+From\+I\+SR(x\+Task\+To\+Notify, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga90bc9fa15ace079ad1d8fc419f51365d}\label{group___f_r_t_o_s1__module_ga90bc9fa15ace079ad1d8fc419f51365d}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Notify}(x\+Task\+To\+Notify,  ul\+Value,  e\+Action)~x\+Task\+Notify(x\+Task\+To\+Notify, ul\+Value, e\+Action)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga9943041478b4b481aa0a8670c6edd4be}\label{group___f_r_t_o_s1__module_ga9943041478b4b481aa0a8670c6edd4be}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Notify\+From\+I\+SR}(x\+Task\+To\+Notify,  ul\+Value,  e\+Action,  px\+Higher\+Priority\+Task\+Woken)~x\+Task\+Notify\+From\+I\+SR(x\+Task\+To\+Notify, ul\+Value, e\+Action, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaa6ec29b95f2aeecae38d52ed20d63c10}\label{group___f_r_t_o_s1__module_gaa6ec29b95f2aeecae38d52ed20d63c10}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Notify\+Wait}(ul\+Bits\+To\+Clear\+On\+Entry,  ul\+Bits\+To\+Clear\+On\+Exit,  pul\+Notification\+Value,  x\+Ticks\+To\+Wait)~x\+Task\+Notify\+Wait(ul\+Bits\+To\+Clear\+On\+Entry, ul\+Bits\+To\+Clear\+On\+Exit, pul\+Notification\+Value, x\+Ticks\+To\+Wait)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga7df09f2b8d36c2db315d58cc9879487f}\label{group___f_r_t_o_s1__module_ga7df09f2b8d36c2db315d58cc9879487f}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Set\+Thread\+Local\+Storage\+Pointer}(x\+Task\+To\+Set,  x\+Index,  pv\+Value)~v\+Task\+Set\+Thread\+Local\+Storage\+Pointer(x\+Task\+To\+Set, x\+Index, pv\+Value)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac2a94f08f263fae6a729b0577b02a7d1}\label{group___f_r_t_o_s1__module_gac2a94f08f263fae6a729b0577b02a7d1}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+pv\+Task\+Get\+Thread\+Local\+Storage\+Pointer}(x\+Task\+To\+Query,  x\+Index)~pv\+Task\+Get\+Thread\+Local\+Storage\+Pointer(x\+Task\+To\+Query, x\+Index)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga5c7b8fe8b16e29f5c01be043db9ae724}\label{group___f_r_t_o_s1__module_ga5c7b8fe8b16e29f5c01be043db9ae724}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Binary}()~x\+Semaphore\+Create\+Binary()
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga1706d3232e8e1e6c58095692a0601cf5}\label{group___f_r_t_o_s1__module_ga1706d3232e8e1e6c58095692a0601cf5}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Notify\+And\+Query}(x\+Task\+To\+Notify,  ul\+Value,  e\+Action,  pul\+Previous\+Notify\+Value)~x\+Task\+Notify\+And\+Query(x\+Task\+To\+Notify, ul\+Value, e\+Action, pul\+Previous\+Notify\+Value)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga0eb38927fbf0d0c1f6a5f3f24c9d25c3}\label{group___f_r_t_o_s1__module_ga0eb38927fbf0d0c1f6a5f3f24c9d25c3}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Notify\+And\+Query\+From\+I\+SR}(x\+Task\+To\+Notify,  ul\+Value,  e\+Action,  pul\+Previous\+Notify\+Value,  px\+Higher\+Priority\+Task\+Woken)~x\+Task\+Notify\+And\+Query\+From\+I\+SR(x\+Task\+To\+Notify, ul\+Value, e\+Action, pul\+Previous\+Notify\+Value, px\+Higher\+Priority\+Task\+Woken)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga8410210c01dcbc1ecdaba90f141a4732}\label{group___f_r_t_o_s1__module_ga8410210c01dcbc1ecdaba90f141a4732}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Notify\+State\+Clear}(x\+Task)~x\+Task\+Notify\+State\+Clear(x\+Task)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga30e411af81b88843d4023f1661e98a30}\label{group___f_r_t_o_s1__module_ga30e411af81b88843d4023f1661e98a30}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Get\+Handle}(pc\+Name\+To\+Query)~x\+Task\+Get\+Handle(pc\+Name\+To\+Query)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga728d43a9aeb1f635e2d1c64ab31241e9}\label{group___f_r_t_o_s1__module_ga728d43a9aeb1f635e2d1c64ab31241e9}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+pc\+Task\+Get\+Name}(x\+Task\+To\+Query)~pc\+Task\+Get\+Name(x\+Task\+To\+Query)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga2fc2dc9f0df2c8c50a91a1b6a32bb3b1}\label{group___f_r_t_o_s1__module_ga2fc2dc9f0df2c8c50a91a1b6a32bb3b1}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Task\+Create\+Static}(pv\+Task\+Code,  pc\+Name,  us\+Stack\+Depth,  pv\+Parameters,  ux\+Priority,  pux\+Stack\+Buffer,  px\+Task\+Buffer)~x\+Task\+Create\+Static(pv\+Task\+Code, pc\+Name, us\+Stack\+Depth, pv\+Parameters, ux\+Priority, pux\+Stack\+Buffer, px\+Task\+Buffer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga5e5ab53690f521cdd9cfd798a4f65bc3}\label{group___f_r_t_o_s1__module_ga5e5ab53690f521cdd9cfd798a4f65bc3}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Queue\+Create\+Static}(ux\+Queue\+Length,  ux\+Item\+Size,  puc\+Queue\+Storage\+Buffer,  px\+Queue\+Buffer)~x\+Queue\+Create\+Static(ux\+Queue\+Length, ux\+Item\+Size, puc\+Queue\+Storage\+Buffer, px\+Queue\+Buffer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gac9eec6e9aa8177a4b977c9923a8ad084}\label{group___f_r_t_o_s1__module_gac9eec6e9aa8177a4b977c9923a8ad084}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Event\+Group\+Create\+Static}(px\+Event\+Group\+Buffer)~x\+Event\+Group\+Create\+Static(px\+Event\+Group\+Buffer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaee8fc6683370dc412d53ba3f6df987b6}\label{group___f_r_t_o_s1__module_gaee8fc6683370dc412d53ba3f6df987b6}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Binary\+Static}(px\+Semaphore\+Buffer)~x\+Semaphore\+Create\+Binary\+Static(px\+Semaphore\+Buffer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga45e7bd6787a8b178322d49848ff6f382}\label{group___f_r_t_o_s1__module_ga45e7bd6787a8b178322d49848ff6f382}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Counting\+Static}(ux\+Max\+Count,  ux\+Initial\+Count,  px\+Sempahore\+Buffer)~x\+Semaphore\+Create\+Counting\+Static(ux\+Max\+Count, ux\+Initial\+Count, px\+Sempahore\+Buffer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaa31fd23221fda3263fb4b40b88d1643a}\label{group___f_r_t_o_s1__module_gaa31fd23221fda3263fb4b40b88d1643a}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Mutex\+Static}(px\+Mutex\+Buffer)~x\+Semaphore\+Create\+Mutex\+Static(px\+Mutex\+Buffer)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaadb1f1cae4b01cb6a8a3cdf65f0270a6}\label{group___f_r_t_o_s1__module_gaadb1f1cae4b01cb6a8a3cdf65f0270a6}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Task\+Get\+Info}(x\+Task,  px\+Task\+Status,  x\+Get\+Free\+Stack\+Space,  e\+State)~v\+Task\+Get\+Info(x\+Task, px\+Task\+Status, x\+Get\+Free\+Stack\+Space, e\+State)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga1f3e62d8e496c0725b0beefb62bb9572}\label{group___f_r_t_o_s1__module_ga1f3e62d8e496c0725b0beefb62bb9572}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+ux\+Semaphore\+Get\+Count}(x\+Semaphore)~ux\+Semaphore\+Get\+Count(x\+Semaphore)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gae842ffded04aade1405792b39f2c0005}\label{group___f_r_t_o_s1__module_gae842ffded04aade1405792b39f2c0005}} 
+\#define {\bfseries F\+R\+T\+O\+S1\+\_\+x\+Semaphore\+Create\+Recursive\+Mutex\+Static}(px\+Mutex\+Buffer)~x\+Semaphore\+Create\+Recursive\+Mutex\+Static(px\+Mutex\+Buffer)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga978b77c999725d30847a41f218210fd5}\label{group___f_r_t_o_s1__module_ga978b77c999725d30847a41f218210fd5}} 
+typedef size\+\_\+t {\bfseries Tsize\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga77aedcbdc23c30e3d6c60787250c5e15}\label{group___f_r_t_o_s1__module_ga77aedcbdc23c30e3d6c60787250c5e15}} 
+uint8\+\_\+t {\bfseries F\+R\+T\+O\+S1\+\_\+\+Parse\+Command} (const unsigned char $\ast$cmd, bool $\ast$handled, const \mbox{\hyperlink{struct_c_l_s1___std_i_o_type}{C\+L\+S1\+\_\+\+Std\+I\+O\+Type}} $\ast$io)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaa6736fa261f845b8f407ca839b14c340}\label{group___f_r_t_o_s1__module_gaa6736fa261f845b8f407ca839b14c340}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gae59cd6cf4cfc95ca846900a4c8341760}\label{group___f_r_t_o_s1__module_gae59cd6cf4cfc95ca846900a4c8341760}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+\+Deinit} (void)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gaec4d75a40722a373e88bd57c4e899940}\label{group___f_r_t_o_s1__module_gaec4d75a40722a373e88bd57c4e899940}} 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+\+App\+Configure\+Timer\+For\+Runtime\+Stats} (void)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_gab1438703d0c195f86363fd284f256948}\label{group___f_r_t_o_s1__module_gab1438703d0c195f86363fd284f256948}} 
+uint32\+\_\+t {\bfseries F\+R\+T\+O\+S1\+\_\+\+App\+Get\+Runtime\+Counter\+Value\+From\+I\+SR} (void)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga511c6a9f325400e54badcc5d912d2917}\label{group___f_r_t_o_s1__module_ga511c6a9f325400e54badcc5d912d2917}} 
+void {\bfseries v\+Port\+Pend\+S\+V\+Handler} (void)
+\item 
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga1f0fdb64040c66499e4e087bed8b2c90}\label{group___f_r_t_o_s1__module_ga1f0fdb64040c66499e4e087bed8b2c90}} 
+void {\bfseries v\+Port\+Tick\+Handler} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___f_r_t_o_s1__module_ga2ba609c134ea5b867c383afbd7191df0}\label{group___f_r_t_o_s1__module_ga2ba609c134ea5b867c383afbd7191df0}} 
+\index{FRTOS1 module documentation@{FRTOS1 module documentation}!PEX\_RTOS\_INIT@{PEX\_RTOS\_INIT}}
+\index{PEX\_RTOS\_INIT@{PEX\_RTOS\_INIT}!FRTOS1 module documentation@{FRTOS1 module documentation}}
+\doxysubsubsection{\texorpdfstring{PEX\_RTOS\_INIT}{PEX\_RTOS\_INIT}}
+{\footnotesize\ttfamily \#define P\+E\+X\+\_\+\+R\+T\+O\+S\+\_\+\+I\+N\+IT(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{/* macro called from PE\_low\_level\_init() */} \(\backslash\)}
+\DoxyCodeLine{    FRTOS1\_Init();}
+
+\end{DoxyCode}

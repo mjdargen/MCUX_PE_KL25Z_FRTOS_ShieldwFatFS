@@ -1,0 +1,364 @@
+\hypertarget{group___s_d1__module}{}\doxysection{S\+D1 module documentation}
+\label{group___s_d1__module}\index{SD1 module documentation@{SD1 module documentation}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gaac4b8f1127fcb82eca58250bc8556bd8}\label{group___s_d1__module_gaac4b8f1127fcb82eca58250bc8556bd8}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+N\+A\+B\+L\+ED}~0
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga085f71a540f25bbd9b5e4fd6682d46b1}\label{group___s_d1__module_ga085f71a540f25bbd9b5e4fd6682d46b1}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+W\+R\+I\+T\+E\+\_\+\+R\+E\+A\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+E\+N\+A\+B\+L\+ED}~0
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga7e0225bf2aec049f386813fb5c5509ab}\label{group___s_d1__module_ga7e0225bf2aec049f386813fb5c5509ab}} 
+\#define {\bfseries S\+D1\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+A\+D\+Y\+\_\+\+MS}~500  /$\ast$ user configured wait timeout until the device is ready $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga2bc4d3c20489f4530eb7aab4ecbf88d9}\label{group___s_d1__module_ga2bc4d3c20489f4530eb7aab4ecbf88d9}} 
+\#define {\bfseries S\+D1\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+C\+M\+D\+\_\+\+MS}~100  /$\ast$ user configured wait timeout for commands $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gaaaa85552df7b531c25b79f164193e948}\label{group___s_d1__module_gaaaa85552df7b531c25b79f164193e948}} 
+\#define {\bfseries S\+D1\+\_\+\+T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+A\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+MS}~500  /$\ast$ user configured wait timeout for reading a data block $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga1d4692424bf6f152dd1417a2d8d92b8f}\label{group___s_d1__module_ga1d4692424bf6f152dd1417a2d8d92b8f}} 
+\#define {\bfseries S\+D1\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+SS}()~/$\ast$ dummy macro, as not using slave selection $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga193f7d5e6c4b53714db543ae7e58754b}\label{group___s_d1__module_ga193f7d5e6c4b53714db543ae7e58754b}} 
+\#define {\bfseries S\+D1\+\_\+\+D\+I\+S\+A\+B\+L\+E\+\_\+\+SS}()~/$\ast$ dummy macro, as not using slave selection $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga554ee4fc7470b4c578566f7624f7f772}\label{group___s_d1__module_ga554ee4fc7470b4c578566f7624f7f772}} 
+\#define {\bfseries S\+D1\+\_\+\+D\+U\+M\+MY}~0xff /$\ast$ S\+PI dummy value $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gadf1182e540ba652f2be5e462b47f0dd1}\label{group___s_d1__module_gadf1182e540ba652f2be5e462b47f0dd1}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+Enable}()~(void)\mbox{\hyperlink{group___s_m2__module_ga323e9e27aae1a5c076973627fc5a31d7}{S\+M2\+\_\+\+Enable}}(\mbox{\hyperlink{group___s_m2__module_ga2250ac3e4e6e091f717aef429b4e6771}{S\+M2\+\_\+\+Device\+Data}})
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gab661470c9adc4ce2d896dcd02ef87b75}\label{group___s_d1__module_gab661470c9adc4ce2d896dcd02ef87b75}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+Disable}()~(void)\mbox{\hyperlink{group___s_m2__module_ga52198c81f9897911a60f419c4be58e11}{S\+M2\+\_\+\+Disable}}(\mbox{\hyperlink{group___s_m2__module_ga2250ac3e4e6e091f717aef429b4e6771}{S\+M2\+\_\+\+Device\+Data}})
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga0c880bc12d8675fbe55266f9c2108329}\label{group___s_d1__module_ga0c880bc12d8675fbe55266f9c2108329}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+Set\+Slow\+Mode}()~(void)\mbox{\hyperlink{group___s_m2__module_ga779bc9ec89a25c5fbbd7234025438197}{S\+M2\+\_\+\+Select\+Configuration}}(\mbox{\hyperlink{group___s_m2__module_ga2250ac3e4e6e091f717aef429b4e6771}{S\+M2\+\_\+\+Device\+Data}}, 0, 0) /$\ast$ max 400kbps $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga122c57ee79c7399106e7326b730ed99b}\label{group___s_d1__module_ga122c57ee79c7399106e7326b730ed99b}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+Set\+Fast\+Mode}()~(void)\mbox{\hyperlink{group___s_m2__module_ga779bc9ec89a25c5fbbd7234025438197}{S\+M2\+\_\+\+Select\+Configuration}}(\mbox{\hyperlink{group___s_m2__module_ga2250ac3e4e6e091f717aef429b4e6771}{S\+M2\+\_\+\+Device\+Data}}, 1, 1) /$\ast$ max 12Mbps $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga1c3063ee4e41c1934f69bccd1fe0dad3}\label{group___s_d1__module_ga1c3063ee4e41c1934f69bccd1fe0dad3}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+Set\+Shift\+Clock\+Polarity}(val)~/$\ast$ not needed for L\+DD $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga545d7330e88b5fe404a05241fc617792}\label{group___s_d1__module_ga545d7330e88b5fe404a05241fc617792}} 
+\#define {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+Set\+Idle\+Clock\+Polarity}(val)~/$\ast$ not needed for L\+DD $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga5e0b96f8c6f11aeaee077d1407fab7eb}\label{group___s_d1__module_ga5e0b96f8c6f11aeaee077d1407fab7eb}} 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+OW}~0
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gaccdc8791cd588120f9c5aa324e019617}\label{group___s_d1__module_gaccdc8791cd588120f9c5aa324e019617}} 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+M\+O\+D\+E\+\_\+\+F\+A\+ST}~1
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga33fa7f918f1f018391bd36e04ffdd479}\label{group___s_d1__module_ga33fa7f918f1f018391bd36e04ffdd479}} 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+T\+I\+V\+A\+T\+E\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE}~2
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga031ed93f8271307327e8047b5a37edf3}\label{group___s_d1__module_ga031ed93f8271307327e8047b5a37edf3}} 
+\#define {\bfseries S\+D1\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE}~512            /$\ast$ user defined block size $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gabda24bac7f09bbd2cda5bde6e94d97e8}\label{group___s_d1__module_gabda24bac7f09bbd2cda5bde6e94d97e8}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D0}~(0x40+0)              /$\ast$ Resets the SD Memory Card $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D1}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gaa628ef3a92fbe2660a588c381764f872}\label{group___s_d1__module_gaa628ef3a92fbe2660a588c381764f872}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D6}~(0x40+6)              /$\ast$ Checks switchable function (mode 0) and switches card function (mode 1).$\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D8}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga1b753379750753d8e0503a18e1e430c0}\label{group___s_d1__module_ga1b753379750753d8e0503a18e1e430c0}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D9}~(0x40+9)              /$\ast$ Asks the selected card to send its cardspecific data (C\+SD)$\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga6054ea748188e7d359df559c7c0d2799}\label{group___s_d1__module_ga6054ea748188e7d359df559c7c0d2799}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D10}~(0x40+10)             /$\ast$ Asks the selected card to send its card identification (C\+ID) $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga421282e58276cc10f0a8f4f16dce75fc}\label{group___s_d1__module_ga421282e58276cc10f0a8f4f16dce75fc}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D12}~(0x40+12)             /$\ast$ Forces the card to stop transmission in Multiple Block Read Operation $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gacead5bfbe98209edbf3a9425d28b3db8}\label{group___s_d1__module_gacead5bfbe98209edbf3a9425d28b3db8}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D13}~(0x40+13)             /$\ast$ Asks the selected card to send its status register. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D16}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga2c550631e2a6e710a7d0c5fbc2ebbae2}\label{group___s_d1__module_ga2c550631e2a6e710a7d0c5fbc2ebbae2}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D17}~(0x40+17)             /$\ast$ Reads a block of the size selected by the S\+E\+T\+\_\+\+B\+L\+O\+C\+K\+L\+EN command.$\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D18}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga463ba3e5872bb3051652a0b8eca46233}\label{group___s_d1__module_ga463ba3e5872bb3051652a0b8eca46233}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D24}~(0x40+24)             /$\ast$ Writes a block of the size selected by the S\+E\+T\+\_\+\+B\+L\+O\+C\+K\+L\+EN command. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D25}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga8151f1642ccb87d7ac960da65872d667}\label{group___s_d1__module_ga8151f1642ccb87d7ac960da65872d667}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D27}~(0x40+27)             /$\ast$ Programming of the programmable bits of the C\+S\+D. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D28}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D29}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D30}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga89861207e65a0e11772b138b24b57b62}\label{group___s_d1__module_ga89861207e65a0e11772b138b24b57b62}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D32}~(0x40+32)             /$\ast$ Sets the address of the first write block to be erased.$\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gae249c5cb1b18d8a0180488f202a20e32}\label{group___s_d1__module_gae249c5cb1b18d8a0180488f202a20e32}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D33}~(0x40+33)             /$\ast$ Sets the address of the last write block of the continuous range to be erased. $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga2721c563a853c80b92b44a58c3a96187}\label{group___s_d1__module_ga2721c563a853c80b92b44a58c3a96187}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D38}~(0x40+38)             /$\ast$ Erases all previously selected write blocks $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D42}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D55}
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D56}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga882946258f87243fb3610ddb1b485bfe}\label{group___s_d1__module_ga882946258f87243fb3610ddb1b485bfe}} 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D58}~(0x40+58)             /$\ast$ Reads the O\+CR register of a card. C\+CS bit is assigned to O\+CR\mbox{[}30\mbox{]}. $\ast$/
+\item 
+\#define {\bfseries S\+D1\+\_\+\+C\+M\+D59}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gaecc04ab0a6baa0f7326c9890c3df5e70}\label{group___s_d1__module_gaecc04ab0a6baa0f7326c9890c3df5e70}} 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+M\+D41}~(0x\+C0+41)            /$\ast$ S\+E\+N\+D\+\_\+\+O\+P\+\_\+\+C\+O\+ND (S\+DC) $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gaaa565b9bb2c1bf04fbc0b4adfb764b57}\label{group___s_d1__module_gaaa565b9bb2c1bf04fbc0b4adfb764b57}} 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+M\+D13}~(0x\+C0+13)            /$\ast$ S\+D\+\_\+\+S\+T\+A\+T\+US (S\+DC) $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gab15c3938f423869754de87c10b152437}\label{group___s_d1__module_gab15c3938f423869754de87c10b152437}} 
+\#define {\bfseries S\+D1\+\_\+\+A\+C\+M\+D23}~(0x\+C0+23)            /$\ast$ S\+E\+T\+\_\+\+W\+R\+\_\+\+B\+L\+K\+\_\+\+E\+R\+A\+S\+E\+\_\+\+C\+O\+U\+NT (S\+DC) $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga3f0a5522d40d3f74b7f4299ba8e5ce35}\label{group___s_d1__module_ga3f0a5522d40d3f74b7f4299ba8e5ce35}} 
+\#define {\bfseries S\+D1\+\_\+is\+Write\+Protected}()~F\+A\+L\+SE                                 /$\ast$ no hardware to detect write protection, thus none $\ast$/
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga9beb527aaa004b217aef9b31f0e08e09}\label{group___s_d1__module_ga9beb527aaa004b217aef9b31f0e08e09}} 
+\#define {\bfseries S\+D1\+\_\+\+Card\+Present}()~T\+R\+UE                                  /$\ast$ no card detection pin, but user wants to report T\+R\+UE $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gabc6126af1d45847bc59afa0aa3216b04}\label{group___s_d1__module_gabc6126af1d45847bc59afa0aa3216b04}} 
+enum \{ {\bfseries S\+D1\+\_\+\+OK} = 0, 
+{\bfseries S\+D1\+\_\+\+I\+D\+LE} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga84620858e6399e51fa361e8f28de47c2}\label{group___s_d1__module_ga84620858e6399e51fa361e8f28de47c2}} 
+D\+S\+T\+A\+T\+US {\bfseries S\+D1\+\_\+disk\+\_\+initialize} (uint8\+\_\+t drv)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gaaa810520720e16862e64b41be3736bd0}\label{group___s_d1__module_gaaa810520720e16862e64b41be3736bd0}} 
+D\+S\+T\+A\+T\+US {\bfseries S\+D1\+\_\+disk\+\_\+status} (uint8\+\_\+t drv)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga9391dd357d843322f418a830cdcfc336}\label{group___s_d1__module_ga9391dd357d843322f418a830cdcfc336}} 
+D\+R\+E\+S\+U\+LT {\bfseries S\+D1\+\_\+disk\+\_\+read} (uint8\+\_\+t drv, uint8\+\_\+t $\ast$buff, uint32\+\_\+t sector, unsigned int count)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga5586172c332d52a6c4d9e94ea22679ed}\label{group___s_d1__module_ga5586172c332d52a6c4d9e94ea22679ed}} 
+D\+R\+E\+S\+U\+LT {\bfseries S\+D1\+\_\+disk\+\_\+write} (uint8\+\_\+t drv, const uint8\+\_\+t $\ast$buff, uint32\+\_\+t sector, unsigned int count)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga8ac13fff6d9b9710e7432d3654acc5d9}\label{group___s_d1__module_ga8ac13fff6d9b9710e7432d3654acc5d9}} 
+D\+R\+E\+S\+U\+LT {\bfseries S\+D1\+\_\+disk\+\_\+ioctl} (uint8\+\_\+t drv, uint8\+\_\+t ctrl, void $\ast$buff)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga3934906854866c669f8d87786bce2ab8}\label{group___s_d1__module_ga3934906854866c669f8d87786bce2ab8}} 
+void {\bfseries S\+D1\+\_\+\+S\+P\+I\+\_\+\+W\+R\+I\+TE} (unsigned char write)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gacd6e338fb2dfd961126006b0033cea67}\label{group___s_d1__module_gacd6e338fb2dfd961126006b0033cea67}} 
+void {\bfseries S\+D1\+\_\+\+Activate} (void)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga3fe39073f354e28ca765d8dfa302dfc0}\label{group___s_d1__module_ga3fe39073f354e28ca765d8dfa302dfc0}} 
+void {\bfseries S\+D1\+\_\+\+Deactivate} (void)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga92150d4ef7127bd9a8824aae89fcc106}\label{group___s_d1__module_ga92150d4ef7127bd9a8824aae89fcc106}} 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Wait\+Ready} (void)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gac7a72e42cc976bc20362c7fbb6117394}\label{group___s_d1__module_gac7a72e42cc976bc20362c7fbb6117394}} 
+bool {\bfseries S\+D1\+\_\+\+Receive\+Data\+Block} (uint8\+\_\+t $\ast$data, uint16\+\_\+t nof\+Bytes)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga655bdc2ff45463d5366921442d242470}\label{group___s_d1__module_ga655bdc2ff45463d5366921442d242470}} 
+bool {\bfseries S\+D1\+\_\+\+Send\+Data\+Block} (uint8\+\_\+t $\ast$data, uint8\+\_\+t token, uint16\+\_\+t nof\+Bytes)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga859ba0694bb317043af03dfbe25d5fd1}\label{group___s_d1__module_ga859ba0694bb317043af03dfbe25d5fd1}} 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Send\+Cmd} (uint8\+\_\+t cmd, uint32\+\_\+t arg)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gae96de4da6d483971ab08774eee78fa15}\label{group___s_d1__module_gae96de4da6d483971ab08774eee78fa15}} 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Init} (void $\ast$unused)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_gae7753480d91c0b9143460d8ba82b7673}\label{group___s_d1__module_gae7753480d91c0b9143460d8ba82b7673}} 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Receive\+Byte} (void)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga86cd46dff94b3c781bdfc958e7d5eda5}\label{group___s_d1__module_ga86cd46dff94b3c781bdfc958e7d5eda5}} 
+void {\bfseries S\+D1\+\_\+\+Set\+Slow\+Mode} (void)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga533d064091ec486eb84ff25a29075676}\label{group___s_d1__module_ga533d064091ec486eb84ff25a29075676}} 
+void {\bfseries S\+D1\+\_\+\+Set\+Fast\+Mode} (void)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga3b1a33ef2a2a8a6348732d8a29d6a229}\label{group___s_d1__module_ga3b1a33ef2a2a8a6348732d8a29d6a229}} 
+void {\bfseries S\+D1\+\_\+\+Init\+Comm\+Channel} (void)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga874999d238d857f3a9e517d4fc01d388}\label{group___s_d1__module_ga874999d238d857f3a9e517d4fc01d388}} 
+uint8\+\_\+t {\bfseries S\+D1\+\_\+\+Deinit} (void $\ast$unused)
+\item 
+\mbox{\Hypertarget{group___s_d1__module_ga8e770c83879aa82f50bf9912edf43a25}\label{group___s_d1__module_ga8e770c83879aa82f50bf9912edf43a25}} 
+void {\bfseries S\+M2\+\_\+\+On\+Block\+Received} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_d1__module_ga973f226771725261f429de1e4256f7fa}\label{group___s_d1__module_ga973f226771725261f429de1e4256f7fa}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD1@{SD1\_CMD1}}
+\index{SD1\_CMD1@{SD1\_CMD1}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD1}{SD1\_CMD1}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D1}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+1)              \textcolor{comment}{/* Sends host capacity support information and activates the card's}}
+\DoxyCodeLine{\textcolor{comment}{                                           initialization process. HCS is effective when card receives SEND\_IF\_COND}}
+\DoxyCodeLine{\textcolor{comment}{                                           command. Reserved bits shall be set to '0'. */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_ga4bf747ec33b13e6fa33927b893ed1b77}\label{group___s_d1__module_ga4bf747ec33b13e6fa33927b893ed1b77}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD16@{SD1\_CMD16}}
+\index{SD1\_CMD16@{SD1\_CMD16}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD16}{SD1\_CMD16}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D16}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+16)             \textcolor{comment}{/* Sets a block length (in bytes) for all following block commands (read and}}
+\DoxyCodeLine{\textcolor{comment}{                                           write) of a Standard Capacity Card. Block length of the read and write}}
+\DoxyCodeLine{\textcolor{comment}{                                           commands are fixed to 512 bytes in a High Capacity Card. The length of}}
+\DoxyCodeLine{\textcolor{comment}{                                           LOCK\_UNLOCK command is set by this command in both capacity cards.*/}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_ga97c5e57d8ca350405a65a4c76493ea88}\label{group___s_d1__module_ga97c5e57d8ca350405a65a4c76493ea88}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD18@{SD1\_CMD18}}
+\index{SD1\_CMD18@{SD1\_CMD18}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD18}{SD1\_CMD18}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D18}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+18)             \textcolor{comment}{/* Continuously transfers data blocks from card to host until interrupted by a}}
+\DoxyCodeLine{\textcolor{comment}{                                           STOP\_TRANSMISSION command.*/}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_ga495ffd8dbefd543f590531effe473e5f}\label{group___s_d1__module_ga495ffd8dbefd543f590531effe473e5f}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD25@{SD1\_CMD25}}
+\index{SD1\_CMD25@{SD1\_CMD25}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD25}{SD1\_CMD25}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D25}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+25)             \textcolor{comment}{/* Continuously writes blocks of data until ’Stop Tran’ token is sent}}
+\DoxyCodeLine{\textcolor{comment}{                                          (instead ’Start Block’).*/}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_gae4c739c903e864e9791b3a9e8cc7b029}\label{group___s_d1__module_gae4c739c903e864e9791b3a9e8cc7b029}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD28@{SD1\_CMD28}}
+\index{SD1\_CMD28@{SD1\_CMD28}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD28}{SD1\_CMD28}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D28}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+28)             \textcolor{comment}{/* If the card has write protection features, this command sets the write protection bit}}
+\DoxyCodeLine{\textcolor{comment}{                                           of the addressed group. The properties of write protection are coded in the card}}
+\DoxyCodeLine{\textcolor{comment}{                                           specific data (WP\_GRP\_SIZE). The High Capacity Card does not support this command.*/}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_gad19f24560b7e1380b1ae2c22feb00e48}\label{group___s_d1__module_gad19f24560b7e1380b1ae2c22feb00e48}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD29@{SD1\_CMD29}}
+\index{SD1\_CMD29@{SD1\_CMD29}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD29}{SD1\_CMD29}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D29}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+29)             \textcolor{comment}{/* If the card has write protection features, this command clears the write protection}}
+\DoxyCodeLine{\textcolor{comment}{                                           bit of the addressed group. The High Capacity Card does not support this command. */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_ga579b7e101609baa47c329c06fd1bfc0c}\label{group___s_d1__module_ga579b7e101609baa47c329c06fd1bfc0c}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD30@{SD1\_CMD30}}
+\index{SD1\_CMD30@{SD1\_CMD30}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD30}{SD1\_CMD30}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D30}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+30)             \textcolor{comment}{/* If the card has write protection features, this command asks the card to send the}}
+\DoxyCodeLine{\textcolor{comment}{                                           status of the write protection bits.6 The High Capacity Card does not support this command. */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_gaa02c8624baf875889f1ca6770347c170}\label{group___s_d1__module_gaa02c8624baf875889f1ca6770347c170}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD42@{SD1\_CMD42}}
+\index{SD1\_CMD42@{SD1\_CMD42}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD42}{SD1\_CMD42}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D42}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+42)             \textcolor{comment}{/* Used to Set/Reset the Password or lock/unlock the card. A transferred data block includes}}
+\DoxyCodeLine{\textcolor{comment}{                                           all the command details -\/ refer to Chapter 4.3.7. The size of the Data Block is defined}}
+\DoxyCodeLine{\textcolor{comment}{                                           with SET\_BLOCK\_LEN command. Reserved bits in the argument and in Lock Card Data Structure}}
+\DoxyCodeLine{\textcolor{comment}{                                           shall be set to 0. */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_gaad07cf534d117576f568d63a23e01626}\label{group___s_d1__module_gaad07cf534d117576f568d63a23e01626}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD55@{SD1\_CMD55}}
+\index{SD1\_CMD55@{SD1\_CMD55}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD55}{SD1\_CMD55}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D55}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+55)             \textcolor{comment}{/* Defines to the card that the next command is an application specific command}}
+\DoxyCodeLine{\textcolor{comment}{                                           rather than a standard command */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_gacf2730f5ed673fc5d9d7debdd726d5ab}\label{group___s_d1__module_gacf2730f5ed673fc5d9d7debdd726d5ab}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD56@{SD1\_CMD56}}
+\index{SD1\_CMD56@{SD1\_CMD56}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD56}{SD1\_CMD56}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D56}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+56)             \textcolor{comment}{/* Used either to transfer a Data Block to the card or to get a Data Block from the card}}
+\DoxyCodeLine{\textcolor{comment}{                                           for general purpose/application specific commands. In case of Standard Capacity SD}}
+\DoxyCodeLine{\textcolor{comment}{                                           Memory Card, the size of the Data Block shall be defined with SET\_BLOCK\_LEN command.}}
+\DoxyCodeLine{\textcolor{comment}{                                           Block length of this command is fixed to 512-\/byte in High Capacity Card. */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_ga87535571ea004712079e82892da0a5f7}\label{group___s_d1__module_ga87535571ea004712079e82892da0a5f7}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD59@{SD1\_CMD59}}
+\index{SD1\_CMD59@{SD1\_CMD59}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD59}{SD1\_CMD59}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D59}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+59)             \textcolor{comment}{/* Turns the CRC option on or off. A ‘1’ in the CRC option bit will turn the option on,}}
+\DoxyCodeLine{\textcolor{comment}{                                           a ‘0’ will turn it off */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_d1__module_gaf8128193ab9bab5ebca45dac1aa2a197}\label{group___s_d1__module_gaf8128193ab9bab5ebca45dac1aa2a197}} 
+\index{SD1 module documentation@{SD1 module documentation}!SD1\_CMD8@{SD1\_CMD8}}
+\index{SD1\_CMD8@{SD1\_CMD8}!SD1 module documentation@{SD1 module documentation}}
+\doxysubsubsection{\texorpdfstring{SD1\_CMD8}{SD1\_CMD8}}
+{\footnotesize\ttfamily \#define S\+D1\+\_\+\+C\+M\+D8}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(0x40+8)              \textcolor{comment}{/* Sends SD Memory Card interface condition that includes host supply voltage}}
+\DoxyCodeLine{\textcolor{comment}{                                           information and asks the accessed card whether card can operate in supplied}}
+\DoxyCodeLine{\textcolor{comment}{                                           voltage range. Reserved bits shall be set to '0'.*/}}
+
+\end{DoxyCode}

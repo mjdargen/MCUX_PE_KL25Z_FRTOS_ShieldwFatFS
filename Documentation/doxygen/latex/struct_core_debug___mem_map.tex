@@ -1,0 +1,65 @@
+\hypertarget{struct_core_debug___mem_map}{}\doxysection{Core\+Debug\+\_\+\+Mem\+Map Struct Reference}
+\label{struct_core_debug___mem_map}\index{CoreDebug\_MemMap@{CoreDebug\_MemMap}}
+
+
+{\ttfamily \#include $<$M\+K\+L25\+Z4.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_core_debug___mem_map_a6ba38c2d822f67a83f7cb7d82cc879eb}\label{struct_core_debug___mem_map_a6ba38c2d822f67a83f7cb7d82cc879eb}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \mbox{\hyperlink{struct_core_debug___mem_map_a4968901505f61e2a98c9196a8ac7584b}{base\_DHCSR\_Read}}\\
+\>uint32\_t \mbox{\hyperlink{struct_core_debug___mem_map_a57de52c8c1eb5789546543f2408ce487}{base\_DHCSR\_Write}}\\
+\}; \\
+
+\end{tabbing}\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_core_debug___mem_map_ad9c98f7390e5d3a6b54df56ddea32e8b}{base\+\_\+\+D\+C\+R\+SR}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_core_debug___mem_map_aac76a717b2aba2ccbf75e020cc71fb3e}{base\+\_\+\+D\+C\+R\+DR}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_core_debug___mem_map_a13a099e668fcb3587b2cd6eb8f8608d5}{base\+\_\+\+D\+E\+M\+CR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core\+Debug -\/ Peripheral register structure 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_core_debug___mem_map_aac76a717b2aba2ccbf75e020cc71fb3e}\label{struct_core_debug___mem_map_aac76a717b2aba2ccbf75e020cc71fb3e}} 
+\index{CoreDebug\_MemMap@{CoreDebug\_MemMap}!base\_DCRDR@{base\_DCRDR}}
+\index{base\_DCRDR@{base\_DCRDR}!CoreDebug\_MemMap@{CoreDebug\_MemMap}}
+\doxysubsubsection{\texorpdfstring{base\_DCRDR}{base\_DCRDR}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+Debug\+\_\+\+Mem\+Map\+::base\+\_\+\+D\+C\+R\+DR}
+
+Debug Core Register Data Register, offset\+: 0x8 \mbox{\Hypertarget{struct_core_debug___mem_map_ad9c98f7390e5d3a6b54df56ddea32e8b}\label{struct_core_debug___mem_map_ad9c98f7390e5d3a6b54df56ddea32e8b}} 
+\index{CoreDebug\_MemMap@{CoreDebug\_MemMap}!base\_DCRSR@{base\_DCRSR}}
+\index{base\_DCRSR@{base\_DCRSR}!CoreDebug\_MemMap@{CoreDebug\_MemMap}}
+\doxysubsubsection{\texorpdfstring{base\_DCRSR}{base\_DCRSR}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+Debug\+\_\+\+Mem\+Map\+::base\+\_\+\+D\+C\+R\+SR}
+
+Debug Core Register Selector Register, offset\+: 0x4 \mbox{\Hypertarget{struct_core_debug___mem_map_a13a099e668fcb3587b2cd6eb8f8608d5}\label{struct_core_debug___mem_map_a13a099e668fcb3587b2cd6eb8f8608d5}} 
+\index{CoreDebug\_MemMap@{CoreDebug\_MemMap}!base\_DEMCR@{base\_DEMCR}}
+\index{base\_DEMCR@{base\_DEMCR}!CoreDebug\_MemMap@{CoreDebug\_MemMap}}
+\doxysubsubsection{\texorpdfstring{base\_DEMCR}{base\_DEMCR}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+Debug\+\_\+\+Mem\+Map\+::base\+\_\+\+D\+E\+M\+CR}
+
+Debug Exception and Monitor Control Register, offset\+: 0xC \mbox{\Hypertarget{struct_core_debug___mem_map_a4968901505f61e2a98c9196a8ac7584b}\label{struct_core_debug___mem_map_a4968901505f61e2a98c9196a8ac7584b}} 
+\index{CoreDebug\_MemMap@{CoreDebug\_MemMap}!base\_DHCSR\_Read@{base\_DHCSR\_Read}}
+\index{base\_DHCSR\_Read@{base\_DHCSR\_Read}!CoreDebug\_MemMap@{CoreDebug\_MemMap}}
+\doxysubsubsection{\texorpdfstring{base\_DHCSR\_Read}{base\_DHCSR\_Read}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+Debug\+\_\+\+Mem\+Map\+::base\+\_\+\+D\+H\+C\+S\+R\+\_\+\+Read}
+
+Debug Halting Control and Status Register, offset\+: 0x0 \mbox{\Hypertarget{struct_core_debug___mem_map_a57de52c8c1eb5789546543f2408ce487}\label{struct_core_debug___mem_map_a57de52c8c1eb5789546543f2408ce487}} 
+\index{CoreDebug\_MemMap@{CoreDebug\_MemMap}!base\_DHCSR\_Write@{base\_DHCSR\_Write}}
+\index{base\_DHCSR\_Write@{base\_DHCSR\_Write}!CoreDebug\_MemMap@{CoreDebug\_MemMap}}
+\doxysubsubsection{\texorpdfstring{base\_DHCSR\_Write}{base\_DHCSR\_Write}}
+{\footnotesize\ttfamily uint32\+\_\+t Core\+Debug\+\_\+\+Mem\+Map\+::base\+\_\+\+D\+H\+C\+S\+R\+\_\+\+Write}
+
+Debug Halting Control and Status Register, offset\+: 0x0 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Static\+\_\+\+Code/\+I\+O\+\_\+\+Map/\mbox{\hyperlink{_m_k_l25_z4_8h}{M\+K\+L25\+Z4.\+h}}\end{DoxyCompactItemize}

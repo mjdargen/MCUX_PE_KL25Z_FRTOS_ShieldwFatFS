@@ -1,0 +1,95 @@
+\hypertarget{_events_8h}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/sources/\+Events.h File Reference}
+\label{_events_8h}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/sources/Events.h@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/sources/Events.h}}
+
+
+This is user\textquotesingle{}s event module. Put your event handler code here.  
+
+
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+\_\+\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}M\+C\+U\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}F\+R\+T\+O\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U\+T\+I\+L1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Audio\+Amp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+D\+R.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+Dpin1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bit\+Io\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+D\+G.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+Dpin2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bit\+Io\+Ldd2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+D\+B.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+E\+Dpin3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bit\+Io\+Ldd3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}F\+A\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}W\+A\+I\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+M\+O\+U\+T1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tm\+Dt1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}X\+F1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+A1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Dac\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Dac\+Ldd1\+\_\+\+D\+M\+A0.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+L\+S1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+S2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+Serial\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+M2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+Data\+\_\+\+Bits.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+B\+L\+\_\+\+P\+W\+M.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+P\+M1\+\_\+0.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+D\+\_\+\+N\+C.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+N\+W\+R.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+N\+R\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+C\+D\+\_\+\+N\+R\+S\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+D1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Adc\+Ldd1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+4.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+5.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+6.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+B\+G\+\_\+7.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}M\+M\+A1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+I2\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+I2\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}H\+B\+L\+E\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+M\+A1.\+h\char`\"{}}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t {\bfseries Tsize\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___events__module_ga960d094664356278ac5472d45a6ea2f3}{Cpu\+\_\+\+On\+N\+M\+I\+I\+NT}} (void)
+\begin{DoxyCompactList}\small\item\em This event is called when the Non maskable interrupt had occurred. This event is automatically enabled when the \mbox{[}N\+MI interrupt\mbox{]} property is set to \textquotesingle{}Enabled\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___events__module_ga5bc33eaaac4ab64403a921495db399b0}{A\+S1\+\_\+\+On\+Block\+Received}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This event is called when the requested number of data is moved to the input buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___events__module_gaf23a767b9b4e81efa9e244306792dcfd}{A\+S1\+\_\+\+On\+Block\+Sent}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em This event is called after the last character from the output buffer is moved to the transmitter. \end{DoxyCompactList}\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Stack\+Overflow\+Hook} (\mbox{\hyperlink{structtsk_task_control_block}{Task\+Handle\+\_\+t}} px\+Task, char $\ast$pc\+Task\+Name)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Tick\+Hook} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Idle\+Hook} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+Application\+Malloc\+Failed\+Hook} (void)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+On\+Pre\+Sleep\+Processing} (Tick\+Type\+\_\+t expected\+Idle\+Ticks)
+\item 
+void {\bfseries F\+R\+T\+O\+S1\+\_\+v\+On\+Post\+Sleep\+Processing} (Tick\+Type\+\_\+t expected\+Idle\+Ticks)
+\item 
+void \mbox{\hyperlink{group___events__module_ga6bc24933aaf9dad765ff9e1259be2ee1}{Dac\+Ldd1\+\_\+\+On\+Complete}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Called at the end of a D\+MA transfer. If the Half complete property in initialization section is enabled, this event is also called when current major iteration count reaches the halfway point. See Set\+Event\+Mask() and Get\+Event\+Mask() methods. This event is enabled only if Interrupt service property and D\+MA property are enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is user\textquotesingle{}s event module. Put your event handler code here. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

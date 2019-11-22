@@ -1,0 +1,171 @@
+\hypertarget{_u_t_i_l1_8h}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+U\+T\+I\+L1.h File Reference}
+\label{_u_t_i_l1_8h}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/UTIL1.h@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/UTIL1.h}}
+
+
+Contains various utility functions.  
+
+
+{\ttfamily \#include \char`\"{}M\+C\+U\+C1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U\+T\+I\+L1config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries U\+T\+I\+L1\+\_\+strcmp}(str1,  str2)~strcmp(str1, str2)
+\item 
+\#define {\bfseries U\+T\+I\+L1\+\_\+strncmp}(str1,  str2,  size)~strncmp(str1, str2, size)
+\item 
+\#define {\bfseries U\+T\+I\+L1\+\_\+strlen}(str)~strlen(str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___u_t_i_l1__module_gac119fea18ee711120d44fe056b99b364}\label{group___u_t_i_l1__module_gac119fea18ee711120d44fe056b99b364}} 
+enum {\bfseries U\+T\+I\+L1\+\_\+\+Separated\+Number\+Type} \{ {\bfseries U\+T\+I\+L1\+\_\+\+S\+E\+P\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8}, 
+{\bfseries U\+T\+I\+L1\+\_\+\+S\+E\+P\+\_\+\+N\+U\+M\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8\+\_\+\+H\+E\+X\+\_\+\+N\+O\+\_\+\+P\+R\+E\+F\+IX}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga05eaa0c70134ec4c75b50e415470636b}{U\+T\+I\+L1\+\_\+strcpy}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, const unsigned char $\ast$src)
+\begin{DoxyCompactList}\small\item\em copy the string src into dst. It performs the same task as strncpy, except \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga08c23f0fce3b1fc9c3bfbb7397f71a5a}{U\+T\+I\+L1\+\_\+strcat}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, const unsigned char $\ast$src)
+\begin{DoxyCompactList}\small\item\em Concat the string src into dst. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_gaa2ec540f5fc0c367af38d4653204a24f}{U\+T\+I\+L1\+\_\+\+Num16s\+To\+Str}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Converts a 16bit signed number into a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga38d58e4ec9bf79c042fc307ff32dad93}{U\+T\+I\+L1\+\_\+\+Num16s\+To\+Str\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int16\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em Converts a 16bit signed number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}). Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_gaec27c4f9d9b48fde67d9270f63c8aee5}{U\+T\+I\+L1\+\_\+strcat\+Num16s}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em appends a 16bit signed number to a string. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga124aff9bf4ad2ff84cbe3346fcdbb02b}{U\+T\+I\+L1\+\_\+strcat\+Num16s\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int16\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em appends a 16bit signed number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga4b505e94761b330fa24903d12f0a8508}{U\+T\+I\+L1\+\_\+strcat\+Num8\+Hex}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint8\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Adds a 8bit number as hex value to a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga8b8594202e97c9e5824ce6a9e3fb29b8}{U\+T\+I\+L1\+\_\+strcat\+Num16\+Hex}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint16\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Adds a 16bit number as hex value to a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga0b51bb7363954ff1122274315e4a05fc}{U\+T\+I\+L1\+\_\+strcat\+Num32s}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em appends a 32bit (long) number to a string. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga446da30d25403706e07922522b5bb320}{U\+T\+I\+L1\+\_\+\+Num32s\+To\+Str}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Converts a 32bit number to a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga6b2f6bc66460e5f81ab2d934d99b0221}{U\+T\+I\+L1\+\_\+strcat\+Num32\+Hex}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint32\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Adds a 32bit number as hex value to a string. \end{DoxyCompactList}\item 
+bool {\bfseries U\+T\+I\+L1\+\_\+\+Is\+Leap\+Year} (uint16\+\_\+t year)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Week\+Day} (uint16\+\_\+t year, uint8\+\_\+t month, uint8\+\_\+t day)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+chcat} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint8\+\_\+t ch)
+\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga08c07e142fc2d6ee106ff74e058f8550}{U\+T\+I\+L1\+\_\+strcat\+Num32u}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em appends a 32bit (unsigned long) number to a string. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga47f18477d12c53ac4587abd039374498}{U\+T\+I\+L1\+\_\+\+Num32u\+To\+Str}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Converts a 32bit signed number to a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga259e632bead66f672140daaedd94c5d3}{U\+T\+I\+L1\+\_\+strcat\+Num32u\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint32\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em appends a 32bit unsigned number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_gabc0a815c91173ed9152eca324d97b4e8}{U\+T\+I\+L1\+\_\+\+Num32u\+To\+Str\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint32\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em Converts a 32bit unsigned number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}). Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga02a8cd396c6d3d9234321d63a0dceece}{U\+T\+I\+L1\+\_\+strcat\+Num24\+Hex}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint32\+\_\+t num)
+\begin{DoxyCompactList}\small\item\em Adds a 24bit number as hex value to a string. \end{DoxyCompactList}\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Read\+Escaped\+Name} (const unsigned char $\ast$filename, uint8\+\_\+t $\ast$destname, size\+\_\+t maxlen, size\+\_\+t $\ast$len\+Read, size\+\_\+t $\ast$len\+Written, const char $\ast$terminators)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+xatoi} (const unsigned char $\ast$$\ast$str, int32\+\_\+t $\ast$res)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Date} (const unsigned char $\ast$$\ast$str, uint8\+\_\+t $\ast$day, uint8\+\_\+t $\ast$month, uint16\+\_\+t $\ast$year)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Time} (const unsigned char $\ast$$\ast$str, uint8\+\_\+t $\ast$hour, uint8\+\_\+t $\ast$minute, uint8\+\_\+t $\ast$second, uint8\+\_\+t $\ast$h\+Second)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Decimal16u\+Number} (const unsigned char $\ast$$\ast$str, uint16\+\_\+t $\ast$val)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Decimal8u\+Number} (const unsigned char $\ast$$\ast$str, uint8\+\_\+t $\ast$val)
+\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga2617b1bd9c2be5275d058692ecad2e2f}{U\+T\+I\+L1\+\_\+\+Num16u\+To\+Str}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Converts a 16bit unsigned number into a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_gaa751000f1fb28af773078ac27fba72fb}{U\+T\+I\+L1\+\_\+\+Num8s\+To\+Str}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, signed char val)
+\begin{DoxyCompactList}\small\item\em Converts an 8bit signed number into a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_gab5dfed20066315231d87809500f32f1d}{U\+T\+I\+L1\+\_\+\+Num8u\+To\+Str}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em Converts an 8bit unsigned number into a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_gaabda98734e584259f80df91feb6463f2}{U\+T\+I\+L1\+\_\+\+Num16u\+To\+Str\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint16\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em Converts a 16bit unsigned number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}). Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga9acbbdd951d05627e03c464670b4985e}{U\+T\+I\+L1\+\_\+\+Num32s\+To\+Str\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int32\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em Converts a 32bit signed number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}). Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga0716493ba0c299b7b50fb5525d94176f}{U\+T\+I\+L1\+\_\+strcat\+Num16u}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em appends a 16bit unsigned number to a string. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga8ca2584fe8b064f672e231ac36a47285}{U\+T\+I\+L1\+\_\+strcat\+Num16u\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint16\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em appends a 16bit unsigned number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga8371cf0db923bbb5c09c29f8c58abffd}{U\+T\+I\+L1\+\_\+strcat\+Num32s\+Formatted}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int32\+\_\+t val, char fill, uint8\+\_\+t nof\+Fill)
+\begin{DoxyCompactList}\small\item\em appends a 32bit signed number to a string, in a formatted way (like printf with \char`\"{}\%0d\char`\"{}. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Decimal32u\+Number} (const unsigned char $\ast$$\ast$str, uint32\+\_\+t $\ast$val)
+\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_ga363d82b53f80bd2a60865dea49e0d596}{U\+T\+I\+L1\+\_\+strcat\+Num8u}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint8\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em appends a 8bit unsigned number to a string. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___u_t_i_l1__module_gabb1f0070273e9202210a022f0eeeff18}{U\+T\+I\+L1\+\_\+strcat\+Num8s}} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, signed char val)
+\begin{DoxyCompactList}\small\item\em appends a 8bit signed number to a string. Always terminates the result string. Note\+: count is the size of dst I\+N\+C\+L\+U\+D\+I\+NG zero byte. Precondition\+: src, dst != N\+U\+LL \end{DoxyCompactList}\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Hex32u\+Number} (const unsigned char $\ast$$\ast$str, uint32\+\_\+t $\ast$val)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Hex16u\+Number} (const unsigned char $\ast$$\ast$str, uint16\+\_\+t $\ast$val)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Hex8u\+Number} (const unsigned char $\ast$$\ast$str, uint8\+\_\+t $\ast$val)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+strtailcmp} (const uint8\+\_\+t $\ast$str, const uint8\+\_\+t $\ast$tail)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+str\+Cut\+Tail} (uint8\+\_\+t $\ast$str, uint8\+\_\+t $\ast$tail)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Hex8u\+Number\+No\+Prefix} (const unsigned char $\ast$$\ast$str, uint8\+\_\+t $\ast$val)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+strcat\+Num32s\+Dot\+Value100} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, int32\+\_\+t num)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Decimal8s\+Number} (const unsigned char $\ast$$\ast$str, signed char $\ast$val)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Decimal16s\+Number} (const unsigned char $\ast$$\ast$str, int16\+\_\+t $\ast$val)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Decimal32s\+Number} (const unsigned char $\ast$$\ast$str, int32\+\_\+t $\ast$val)
+\item 
+int16\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+str\+Find} (uint8\+\_\+t $\ast$str, uint8\+\_\+t $\ast$sub\+Str)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Separated\+Numbers} (const unsigned char $\ast$$\ast$str, uint8\+\_\+t $\ast$values, uint8\+\_\+t nof\+Values, char separator, U\+T\+I\+L1\+\_\+\+Separated\+Number\+Type number\+Type)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Double\+Quoted\+String} (const uint8\+\_\+t $\ast$$\ast$cmd, uint8\+\_\+t $\ast$buf, size\+\_\+t buf\+Size)
+\item 
+uint8\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Scan\+Decimal32s\+Dot\+Number} (const unsigned char $\ast$$\ast$str, int32\+\_\+t $\ast$integral, uint32\+\_\+t $\ast$fractional, uint8\+\_\+t $\ast$nof\+Fractional\+Zeros)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+strcat\+Pad} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, const unsigned char $\ast$src, char pad\+Char, uint8\+\_\+t src\+Pad\+Size)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+\+Num\+Float\+To\+Str} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, float val, uint8\+\_\+t nof\+Frac\+Digits)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+strcat\+Num\+Float} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, float val, uint8\+\_\+t nof\+Frac\+Digits)
+\item 
+uint16\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Get\+Value16\+LE} (uint8\+\_\+t $\ast$dataP)
+\item 
+uint32\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Get\+Value24\+LE} (uint8\+\_\+t $\ast$dataP)
+\item 
+uint32\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+\+Get\+Value32\+LE} (uint8\+\_\+t $\ast$dataP)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+\+Set\+Value16\+LE} (uint16\+\_\+t data, uint8\+\_\+t $\ast$dataP)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+\+Set\+Value24\+LE} (uint32\+\_\+t data, uint8\+\_\+t $\ast$dataP)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+\+Set\+Value32\+LE} (uint32\+\_\+t data, uint8\+\_\+t $\ast$dataP)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+\+Deinit} (void)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+\+Init} (void)
+\item 
+int32\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+map} (int32\+\_\+t x, int32\+\_\+t in\+\_\+min, int32\+\_\+t in\+\_\+max, int32\+\_\+t out\+\_\+min, int32\+\_\+t out\+\_\+max)
+\item 
+int32\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+constrain} (int32\+\_\+t val, int32\+\_\+t min, int32\+\_\+t max)
+\item 
+int32\+\_\+t {\bfseries U\+T\+I\+L1\+\_\+random} (int32\+\_\+t min, int32\+\_\+t max)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+random\+Set\+Seed} (unsigned int seed)
+\item 
+void {\bfseries U\+T\+I\+L1\+\_\+strcat\+Num\+Hex} (uint8\+\_\+t $\ast$dst, size\+\_\+t dst\+Size, uint32\+\_\+t num, uint8\+\_\+t nof\+Bytes)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains various utility functions. 
+
+\begin{DoxyVersion}{Version}
+01.\+00 
+\end{DoxyVersion}

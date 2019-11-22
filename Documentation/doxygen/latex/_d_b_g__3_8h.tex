@@ -1,0 +1,58 @@
+\hypertarget{_d_b_g__3_8h}{}\doxysection{C\+:/\+Users/\+Michael/\+Documents/\+Git\+Hub/\+M\+C\+U\+X\+\_\+workspace/\+M\+C\+U\+X\+\_\+\+P\+E\+\_\+\+K\+L25\+Z\+\_\+\+F\+R\+T\+O\+S\+\_\+\+Shieldw\+Fat\+F\+S/\+Generated\+\_\+\+Code/\+D\+B\+G\+\_\+3.h File Reference}
+\label{_d_b_g__3_8h}\index{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/DBG\_3.h@{C:/Users/Michael/Documents/GitHub/MCUX\_workspace/MCUX\_PE\_KL25Z\_FRTOS\_ShieldwFatFS/Generated\_Code/DBG\_3.h}}
+
+
+The H\+AL Bit\+IO component provides a low level A\+PI for unified access to general purpose digital input/output pins across various device designs.  
+
+
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+\_\+\+Const.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+\_\+\+Map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+P\+I\+O\+\_\+\+P\+D\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cpu.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga416575bf430e7e00bf5cd78eb3c0df02}{D\+B\+G\+\_\+3\+\_\+\+P\+R\+P\+H\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~0x400\+F\+F040U
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga62b68b195e15a380b825d8c704f8c397}{D\+B\+G\+\_\+3\+\_\+\+Device\+Data}}~((\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$)\mbox{\hyperlink{group___p_e___types__module_gaa1c23d559daef5bcd3327ca83fb56f5a}{P\+E\+\_\+\+L\+D\+D\+\_\+\+Get\+Device\+Structure}}(P\+E\+\_\+\+L\+D\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+D\+B\+G\+\_\+3\+\_\+\+ID))
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga75e61170654b0250f2137b1f16bc8da6}{D\+B\+G\+\_\+3\+\_\+\+Init\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga1cbd4ded0d2161384dee0ba970a4fc92}{D\+B\+G\+\_\+3\+\_\+\+Get\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_gaf116babca5070c6183b2247b0bcf099e}{D\+B\+G\+\_\+3\+\_\+\+Put\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga9fee82c27ee7fcde35986cc1bf245437}{D\+B\+G\+\_\+3\+\_\+\+Clr\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga2465f5b70d950b12b0a6255a3e251e3d}{D\+B\+G\+\_\+3\+\_\+\+Set\+Val\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+E\+N\+A\+B\+L\+ED}}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga3ff8cfdc2df5ea2fa699bc96d568da75}{D\+B\+G\+\_\+3\+\_\+\+M\+O\+D\+U\+L\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~F\+P\+T\+B\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_ga1e0792c1c99880dbab5dea9b7eaf53ff}{D\+B\+G\+\_\+3\+\_\+\+P\+O\+R\+T\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}}~\mbox{\hyperlink{group___p_o_r_t___peripheral_ga585b4782d1ceb44492289af0019480f9}{P\+O\+R\+T\+B\+\_\+\+B\+A\+S\+E\+\_\+\+P\+TR}}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g__3__module_gac0e8f85766e7e2eaca9c0c87497d38e8}{D\+B\+G\+\_\+3\+\_\+\+P\+O\+R\+T\+\_\+\+M\+A\+SK}}~0x08U
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$ \mbox{\hyperlink{group___d_b_g__3__module_gae54601fc92c6d293b9ded96a5c57bed8}{D\+B\+G\+\_\+3\+\_\+\+Init}} (\mbox{\hyperlink{group___p_e___types__module_ga0b66a73f87238a782318aa0be7578e35}{L\+D\+D\+\_\+\+T\+User\+Data}} $\ast$User\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets interrupt priority, sets pin routing, sets timing, etc. If the \char`\"{}\+Enable
+    in init. code\char`\"{} is set to \char`\"{}yes\char`\"{} value then the device is also enabled(see the description of the Enable() method). In this case the Enable() method is not necessary and needn\textquotesingle{}t to be generated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group___d_b_g__3__module_gaffea43fc89eaea3db4d23629c41ed6d6}{D\+B\+G\+\_\+3\+\_\+\+Get\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Returns the input/output value. If the direction is \mbox{[}input\mbox{]} then the input value of the pin is read and returned. If the direction is \mbox{[}output\mbox{]} then the last written value is read and returned (see $<$\+Safe mode$>$=\char`\"{}\char`\"{}$>$ property for limitations). This method cannot be disabled if direction is \mbox{[}input\mbox{]}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___d_b_g__3__module_gae6fb7f8527fecea22b23664558078cea}{D\+B\+G\+\_\+3\+\_\+\+Put\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr, bool Val)
+\begin{DoxyCompactList}\small\item\em The specified output value is set. If the direction is {\bfseries{ input}}, the component saves the value to a memory or a register and this value will be written to the pin after switching to the output mode (using {\ttfamily Set\+Dir(\+T\+R\+U\+E)}; see \href{BitIOProperties.html\#SafeMode}{\texttt{ Safe mode}} property for limitations). If the direction is {\bfseries{output}}, it writes the value to the pin. (Method is available only if the direction = \uline{{\ttfamily output}} or \uline{{\ttfamily  input/output}}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___d_b_g__3__module_ga95a3f882b28a877d21f207bf729c10e8}{D\+B\+G\+\_\+3\+\_\+\+Clr\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Clears (set to zero) the output value. It is equivalent to the \mbox{[}Put\+Val(\+F\+A\+L\+S\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___d_b_g__3__module_ga825efe1deb8ce42419ef8f52940a040a}{D\+B\+G\+\_\+3\+\_\+\+Set\+Val}} (\mbox{\hyperlink{group___p_e___types__module_gac5cf1362f1f0e3a2ce71b1bf2276d091}{L\+D\+D\+\_\+\+T\+Device\+Data}} $\ast$Device\+Data\+Ptr)
+\begin{DoxyCompactList}\small\item\em Sets (to one) the output value. It is equivalent to the \mbox{[}Put\+Val(\+T\+R\+U\+E)\mbox{]}. This method is available only if the direction = {\itshape \mbox{[}output\mbox{]}} or {\itshape \mbox{[}input/output\mbox{]}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The H\+AL Bit\+IO component provides a low level A\+PI for unified access to general purpose digital input/output pins across various device designs. 
+
+\begin{DoxyVersion}{Version}
+01.\+03 R\+T\+OS drivers using H\+AL Bit\+IO A\+PI are simpler and more portable to various microprocessors. 
+\end{DoxyVersion}
