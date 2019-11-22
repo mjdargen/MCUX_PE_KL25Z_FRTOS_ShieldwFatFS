@@ -456,7 +456,7 @@ void CreateTasks(void) {
   if (FRTOS1_xTaskCreate(
      RGB_Task,  /* pointer to the task */
       "RGB", /* task name for kernel awareness debugging */
-      configMINIMAL_STACK_SIZE + 0, /* task stack size */
+      configMINIMAL_STACK_SIZE + 4, /* task stack size */
       (void*)NULL, /* optional task startup argument */
       tskIDLE_PRIORITY + 0,  /* initial priority */
 			RGB_taskHandle /* optional task handle to create */

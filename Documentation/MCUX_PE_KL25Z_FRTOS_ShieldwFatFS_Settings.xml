@@ -252,7 +252,7 @@ PE_DEBUGHALT();
         </group>
       </group>
       <boolgroup name="Shell" v="Enabled">
-        <Max_number_of_tasks v="8" />
+        <Max_number_of_tasks v="10" />
         <Shell v="CLS1" />
       </boolgroup>
       <Utility v="UTIL1" />

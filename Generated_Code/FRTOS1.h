@@ -6,7 +6,7 @@
 **     Component   : FreeRTOS
 **     Version     : Component 01.579, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-21, 22:09, # CodeGen: 4
 **     Abstract    :
 **          This component implements the FreeRTOS Realtime Operating System
 **     Settings    :
@@ -89,7 +89,7 @@
 **              User function for entering critical section : no
 **              User function for exiting critical section : no
 **          Shell                                          : Enabled
-**            Max number of tasks                          : 8
+**            Max number of tasks                          : 10
 **            Shell                                        : CLS1
 **          Utility                                        : UTIL1
 **     Contents    :
