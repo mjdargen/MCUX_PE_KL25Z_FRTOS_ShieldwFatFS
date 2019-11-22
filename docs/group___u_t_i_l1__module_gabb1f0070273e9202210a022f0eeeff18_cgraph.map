@@ -1,0 +1,7 @@
+<map id="UTIL1_strcatNum8s" name="UTIL1_strcatNum8s">
+<area shape="rect" id="node1" title="appends a 8bit signed number to a string. Always terminates the result string. Note: count is the siz..." alt="" coords="5,31,141,57"/>
+<area shape="rect" id="node2" href="$group___u_t_i_l1__module.html#gaa751000f1fb28af773078ac27fba72fb" title="Converts an 8bit signed number into a string." alt="" coords="189,5,324,32"/>
+<area shape="rect" id="node5" href="$group___u_t_i_l1__module.html#ga08c23f0fce3b1fc9c3bfbb7397f71a5a" title="Concat the string src into dst. Always terminates the result string. Note: count is the size of dst I..." alt="" coords="209,56,304,83"/>
+<area shape="rect" id="node3" href="$group___u_t_i_l1__module.html#gaa2ec540f5fc0c367af38d4653204a24f" title="Converts a 16bit signed number into a string." alt="" coords="372,5,513,32"/>
+<area shape="rect" id="node4" href="$group___u_t_i_l1__module.html#ga05eaa0c70134ec4c75b50e415470636b" title="copy the string src into dst. It performs the same task as strncpy, except" alt="" coords="561,5,660,32"/>
+</map>

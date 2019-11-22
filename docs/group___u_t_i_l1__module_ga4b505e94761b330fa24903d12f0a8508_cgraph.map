@@ -1,0 +1,4 @@
+<map id="UTIL1_strcatNum8Hex" name="UTIL1_strcatNum8Hex">
+<area shape="rect" id="node1" title="Adds a 8bit number as hex value to a string." alt="" coords="5,5,157,32"/>
+<area shape="rect" id="node2" href="$group___u_t_i_l1__module.html#ga08c23f0fce3b1fc9c3bfbb7397f71a5a" title="Concat the string src into dst. Always terminates the result string. Note: count is the size of dst I..." alt="" coords="205,5,300,32"/>
+</map>

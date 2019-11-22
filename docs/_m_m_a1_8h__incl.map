@@ -1,0 +1,17 @@
+<map id="C:/Users/Michael/Documents/GitHub/MCUX_workspace/MCUX_PE_KL25Z_FRTOS_ShieldwFatFS/Generated_Code/MMA1.h" name="C:/Users/Michael/Documents/GitHub/MCUX_workspace/MCUX_PE_KL25Z_FRTOS_ShieldwFatFS/Generated_Code/MMA1.h">
+<area shape="rect" id="node1" title="Implements a Driver for the MMA8451 accelerometer from NXP/Freescale." alt="" coords="272,5,501,76"/>
+<area shape="rect" id="node2" href="$_m_c_u_c1_8h.html" title="Configures the drivers for various SDKs and APIs used." alt="" coords="289,273,367,300"/>
+<area shape="rect" id="node10" href="$_m_m_a1config_8h.html" title="Configuration header file for MMA8451Q accelerometer." alt="" coords="462,124,567,151"/>
+<area shape="rect" id="node11" href="$_g_i2_c1_8h.html" title="This component implements a generic I2C driver wrapper to work both with LDD and non&#45;LDD I2C componen..." alt="" coords="157,124,227,151"/>
+<area shape="rect" id="node14" href="$_w_a_i_t1_8h.html" title="Implements busy waiting routines." alt="" coords="315,124,387,151"/>
+<area shape="rect" id="node3" href="$_m_c_u_c1config_8h.html" title="Configuration header file for McuLibConfig." alt="" coords="423,348,535,375"/>
+<area shape="rect" id="node4" href="$_p_e___types_8h.html" title="PE_Types.h &#45; contains definitions of basic types, register access macros and hardware specific macros..." alt="" coords="5,423,99,449"/>
+<area shape="rect" id="node6" href="$_p_e___error_8h.html" title="This component &quot;PE_Error&quot; contains internal definitions of the error constants." alt="" coords="123,423,210,449"/>
+<area shape="rect" id="node7" href="$_p_e___const_8h.html" title="This component &quot;PE_Const&quot; contains internal definitions of the constants." alt="" coords="234,423,326,449"/>
+<area shape="rect" id="node8" title=" " alt="" coords="350,423,429,449"/>
+<area shape="rect" id="node9" href="$_cpu_8h.html" title=" " alt="" coords="191,348,247,375"/>
+<area shape="rect" id="node5" title=" " alt="" coords="19,497,85,524"/>
+<area shape="rect" id="node12" href="$_g_i2_c1config_8h.html" title="Configuration header file for GenericI2C." alt="" coords="51,199,154,225"/>
+<area shape="rect" id="node13" href="$_c_i2_c1_8h.html" title="This component encapsulates the internal I2C communication interface. The implementation of the inter..." alt="" coords="69,273,137,300"/>
+<area shape="rect" id="node15" href="$_w_a_i_t1config_8h.html" title="Configuration header file for Wait." alt="" coords="229,199,336,225"/>
+</map>

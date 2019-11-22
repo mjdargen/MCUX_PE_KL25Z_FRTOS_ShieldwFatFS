@@ -1,0 +1,6 @@
+<map id="UTIL1_strcatNum8u" name="UTIL1_strcatNum8u">
+<area shape="rect" id="node1" title="appends a 8bit unsigned number to a string. Always terminates the result string. Note: count is the s..." alt="" coords="5,31,141,57"/>
+<area shape="rect" id="node2" href="$group___u_t_i_l1__module.html#gab5dfed20066315231d87809500f32f1d" title="Converts an 8bit unsigned number into a string." alt="" coords="189,5,324,32"/>
+<area shape="rect" id="node4" href="$group___u_t_i_l1__module.html#ga08c23f0fce3b1fc9c3bfbb7397f71a5a" title="Concat the string src into dst. Always terminates the result string. Note: count is the size of dst I..." alt="" coords="209,56,304,83"/>
+<area shape="rect" id="node3" href="$group___u_t_i_l1__module.html#ga2617b1bd9c2be5275d058692ecad2e2f" title="Converts a 16bit unsigned number into a string." alt="" coords="372,5,513,32"/>
+</map>

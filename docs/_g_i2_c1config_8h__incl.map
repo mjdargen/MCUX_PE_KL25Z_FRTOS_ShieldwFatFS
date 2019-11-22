@@ -1,0 +1,10 @@
+<map id="C:/Users/Michael/Documents/GitHub/MCUX_workspace/MCUX_PE_KL25Z_FRTOS_ShieldwFatFS/Generated_Code/GI2C1config.h" name="C:/Users/Michael/Documents/GitHub/MCUX_workspace/MCUX_PE_KL25Z_FRTOS_ShieldwFatFS/Generated_Code/GI2C1config.h">
+<area shape="rect" id="node1" title="Configuration header file for GenericI2C." alt="" coords="108,5,337,76"/>
+<area shape="rect" id="node2" href="$_c_i2_c1_8h.html" title="This component encapsulates the internal I2C communication interface. The implementation of the inter..." alt="" coords="189,124,257,151"/>
+<area shape="rect" id="node3" href="$_p_e___types_8h.html" title="PE_Types.h &#45; contains definitions of basic types, register access macros and hardware specific macros..." alt="" coords="5,273,99,300"/>
+<area shape="rect" id="node5" href="$_p_e___error_8h.html" title="This component &quot;PE_Error&quot; contains internal definitions of the error constants." alt="" coords="123,273,210,300"/>
+<area shape="rect" id="node6" href="$_p_e___const_8h.html" title="This component &quot;PE_Const&quot; contains internal definitions of the constants." alt="" coords="234,273,326,300"/>
+<area shape="rect" id="node7" title=" " alt="" coords="350,273,429,300"/>
+<area shape="rect" id="node8" href="$_cpu_8h.html" title=" " alt="" coords="195,199,251,225"/>
+<area shape="rect" id="node4" title=" " alt="" coords="19,348,85,375"/>
+</map>

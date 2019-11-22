@@ -1,0 +1,6 @@
+<map id="LDD_SDHC_TCardCaps" name="LDD_SDHC_TCardCaps">
+<area shape="rect" id="node1" title=" " alt="" coords="236,109,397,136"/>
+<area shape="rect" id="node2" href="$struct_l_d_d___s_d_h_c___t_card_write_protect.html" title=" " alt="" coords="5,5,209,32"/>
+<area shape="rect" id="node3" href="$struct_l_d_d___s_d_h_c___t_card_erase.html" title=" " alt="" coords="234,5,399,32"/>
+<area shape="rect" id="node4" href="$struct_l_d_d___s_d_h_c___t_card_access.html" title=" " alt="" coords="424,5,599,32"/>
+</map>

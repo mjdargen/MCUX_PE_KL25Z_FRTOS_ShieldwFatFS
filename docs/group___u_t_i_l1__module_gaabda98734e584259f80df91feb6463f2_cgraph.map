@@ -1,0 +1,4 @@
+<map id="UTIL1_Num16uToStrFormatted" name="UTIL1_Num16uToStrFormatted">
+<area shape="rect" id="node1" title="Converts a 16bit unsigned number to a string, in a formatted way (like printf with &quot;%0d&quot;)...." alt="" coords="5,5,205,32"/>
+<area shape="rect" id="node2" href="$group___u_t_i_l1__module.html#ga2617b1bd9c2be5275d058692ecad2e2f" title="Converts a 16bit unsigned number into a string." alt="" coords="253,5,395,32"/>
+</map>

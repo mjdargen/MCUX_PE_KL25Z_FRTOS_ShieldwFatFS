@@ -1,0 +1,4 @@
+<map id="DacLdd1_DMA0_EnableRequest" name="DacLdd1_DMA0_EnableRequest">
+<area shape="rect" id="node1" title="The method enables request from peripheral. Please note that this method doesn&#39;t start the transfer...." alt="" coords="5,5,216,32"/>
+<area shape="rect" id="node2" href="$group___d_m_a1__module.html#ga34838191f442386bfd2d166b7b9ee2e7" title="The method enables DMA request from peripheral. Please note that this method doesn&#39;t start the transf..." alt="" coords="264,5,417,32"/>
+</map>

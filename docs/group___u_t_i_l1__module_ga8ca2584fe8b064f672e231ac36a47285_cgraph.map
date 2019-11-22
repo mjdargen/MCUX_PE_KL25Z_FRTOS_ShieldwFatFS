@@ -1,0 +1,6 @@
+<map id="UTIL1_strcatNum16uFormatted" name="UTIL1_strcatNum16uFormatted">
+<area shape="rect" id="node1" title="appends a 16bit unsigned number to a string, in a formatted way (like printf with &quot;%0d&quot;...." alt="" coords="5,31,208,57"/>
+<area shape="rect" id="node2" href="$group___u_t_i_l1__module.html#gaabda98734e584259f80df91feb6463f2" title="Converts a 16bit unsigned number to a string, in a formatted way (like printf with &quot;%0d&quot;)...." alt="" coords="256,5,456,32"/>
+<area shape="rect" id="node4" href="$group___u_t_i_l1__module.html#ga08c23f0fce3b1fc9c3bfbb7397f71a5a" title="Concat the string src into dst. Always terminates the result string. Note: count is the size of dst I..." alt="" coords="309,56,403,83"/>
+<area shape="rect" id="node3" href="$group___u_t_i_l1__module.html#ga2617b1bd9c2be5275d058692ecad2e2f" title="Converts a 16bit unsigned number into a string." alt="" coords="504,5,645,32"/>
+</map>
