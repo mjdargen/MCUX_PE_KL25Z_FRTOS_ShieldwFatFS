@@ -1,0 +1,27 @@
+var page_components =
+[
+    [ "ASerialLdd1 (Serial_LDD)", "_a_serial_ldd1.html", "_a_serial_ldd1" ],
+    [ "AudioAmp (BitIO_LDD)", "_audio_amp.html", "_audio_amp" ],
+    [ "BitIoLdd1 (BitIO_LDD)", "_bit_io_ldd1.html", "_bit_io_ldd1" ],
+    [ "BitIoLdd2 (BitIO_LDD)", "_bit_io_ldd2.html", "_bit_io_ldd2" ],
+    [ "BitIoLdd3 (BitIO_LDD)", "_bit_io_ldd3.html", "_bit_io_ldd3" ],
+    [ "SM2 (SPIMaster_LDD)", "_s_m2.html", "_s_m2" ],
+    [ "DacLdd1 (DAC_LDD)", "_dac_ldd1.html", "_dac_ldd1" ],
+    [ "LCD_Data_Bits (BitsIO_LDD)", "_l_c_d__data__bits.html", "_l_c_d__data__bits" ],
+    [ "TPM1_0 (TimerUnit_LDD)", "_t_p_m1_0.html", "_t_p_m1_0" ],
+    [ "LCD_BL_PWM (PWM_LDD)", "_l_c_d__b_l__p_w_m.html", "_l_c_d__b_l__p_w_m" ],
+    [ "LCD_D_NC (BitIO_LDD)", "_l_c_d__d__n_c.html", "_l_c_d__d__n_c" ],
+    [ "LCD_NWR (BitIO_LDD)", "_l_c_d__n_w_r.html", "_l_c_d__n_w_r" ],
+    [ "LCD_NRD (BitIO_LDD)", "_l_c_d__n_r_d.html", "_l_c_d__n_r_d" ],
+    [ "LCD_NRST (BitIO_LDD)", "_l_c_d__n_r_s_t.html", "_l_c_d__n_r_s_t" ],
+    [ "AdcLdd1 (ADC_LDD)", "_adc_ldd1.html", "_adc_ldd1" ],
+    [ "DBG_1 (BitIO_LDD)", "_d_b_g_1.html", "_d_b_g_1" ],
+    [ "DBG_2 (BitIO_LDD)", "_d_b_g_2.html", "_d_b_g_2" ],
+    [ "DBG_3 (BitIO_LDD)", "_d_b_g_3.html", "_d_b_g_3" ],
+    [ "DBG_4 (BitIO_LDD)", "_d_b_g_4.html", "_d_b_g_4" ],
+    [ "DBG_5 (BitIO_LDD)", "_d_b_g_5.html", "_d_b_g_5" ],
+    [ "DBG_6 (BitIO_LDD)", "_d_b_g_6.html", "_d_b_g_6" ],
+    [ "DBG_7 (BitIO_LDD)", "_d_b_g_7.html", "_d_b_g_7" ],
+    [ "CI2C1 (I2C_LDD)", "_c_i2_c1.html", "_c_i2_c1" ],
+    [ "HBLED (BitIO_LDD)", "_h_b_l_e_d.html", "_h_b_l_e_d" ]
+];
