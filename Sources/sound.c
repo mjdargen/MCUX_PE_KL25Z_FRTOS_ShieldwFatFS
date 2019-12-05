@@ -252,11 +252,22 @@ void Configure_DMA_For_Playback(uint16_t * source1, uint16_t * source2, uint32_t
 	// Generate DMA interrupt when done
 	// Increment source, transfer words (16 bits)
 	// Enable peripheral request
-	DMA0->DMA[0].DCR = DMA_DCR_EINT_MASK | DMA_DCR_SINC_MASK |
+	/*DMA0->DMA[0].DCR = DMA_DCR_EINT_MASK | DMA_DCR_SINC_MASK |
 											DMA_DCR_SSIZE(2) | DMA_DCR_DSIZE(2) |
-											DMA_DCR_ERQ_MASK | DMA_DCR_CS_MASK;
+											DMA_DCR_ERQ_MASK | DMA_DCR_CS_MASK;*/
+
+
 
 	DMA_PDD_EnablePeripheralRequest(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE); /* enable request from peripheral */
+	DMA_PDD_EnableSourceAddressIncrement(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE);
+	DMA_PDD_SetSourceDataTransferSize(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, 2);
+	DMA_PDD_SetDestinationDataTransferSize(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, 2);
+	//DMA_PDD_EnableRequestMask(DMA_BASE_PTR, PDD_ENABLE);
+	DMA_PDD_EnableCycleSteal(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE);
+
+
+	//DMA_PDD_SetSourceAddressModulo
+	//DMA_PDD_SetDestinationAddressModulo
 
 
 	// Enable DMA MUX channel without periodic triggering
