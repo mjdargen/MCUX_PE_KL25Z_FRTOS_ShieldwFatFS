@@ -75,7 +75,7 @@ $(document).ready(function(){initNavTree('_dac_ldd1___d_m_a0_8h_source.html','')
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**     Version     : Component 01.053, Driver 01.01, CPU db: 3.00.000</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">**     Repository  : Kinetis</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**     Compiler    : GNU C Compiler</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**     Abstract    :</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">**          This embedded component implements</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">**          a DMA transfer channel descriptor definition.</span></div>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('_dac_ldd1___d_m_a0_8h_source.html','')
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">**          Channel select                                 : Fixed</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**            DMA controller device                        : DMA1</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">**            Channel                                      : DMA_Channel0</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**            Allocate channel                             : yes</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">**            Allocate channel                             : no</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">**            Arbitration type                             : Fixed</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">**              Priority                                   : 0</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">**            Interrupt service                            : Enabled</span></div>
@@ -96,12 +96,12 @@ $(document).ready(function(){initNavTree('_dac_ldd1___d_m_a0_8h_source.html','')
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">**                Interrupt priority                       : 2</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">**          External object declaration                    : (string list)</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">**          Source transaction settings                    : </span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">**            Start address                                : 0</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">**            Start address                                : (uint32_t) Reload_DMA_Source[read_buffer_num]</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">**            Transaction size                             : 16-bits</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">**            Address adjustment                           : 2</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">**            Address modulo                               : Buffer disabled</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">**          Destination transaction settings               : </span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">**            Start address                                : &amp;DAC0_DAT0L</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">**            Start address                                : (uint32_t) (&amp;DAC0_BASE_PTR-&gt;DAT[0]))</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">**            Transaction size                             : 16-bits</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">**            Address adjustment                           : 0</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">**            Address modulo                               : Buffer disabled</span></div>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('_dac_ldd1___d_m_a0_8h_source.html','')
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">**            Auto-align mode                              : Disabled</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">**            Asynchronous requests                        : Disabled</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">**            Transaction size                             : 16-bits</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">**            Transactions count                           : 1</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">**            Transactions count                           : 2</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">**            Request count                                : 1</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">**            After request complete actions               : </span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">**              Channel linking                            : Disabled</span></div>
@@ -217,30 +217,22 @@ $(document).ready(function(){initNavTree('_dac_ldd1___d_m_a0_8h_source.html','')
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">*/</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup___p_e___types__module_html_gad611bb56d72f1bb1c7187d88e92a579e"><div class="ttname"><a href="group___p_e___types__module.html#gad611bb56d72f1bb1c7187d88e92a579e">PE_LDD_RegisterDeviceStructure</a></div><div class="ttdeci">#define PE_LDD_RegisterDeviceStructure(ComponentIndex, DeviceStructure)</div><div class="ttdef"><b>Definition:</b> PE_Types.h:193</div></div>
-<div class="ttc" id="astruct_d_m_a1___t_chn_init__stuct_html"><div class="ttname"><a href="struct_d_m_a1___t_chn_init__stuct.html">DMA1_TChnInit_stuct</a></div><div class="ttdef"><b>Definition:</b> DMA1.h:131</div></div>
-<div class="ttc" id="a_dac_ldd1_8h_html"><div class="ttname"><a href="_dac_ldd1_8h.html">DacLdd1.h</a></div><div class="ttdoc">This component implements an internal D/A converter of the MCU. It contains settings for converting v...</div></div>
-<div class="ttc" id="a_dac_ldd1___d_m_a0_8h_html"><div class="ttname"><a href="_dac_ldd1___d_m_a0_8h.html">DacLdd1_DMA0.h</a></div><div class="ttdoc">This embedded component implements a DMA transfer channel descriptor definition.</div></div>
-<div class="ttc" id="agroup___d_m_a1__module_html_ga888a430a1e0e7c75ba12e606a5a94e2b"><div class="ttname"><a href="group___d_m_a1__module.html#ga888a430a1e0e7c75ba12e606a5a94e2b">DMA1_InitChannel</a></div><div class="ttdeci">LDD_TDeviceData * DMA1_InitChannel(LDD_TDeviceData *DeviceDataPtr, DMA1_TChnInit *ChIntPtr, LDD_TUserData *UserDataPtr)</div><div class="ttdoc">The method allocates DMA channel for the DMA transfer defined by the transfer descriptor input parame...</div><div class="ttdef"><b>Definition:</b> DMA1.c:253</div></div>
 <div class="ttc" id="a_p_e___l_d_d_8h_html"><div class="ttname"><a href="_p_e___l_d_d_8h.html">PE_LDD.h</a></div></div>
 <div class="ttc" id="agroup___p_e___types__module_html_ga0b66a73f87238a782318aa0be7578e35"><div class="ttname"><a href="group___p_e___types__module.html#ga0b66a73f87238a782318aa0be7578e35">LDD_TUserData</a></div><div class="ttdeci">void LDD_TUserData</div><div class="ttdef"><b>Definition:</b> PE_Types.h:246</div></div>
 <div class="ttc" id="agroup___dac_ldd1___d_m_a0__module_html_gae839cdc84ac41e21a8c6c2d2157a1e4d"><div class="ttname"><a href="group___dac_ldd1___d_m_a0__module.html#gae839cdc84ac41e21a8c6c2d2157a1e4d">DacLdd1_DMA0_Init</a></div><div class="ttdeci">LDD_TDeviceData * DacLdd1_DMA0_Init(LDD_TUserData *UserDataPtr)</div><div class="ttdoc">Initializes the DMAChannel_LDD component. This method allocates no memory. Memory for all DMA used ch...</div><div class="ttdef"><b>Definition:</b> DacLdd1_DMA0.c:163</div></div>
 <div class="ttc" id="a_p_e___const_8h_html"><div class="ttname"><a href="_p_e___const_8h.html">PE_Const.h</a></div><div class="ttdoc">This component &quot;PE_Const&quot; contains internal definitions of the constants.</div></div>
 <div class="ttc" id="a_cpu_8h_html"><div class="ttname"><a href="_cpu_8h.html">Cpu.h</a></div></div>
-<div class="ttc" id="agroup___dac_ldd1___d_m_a0__module_html_ga84e3a00791808f23233743b91c9a768b"><div class="ttname"><a href="group___dac_ldd1___d_m_a0__module.html#ga84e3a00791808f23233743b91c9a768b">DacLdd1_DMA0_EnableRequest</a></div><div class="ttdeci">LDD_TError DacLdd1_DMA0_EnableRequest(LDD_TDeviceData *DeviceDataPtr)</div><div class="ttdoc">The method enables request from peripheral. Please note that this method doesn't start the transfer....</div><div class="ttdef"><b>Definition:</b> DacLdd1_DMA0.c:204</div></div>
-<div class="ttc" id="agroup___d_m_a1__module_html_ga34838191f442386bfd2d166b7b9ee2e7"><div class="ttname"><a href="group___d_m_a1__module.html#ga34838191f442386bfd2d166b7b9ee2e7">DMA1_EnableRequest</a></div><div class="ttdeci">LDD_TError DMA1_EnableRequest(DMA1_TChanDeviceData *ChanDeviceDataPtr)</div><div class="ttdoc">The method enables DMA request from peripheral. Please note that this method doesn't start the transf...</div><div class="ttdef"><b>Definition:</b> DMA1.c:295</div></div>
+<div class="ttc" id="agroup___dac_ldd1___d_m_a0__module_html_ga84e3a00791808f23233743b91c9a768b"><div class="ttname"><a href="group___dac_ldd1___d_m_a0__module.html#ga84e3a00791808f23233743b91c9a768b">DacLdd1_DMA0_EnableRequest</a></div><div class="ttdeci">LDD_TError DacLdd1_DMA0_EnableRequest(LDD_TDeviceData *DeviceDataPtr)</div><div class="ttdoc">The method enables request from peripheral. Please note that this method doesn't start the transfer....</div><div class="ttdef"><b>Definition:</b> DacLdd1_DMA0.c:205</div></div>
 <div class="ttc" id="a_p_e___types_8h_html"><div class="ttname"><a href="_p_e___types_8h.html">PE_Types.h</a></div><div class="ttdoc">PE_Types.h - contains definitions of basic types, register access macros and hardware specific macros...</div></div>
 <div class="ttc" id="agroup___p_e___types__module_html_gac5cf1362f1f0e3a2ce71b1bf2276d091"><div class="ttname"><a href="group___p_e___types__module.html#gac5cf1362f1f0e3a2ce71b1bf2276d091">LDD_TDeviceData</a></div><div class="ttdeci">void LDD_TDeviceData</div><div class="ttdef"><b>Definition:</b> PE_Types.h:243</div></div>
-<div class="ttc" id="agroup___p_e___l_d_d__module_html_ga7d7ce624dc8185ccc306d9432c74a23b"><div class="ttname"><a href="group___p_e___l_d_d__module.html#ga7d7ce624dc8185ccc306d9432c74a23b">PE_LDD_DeviceDataList</a></div><div class="ttdeci">LDD_TDeviceData * PE_LDD_DeviceDataList[26]</div><div class="ttdef"><b>Definition:</b> PE_LDD.c:72</div></div>
 <div class="ttc" id="a_d_m_a1_8h_html"><div class="ttname"><a href="_d_m_a1_8h.html">DMA1.h</a></div><div class="ttdoc">This embedded component implements initialization and runtime handling of an on-chip DMA controller.</div></div>
 <div class="ttc" id="a_p_e___error_8h_html"><div class="ttname"><a href="_p_e___error_8h.html">PE_Error.h</a></div><div class="ttdoc">This component &quot;PE_Error&quot; contains internal definitions of the error constants.</div></div>
-<div class="ttc" id="agroup___d_m_a1__module_html_gac772e5aafdc8f0a0b5c714cc6fa0a3c1"><div class="ttname"><a href="group___d_m_a1__module.html#gac772e5aafdc8f0a0b5c714cc6fa0a3c1">DMA1_Init</a></div><div class="ttdeci">LDD_TDeviceData * DMA1_Init(void)</div><div class="ttdoc">Initializes the associated peripheral(s) and the component internal variables. The method is called a...</div><div class="ttdef"><b>Definition:</b> DMA1.c:188</div></div>
 <div class="ttc" id="agroup___p_e___types__module_html_ga24c2b045fd04e79e85f261ce4df35588"><div class="ttname"><a href="group___p_e___types__module.html#ga24c2b045fd04e79e85f261ce4df35588">LDD_TError</a></div><div class="ttdeci">uint16_t LDD_TError</div><div class="ttdef"><b>Definition:</b> PE_Types.h:240</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_5ee4f4c790f0b84ba8f281983ad9ea7d.html">Generated_Code</a></li><li class="navelem"><a class="el" href="_dac_ldd1___d_m_a0_8h.html">DacLdd1_DMA0.h</a></li>
-    <li class="footer">Generated on Fri Nov 22 2019 15:19:07 for MCUX_PE_KL25Z_FRTOS_ShieldwFatFS by
+    <li class="footer">Generated on Wed Dec 4 2019 23:48:30 for MCUX_PE_KL25Z_FRTOS_ShieldwFatFS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

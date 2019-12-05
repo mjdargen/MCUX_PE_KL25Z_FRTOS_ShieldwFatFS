@@ -6,7 +6,7 @@
 **     Version     : Component 01.025, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38
 **     Abstract    :
 **
 **     Settings    :
@@ -109,6 +109,7 @@
 #include "CI2C1.h"
 #include "HBLED.h"
 #include "DMA1.h"
+#include "TPM0.h"
 
 
 /*

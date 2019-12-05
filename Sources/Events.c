@@ -292,7 +292,7 @@ void DacLdd1_OnComplete(LDD_TUserData *UserDataPtr)
   /* Write your code here ... */
 
 	// Clear done flag
-	DMA0->DMA[0].DSR_BCR |= DMA_DSR_BCR_DONE_MASK;
+	DMA_PDD_ClearInterruptFlags(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, DMA_DSR_BCR_DONE_MASK);
 
 	if (--DMA_Playback_Count > 0) {
 		// Signal event requesting source buffer refill

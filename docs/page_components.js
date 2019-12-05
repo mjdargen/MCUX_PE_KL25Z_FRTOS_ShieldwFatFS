@@ -23,5 +23,6 @@ var page_components =
     [ "DBG_6 (BitIO_LDD)", "_d_b_g_6.html", "_d_b_g_6" ],
     [ "DBG_7 (BitIO_LDD)", "_d_b_g_7.html", "_d_b_g_7" ],
     [ "CI2C1 (I2C_LDD)", "_c_i2_c1.html", "_c_i2_c1" ],
-    [ "HBLED (BitIO_LDD)", "_h_b_l_e_d.html", "_h_b_l_e_d" ]
+    [ "HBLED (BitIO_LDD)", "_h_b_l_e_d.html", "_h_b_l_e_d" ],
+    [ "TPM0 (Init_TPM)", "_t_p_m0.html", "_t_p_m0" ]
 ];

@@ -7,7 +7,7 @@
 **     Version     : Component 01.053, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38
 **     Abstract    :
 **          This embedded component implements
 **          a DMA transfer channel descriptor definition.
@@ -19,7 +19,7 @@
 **          Channel select                                 : Fixed
 **            DMA controller device                        : DMA1
 **            Channel                                      : DMA_Channel0
-**            Allocate channel                             : yes
+**            Allocate channel                             : no
 **            Arbitration type                             : Fixed
 **              Priority                                   : 0
 **            Interrupt service                            : Enabled
@@ -28,12 +28,12 @@
 **                Interrupt priority                       : 2
 **          External object declaration                    : (string list)
 **          Source transaction settings                    : 
-**            Start address                                : 0
+**            Start address                                : (uint32_t) Reload_DMA_Source[read_buffer_num]
 **            Transaction size                             : 16-bits
 **            Address adjustment                           : 2
 **            Address modulo                               : Buffer disabled
 **          Destination transaction settings               : 
-**            Start address                                : &DAC0_DAT0L
+**            Start address                                : (uint32_t) (&DAC0_BASE_PTR->DAT[0]))
 **            Transaction size                             : 16-bits
 **            Address adjustment                           : 0
 **            Address modulo                               : Buffer disabled
@@ -41,7 +41,7 @@
 **            Auto-align mode                              : Disabled
 **            Asynchronous requests                        : Disabled
 **            Transaction size                             : 16-bits
-**            Transactions count                           : 1
+**            Transactions count                           : 2
 **            Request count                                : 1
 **            After request complete actions               : 
 **              Channel linking                            : Disabled

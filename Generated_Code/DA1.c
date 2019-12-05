@@ -7,7 +7,7 @@
 **     Version     : Component 01.096, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-28, 11:52, # CodeGen: 23
 **     Abstract    :
 **         This component "DAC" implements an internal D/A converter
 **         of the MCU. It allows select channels of D/A converter and

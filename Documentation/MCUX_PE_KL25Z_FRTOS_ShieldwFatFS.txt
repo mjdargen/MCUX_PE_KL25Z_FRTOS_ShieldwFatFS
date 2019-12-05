@@ -1305,6 +1305,11 @@ Module "HBLED"     (component BitIO_LDD)
 
 Module "DMA1"      (component DMAController)
 
+Module "TPM0"      (component Init_TPM_VAR0)
+   - TPM0_Init -This method initializes registers of the TPM module according to the Peripheral Initialization settings. Call 
+                this method in user code to initialize the module. By default, the method is called by PE automatically; see 
+                "Call Init method" property of the component for more details.
+
 Module "Cpu"       (component MKL25Z128LK4)
 
 ===================================================================================

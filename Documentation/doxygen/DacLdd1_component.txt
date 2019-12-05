@@ -38,7 +38,7 @@ by the component.
 <td class="regNotResetVal">0x00000000</td>
  <td>DAC0_SR register, peripheral DacLdd1.</td></tr>
 <tr><td>0x4003F021</td><td>DAC0_C0</td>
-<td class="regNotResetVal">0x00000081</td>
+<td class="regNotResetVal">0x00000080</td>
  <td>DAC0_C0 register, peripheral DacLdd1.</td></tr>
 </table>
 Color Denotes Reset Value
@@ -317,7 +317,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003F021</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000081</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000080</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>7</td><td>DACEN</td><td>0x01</td><td>DAC Enable</td>
@@ -326,7 +326,7 @@ registers of the peripheral(s) configured by the component.
 <tr><td>4</td><td>DACSWTRG</td><td>0x00</td><td>DAC Software Trigger</td>
 <tr><td>3</td><td>LPEN</td><td>0x00</td><td>DAC Low Power Control</td>
 <tr><td>1</td><td>DACBTIEN</td><td>0x00</td><td>DAC Buffer Read Pointer Top Flag Interrupt Enable</td>
-<tr><td>0</td><td>DACBBIEN</td><td>0x01</td><td>DAC Buffer Read Pointer Bottom Flag Interrupt Enable</td>
+<tr><td>0</td><td>DACBBIEN</td><td>0x00</td><td>DAC Buffer Read Pointer Bottom Flag Interrupt Enable</td>
 </tr></table>
 */
 /*!
@@ -349,7 +349,7 @@ registers of the peripheral(s) configured by the component.
 **          DMA                                            : Enabled
 **            DMA requests                                 : 
 **              Buffer start                               : Disabled
-**              Buffer end                                 : Enabled
+**              Buffer end                                 : Disabled
 **            DMA version                                  : Recommended
 **              DMA Channel                                : DMAChannel
 **          Initialization                                 : 

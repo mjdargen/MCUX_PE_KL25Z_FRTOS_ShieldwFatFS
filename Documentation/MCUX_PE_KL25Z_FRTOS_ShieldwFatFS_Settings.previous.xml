@@ -252,7 +252,7 @@ PE_DEBUGHALT();
         </group>
       </group>
       <boolgroup name="Shell" v="Enabled">
-        <Max_number_of_tasks v="8" />
+        <Max_number_of_tasks v="10" />
         <Shell v="CLS1" />
       </boolgroup>
       <Utility v="UTIL1" />
@@ -1148,7 +1148,7 @@ PE_DEBUGHALT();
           <boolgroup name="DMA" v="Enabled">
             <group name="DMA requests">
               <Buffer_start v="Disabled" />
-              <Buffer_end v="Enabled" />
+              <Buffer_end v="Disabled" />
             </group>
             <enumgroup name="DMA version" v="Recommended">
               <inhrbean type="DMAChannel_LDD">
@@ -1163,7 +1163,7 @@ PE_DEBUGHALT();
                   <enumgroup name="Channel select" v="Fixed">
                     <DMA_controller_device v="DMA1" />
                     <Channel v="DMA_Channel0" />
-                    <Allocate_channel v="yes" />
+                    <Allocate_channel v="no" />
                     <enumgroup name="Arbitration type" v="Fixed">
                       <Priority v="0" />
                     </enumgroup>
@@ -1178,13 +1178,13 @@ PE_DEBUGHALT();
                     <StrgList></StrgList>
                   </External_object_declaration>
                   <group name="Source transaction settings">
-                    <Start_address v="0" />
+                    <Start_address v="(uint32_t) Reload_DMA_Source[read_buffer_num]" />
                     <Transaction_size v="16-bits" />
                     <Address_adjustment v="2" />
                     <Address_modulo v="Buffer disabled" />
                   </group>
                   <group name="Destination transaction settings">
-                    <Start_address v="&amp;amp;DAC0_DAT0L" />
+                    <Start_address v="(uint32_t) (&amp;amp;DAC0_BASE_PTR-&amp;gt;DAT[0]))" />
                     <Transaction_size v="16-bits" />
                     <Address_adjustment v="0" />
                     <Address_modulo v="Buffer disabled" />
@@ -1193,7 +1193,7 @@ PE_DEBUGHALT();
                     <Auto_align_mode v="Disabled" />
                     <Asynchronous_requests v="Disabled" />
                     <Transaction_size v="16-bits" />
-                    <Transactions_count v="1" />
+                    <Transactions_count v="2" />
                     <Request_count v="1" />
                     <group name="After request complete actions">
                       <boolgroup name="Channel linking" v="Disabled" />
@@ -2658,8 +2658,8 @@ PE_DEBUGHALT();
       <list name="Statically allocated channels" v="1">
         <group name="Channel settings">
           <Channel v="DMA_Channel0" />
-          <Allocate_channel v="no" />
-          <Channel_shared v="no" />
+          <Allocate_channel v="yes" />
+          <Channel_shared v="yes" />
           <Used_by_component_s_ v="DacLdd1_DMA0" />
           <enumgroup name="Arbitration type" v="Fixed">
             <Priority v="0" />
@@ -2684,18 +2684,18 @@ PE_DEBUGHALT();
     </Events>
   </Bean>
   <Bean name="TPM0" type="Init_TPM">
-    <Enabled v="N" />
+    <Enabled v="Y" />
     <Properties>
       <Component_name v="TPM0" />
       <Device v="TPM0" />
       <group name="Settings">
-        <Clock_gate v="Do not initialize" />
+        <Clock_gate v="Enabled" />
         <group name="Clock settings">
-          <Clock_source v="No clock" />
+          <Clock_source v="TPM counter clock" />
           <Prescaler v="divide by 1" />
-          <Counter_frequency v="STOP" />
-          <Modulo_counter v="65535" />
-          <Period v="Counter stopped" />
+          <Counter_frequency v="48 MHz" />
+          <Modulo_counter v="2400" />
+          <Period v="50.021 us" />
         </group>
         <DBG_mode v="TPM counter stopped; output pins remain the same" />
         <Global_time_base v="Disabled" />
@@ -2705,7 +2705,18 @@ PE_DEBUGHALT();
         <Counter_in_Doze_mode v="Enabled" />
       </group>
       <group name="Channels">
-        <boolgroup name="Channel 0" v="Disabled" />
+        <boolgroup name="Channel 0" v="Enabled">
+          <enumgroup name="Channel mode" v="Output compare">
+            <Output_action v="Disconnected" />
+            <Channel_value_register v="0" />
+          </enumgroup>
+          <boolgroup name="Pin" v="Disabled" />
+          <group name="Interrupt/DMA">
+            <Interrupt v="INT_TPM0" />
+            <Channel_interrupt v="Disabled" />
+            <DMA_request v="Enabled" />
+          </group>
+        </boolgroup>
         <boolgroup name="Channel 1" v="Disabled" />
         <boolgroup name="Channel 2" v="Disabled" />
         <boolgroup name="Channel 3" v="Disabled" />
@@ -2733,6 +2744,451 @@ PE_DEBUGHALT();
     </Properties>
     <Methods>
       <Init v="generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="DMAT1" type="DMATransfer_LDD">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="DMAT1" />
+      <DMA_controller_device v="DMA2" />
+      <group name="Channel">
+        <enumgroup name="Channel select" v="Auto select">
+          <Channel v="Autoselected" />
+          <Interrupts v="Disabled" />
+        </enumgroup>
+      </group>
+      <group name="Trigger">
+        <enumgroup name="Trigger source type" v="Explicit software">
+          <EmptySection_DummyValue />
+        </enumgroup>
+      </group>
+      <group name="Data source">
+        <External_object_declaration v="" />
+        <Address v="0" />
+        <Transfer_size v="8-bit" />
+        <Address_offset v="0" />
+        <Circular_buffer v="Buffer disabled" />
+      </group>
+      <group name="Data destination">
+        <External_object_declaration v="" />
+        <Address v="0" />
+        <Transfer_size v="8-bit" />
+        <Address_offset v="0" />
+        <Circular_buffer v="Buffer disabled" />
+      </group>
+      <group name="Data size">
+        <External_object_declaration v="" />
+        <Value v="0" />
+      </group>
+      <enumgroup name="Transfer control" v="Single transfer">
+        <Disable_after_transfer v="no" />
+        <Auto_align_mode v="Disabled" />
+        <Asynchronous_requests v="Disabled" />
+        <boolgroup name="Channel linking" v="Disabled" />
+        <enumgroup name="After transfer complete" v="No action">
+          <EmptySection_DummyValue />
+        </enumgroup>
+      </enumgroup>
+      <group name="Initialization">
+        <Half_complete v="Disabled" />
+        <group name="Event mask">
+          <OnComplete v="Disabled" />
+          <OnError v="Disabled" />
+        </group>
+      </group>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+      <Deinit v="generate code" />
+      <SetEventMask v="don&amp;apos;t generate code" />
+      <GetEventMask v="don&amp;apos;t generate code" />
+      <AllocateChannel v="generate code" />
+      <FreeChannel v="don&amp;apos;t generate code" />
+      <EnableChannel v="generate code" />
+      <DisableChannel v="don&amp;apos;t generate code" />
+      <StartTransfer v="don&amp;apos;t generate code" />
+      <CancelTransfer v="don&amp;apos;t generate code" />
+      <GetTransferredBytes v="don&amp;apos;t generate code" />
+      <GetChannelStatus v="don&amp;apos;t generate code" />
+      <GetLastError v="don&amp;apos;t generate code" />
+      <SetSourceAddress v="don&amp;apos;t generate code" />
+      <SetDestinationAddress v="don&amp;apos;t generate code" />
+      <SetSourceTransferSize v="don&amp;apos;t generate code" />
+      <SetDestinationTransferSize v="don&amp;apos;t generate code" />
+      <SetByteCount v="don&amp;apos;t generate code" />
+      <SetTransferCount v="don&amp;apos;t generate code" />
+      <SetDescriptorUpdate v="don&amp;apos;t generate code" />
+      <GetDescriptorUpdate v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="OnComplete" v="don&amp;apos;t generate code" />
+      <event name="OnError" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
+  <Bean name="DMACH1" type="DMAChannel_LDD">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="DMACH1" />
+      <boolgroup name="Hardware request" v="Disabled" />
+      <enumgroup name="Channel select" v="Fixed">
+        <DMA_controller_device v="DMA1" />
+        <Channel v="DMA_Channel1" />
+        <Allocate_channel v="yes" />
+        <enumgroup name="Arbitration type" v="Fixed">
+          <Priority v="1" />
+        </enumgroup>
+        <boolgroup name="Interrupt service" v="Enabled">
+          <group name="Transfer complete interrupt">
+            <Interrupt_vector v="INT_DMA1" />
+            <Interrupt_priority v="2" />
+          </group>
+        </boolgroup>
+      </enumgroup>
+      <External_object_declaration>
+        <StrgList></StrgList>
+      </External_object_declaration>
+      <group name="Source transaction settings">
+        <Start_address v="(uint32_t) Reload_DMA_Source[read_buffer_num]" />
+        <Transaction_size v="8-bits" />
+        <Address_adjustment v="0" />
+        <Address_modulo v="Buffer disabled" />
+      </group>
+      <group name="Destination transaction settings">
+        <Start_address v="0" />
+        <Transaction_size v="8-bits" />
+        <Address_adjustment v="0" />
+        <Address_modulo v="Buffer disabled" />
+      </group>
+      <group name="Transfer settings">
+        <Auto_align_mode v="Disabled" />
+        <Asynchronous_requests v="Disabled" />
+        <Transaction_size v="8-bits" />
+        <Transactions_count v="1" />
+        <Request_count v="1" />
+        <group name="After request complete actions">
+          <boolgroup name="Channel linking" v="Disabled" />
+          <boolgroup name="Address adjustment" v="Disabled" />
+        </group>
+        <group name="After transfer complete actions">
+          <Disable_peripheral_request v="no" />
+          <boolgroup name="Channel linking" v="Disabled" />
+          <boolgroup name="Address adjustment" v="Disabled" />
+          <boolgroup name="Scatter/gather" v="Disabled" />
+        </group>
+      </group>
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <Half_complete v="Disabled" />
+        <group name="Event mask">
+          <OnComplete v="Enabled" />
+          <OnError v="Enabled" />
+        </group>
+      </group>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+      <Deinit v="don&amp;apos;t generate code" />
+      <Enable v="don&amp;apos;t generate code" />
+      <Disable v="don&amp;apos;t generate code" />
+      <SetEventMask v="don&amp;apos;t generate code" />
+      <GetEventMask v="don&amp;apos;t generate code" />
+      <EnableRequest v="don&amp;apos;t generate code" />
+      <DisableRequest v="don&amp;apos;t generate code" />
+      <StartTransfer v="generate code" />
+      <CancelTransfer v="don&amp;apos;t generate code" />
+      <GetTransferState v="don&amp;apos;t generate code" />
+      <GetTransferCompleteStatus v="don&amp;apos;t generate code" />
+      <GetError v="generate code" />
+      <GetTransferredDataSize v="don&amp;apos;t generate code" />
+      <SetSourceAddress v="don&amp;apos;t generate code" />
+      <SetSourceTransactionSize v="don&amp;apos;t generate code" />
+      <SetDestinationAddress v="don&amp;apos;t generate code" />
+      <SetDestinationTransactionSize v="don&amp;apos;t generate code" />
+      <SetTransactionCount v="don&amp;apos;t generate code" />
+      <SetRequestCount v="generate code" />
+      <GetDriverState v="don&amp;apos;t generate code" />
+      <SetOperationMode v="don&amp;apos;t generate code" />
+      <Main v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="OnComplete" v="generate code">
+        <Event_procedure_name v="DMACH1_OnComplete" />
+      </event>
+      <event name="OnError" v="generate code">
+        <Event_procedure_name v="DMACH1_OnError" />
+      </event>
+    </Events>
+  </Bean>
+  <Bean name="DMAMUX0" type="Init_DMAMUX">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="DMAMUX0" />
+      <Device v="DMAMUX0" />
+      <group name="Settings">
+        <group name="Channels">
+          <boolgroup name="Channel 0" v="Initialize">
+            <Channel v="Enabled" />
+            <Channel_source v="" />
+          </boolgroup>
+          <boolgroup name="Channel 1" v="Do not initialize" />
+          <boolgroup name="Channel 2" v="Do not initialize" />
+          <boolgroup name="Channel 3" v="Do not initialize" />
+        </group>
+      </group>
+      <group name="Initialization">
+        <Call_Init_method v="yes" />
+      </group>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="TI1" type="TimerInt">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="TI1" />
+      <Periodic_interrupt_source v="TPM0_MOD" />
+      <Counter v="TPM0_CNT" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Interrupt v="INT_TPM0" />
+        <Interrupt_priority v="medium priority" />
+      </boolgroup>
+      <Interrupt_period v="50 &amp;#181;s" />
+      <Same_period_in_modes v="no" />
+      <Component_uses_entire_timer v="no" />
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <Events_enabled_in_init_ v="yes" />
+      </group>
+      <group name="CPU clock/speed selection">
+        <High_speed_mode v="This component enabled" />
+        <Low_speed_mode v="This component disabled" />
+        <Slow_speed_mode v="This component disabled" />
+      </group>
+      <group name="Referenced components">
+        <inhrbean type="TimerInt_LDD">
+          <Enabled v="N" />
+          <Properties>
+            <Component_name v="TimerIntLdd1" />
+            <Periodic_interrupt_source v="" />
+            <Counter v="TPM0_CNT" />
+            <boolgroup name="Interrupt service/event" v="Enabled">
+              <Interrupt v="INT_TPM0" />
+              <Interrupt_priority v="medium priority" />
+              <Interrupt_preserve_registers v="yes" />
+            </boolgroup>
+            <Interrupt_period v="50 &amp;#181;s" />
+            <group name="Initialization">
+              <Enabled_in_init__code v="yes" />
+              <group name="Event mask">
+                <OnInterrupt v="Enabled" />
+              </group>
+            </group>
+            <group name="Referenced components">
+              <Linked_TimerUnit v="TU1" />
+            </group>
+          </Properties>
+          <Methods>
+            <Init v="generate code" />
+            <Deinit v="don&amp;apos;t generate code" />
+            <Enable v="don&amp;apos;t generate code" />
+            <Disable v="don&amp;apos;t generate code" />
+            <SetEventMask v="don&amp;apos;t generate code" />
+            <GetEventMask v="don&amp;apos;t generate code" />
+            <GetEventStatus v="don&amp;apos;t generate code" />
+            <SelectPeriod v="don&amp;apos;t generate code" />
+            <SetPeriodUS v="don&amp;apos;t generate code" />
+            <SetPeriodMS v="don&amp;apos;t generate code" />
+            <SetPeriodSec v="don&amp;apos;t generate code" />
+            <SetPeriodReal v="don&amp;apos;t generate code" />
+            <SetFrequencyHz v="don&amp;apos;t generate code" />
+            <SetFrequencykHz v="don&amp;apos;t generate code" />
+            <SetFrequencyMHz v="don&amp;apos;t generate code" />
+            <SetOperationMode v="don&amp;apos;t generate code" />
+            <GetDriverState v="don&amp;apos;t generate code" />
+          </Methods>
+          <Events>
+            <Event_module_name v="Events" />
+            <event name="OnInterrupt" v="generate code">
+              <Event_procedure_name v="TimerIntLdd1_OnInterrupt" />
+            </event>
+          </Events>
+        </inhrbean>
+      </group>
+    </Properties>
+    <Methods>
+      <Enable v="generate code" />
+      <Disable v="don&amp;apos;t generate code" />
+      <EnableEvent v="don&amp;apos;t generate code" />
+      <DisableEvent v="don&amp;apos;t generate code" />
+      <SetPeriodMode v="don&amp;apos;t generate code" />
+      <SetPeriodTicks16 v="don&amp;apos;t generate code" />
+      <SetPeriodTicks32 v="don&amp;apos;t generate code" />
+      <SetPeriodUS v="don&amp;apos;t generate code" />
+      <SetPeriodMS v="don&amp;apos;t generate code" />
+      <SetPeriodSec v="don&amp;apos;t generate code" />
+      <SetPeriodReal v="don&amp;apos;t generate code" />
+      <SetFreqHz v="don&amp;apos;t generate code" />
+      <SetFreqkHz v="don&amp;apos;t generate code" />
+      <SetFreqMHz v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="OnInterrupt" v="generate code">
+        <Event_procedure_name v="TI1_OnInterrupt" />
+        <Priority v="same as interrupt" />
+      </event>
+    </Events>
+  </Bean>
+  <Bean name="TU1" type="TimerUnit_LDD">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="TU1" />
+      <Module_name v="TPM0" />
+      <Counter v="TPM0_CNT" />
+      <Counter_direction v="Up" />
+      <Counter_width v="16 bits" />
+      <Value_type v="Optimal" />
+      <enumgroup name="Input clock source" v="Internal">
+        <Counter_frequency v="48 MHz" />
+      </enumgroup>
+      <enumgroup name="Counter restart" v="On-overrun">
+        <Overrun_period v="Auto select" />
+        <boolgroup name="Interrupt" v="Disabled" />
+      </enumgroup>
+      <list name="Channel list" v="0">
+        <EmptySection_DummyValue />
+      </list>
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <group name="Event mask">
+          <OnCounterRestart v="Enabled" />
+          <OnChannel0 v="Enabled" />
+          <OnChannel1 v="Enabled" />
+          <OnChannel2 v="Enabled" />
+          <OnChannel3 v="Enabled" />
+          <OnChannel4 v="Enabled" />
+          <OnChannel5 v="Enabled" />
+          <OnChannel6 v="Enabled" />
+          <OnChannel7 v="Enabled" />
+        </group>
+      </group>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+      <Deinit v="don&amp;apos;t generate code" />
+      <Enable v="don&amp;apos;t generate code" />
+      <Disable v="don&amp;apos;t generate code" />
+      <SetEventMask v="don&amp;apos;t generate code" />
+      <GetEventMask v="don&amp;apos;t generate code" />
+      <GetEventStatus v="don&amp;apos;t generate code" />
+      <SelectInputFrequency v="don&amp;apos;t generate code" />
+      <GetInputFrequencyReal v="don&amp;apos;t generate code" />
+      <GetInputFrequency v="don&amp;apos;t generate code" />
+      <SetPeriodTicks v="don&amp;apos;t generate code" />
+      <GetPeriodTicks v="don&amp;apos;t generate code" />
+      <ResetCounter v="don&amp;apos;t generate code" />
+      <GetCounterValue v="don&amp;apos;t generate code" />
+      <SetOffsetTicks v="don&amp;apos;t generate code" />
+      <GetOffsetTicks v="don&amp;apos;t generate code" />
+      <GetCaptureValue v="don&amp;apos;t generate code" />
+      <SelectOutputAction v="don&amp;apos;t generate code" />
+      <SelectCaptureEdge v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+      <SetOperationMode v="don&amp;apos;t generate code" />
+      <GetDriverState v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="OnCounterRestart" v="don&amp;apos;t generate code" />
+      <event name="OnChannel0" v="don&amp;apos;t generate code" />
+      <event name="OnChannel1" v="don&amp;apos;t generate code" />
+      <event name="OnChannel2" v="don&amp;apos;t generate code" />
+      <event name="OnChannel3" v="don&amp;apos;t generate code" />
+      <event name="OnChannel4" v="don&amp;apos;t generate code" />
+      <event name="OnChannel5" v="don&amp;apos;t generate code" />
+      <event name="OnChannel6" v="don&amp;apos;t generate code" />
+      <event name="OnChannel7" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
+  <Bean name="DMA2" type="DMA_LDD">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="DMA2" />
+      <Device v="DMA" />
+      <boolgroup name="Channel arbitration type" v="Round robin" />
+      <list name="DMA channels" v="1">
+        <group name="Settings of DMA channel ">
+          <Channel v="DMA_Channel0" />
+          <boolgroup name="Channel arbitration type" v="Round robin" />
+          <boolgroup name="Interrupt service" v="Enabled">
+            <Transfer_complete_interrupt v="INT_DMA0" />
+            <Transfer_complete_interrupt_priority v="medium priority" />
+          </boolgroup>
+        </group>
+      </list>
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+      </group>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+      <Deinit v="generate code" />
+      <Enable v="generate code" />
+      <Disable v="generate code" />
+      <SetEventMask v="don&amp;apos;t generate code" />
+      <GetEventMask v="don&amp;apos;t generate code" />
+      <AllocateChannel v="generate code" />
+      <FreeChannel v="don&amp;apos;t generate code" />
+      <EnableChannel v="generate code" />
+      <DisableChannel v="don&amp;apos;t generate code" />
+      <StartChannelTransfer v="don&amp;apos;t generate code" />
+      <CancelChannelTransfer v="don&amp;apos;t generate code" />
+      <GetChannelTransferredBytes v="don&amp;apos;t generate code" />
+      <GetChannelStatus v="don&amp;apos;t generate code" />
+      <GetChannelLastError v="don&amp;apos;t generate code" />
+      <SetChannelSourceAddress v="don&amp;apos;t generate code" />
+      <SetChannelDestinationAddress v="don&amp;apos;t generate code" />
+      <SetChannelSourceTransferSize v="don&amp;apos;t generate code" />
+      <SetChannelDestinationTransferSize v="don&amp;apos;t generate code" />
+      <SetChannelByteCount v="don&amp;apos;t generate code" />
+      <SetChannelTransferCount v="don&amp;apos;t generate code" />
+      <GetChannelDescriptorUpdate v="don&amp;apos;t generate code" />
+      <SetChannelDescriptorUpdate v="don&amp;apos;t generate code" />
+      <SetOperationMode v="don&amp;apos;t generate code" />
+      <GetDriverState v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="DMA3" type="DMAController">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="DMA3" />
+      <Device v="DMA" />
+      <enumgroup name="Channel arbitration type" v="Fixed">
+        <Autoset_channel_priority v="" />
+      </enumgroup>
+      <list name="Statically allocated channels" v="0">
+        <EmptySection_DummyValue />
+      </list>
+      <list name="Dynamically allocatable channels" v="0">
+        <EmptySection_DummyValue />
+      </list>
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
     </Methods>
     <Events>
       <EmptySection_DummyValue />

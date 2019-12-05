@@ -7,7 +7,7 @@
 **     Version     : Component 01.084, Driver 01.09, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38
 **     Abstract    :
 **         This component implements an internal D/A converter of the MCU.
 **         It contains settings for converting various format of a values
@@ -31,7 +31,7 @@
 **          DMA                                            : Enabled
 **            DMA requests                                 : 
 **              Buffer start                               : Disabled
-**              Buffer end                                 : Enabled
+**              Buffer end                                 : Disabled
 **            DMA version                                  : Recommended
 **              DMA Channel                                : DMAChannel
 **          Initialization                                 : 
@@ -178,8 +178,8 @@ LDD_TDeviceData* DacLdd1_Init(LDD_TUserData *UserDataPtr)
   DAC0_C1 = DAC_C1_DMAEN_MASK;
   /* DAC0_SR: ??=0,??=0,??=0,??=0,??=0,??=0,DACBFRPTF=0,DACBFRPBF=0 */
   DAC0_SR = 0x00U;
-  /* DAC0_C0: DACEN=1,DACRFS=0,DACTRGSEL=0,DACSWTRG=0,LPEN=0,??=0,DACBTIEN=0,DACBBIEN=1 */
-  DAC0_C0 = (DAC_C0_DACEN_MASK | DAC_C0_DACBBIEN_MASK);
+  /* DAC0_C0: DACEN=1,DACRFS=0,DACTRGSEL=0,DACSWTRG=0,LPEN=0,??=0,DACBTIEN=0,DACBBIEN=0 */
+  DAC0_C0 = DAC_C0_DACEN_MASK;
   /* Registration of the device structure */
   PE_LDD_RegisterDeviceStructure(PE_LDD_COMPONENT_DacLdd1_ID,DeviceDataPtr);
   return ((LDD_TDeviceData*)DeviceDataPtr); /* Return pointer to the data data structure */

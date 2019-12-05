@@ -150,6 +150,7 @@ var modules =
     [ "SM2 module documentation", "group___s_m2__module.html", "group___s_m2__module" ],
     [ "TmDt1 module documentation", "group___tm_dt1__module.html", "group___tm_dt1__module" ],
     [ "TMOUT1 module documentation", "group___t_m_o_u_t1__module.html", null ],
+    [ "TPM0 module documentation", "group___t_p_m0__module.html", null ],
     [ "TPM1_0 module documentation", "group___t_p_m1__0__module.html", "group___t_p_m1__0__module" ],
     [ "UTIL1 module documentation", "group___u_t_i_l1__module.html", "group___u_t_i_l1__module" ],
     [ "Vectors module documentation", "group___vectors__module.html", null ],

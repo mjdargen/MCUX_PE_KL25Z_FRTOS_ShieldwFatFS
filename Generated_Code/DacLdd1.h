@@ -7,7 +7,7 @@
 **     Version     : Component 01.084, Driver 01.09, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38
 **     Abstract    :
 **         This component implements an internal D/A converter of the MCU.
 **         It contains settings for converting various format of a values
@@ -31,7 +31,7 @@
 **          DMA                                            : Enabled
 **            DMA requests                                 : 
 **              Buffer start                               : Disabled
-**              Buffer end                                 : Enabled
+**              Buffer end                                 : Disabled
 **            DMA version                                  : Recommended
 **              DMA Channel                                : DMAChannel
 **          Initialization                                 : 

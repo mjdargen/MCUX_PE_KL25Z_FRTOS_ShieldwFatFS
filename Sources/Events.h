@@ -81,6 +81,7 @@
 #include "CI2C1.h"
 #include "HBLED.h"
 #include "DMA1.h"
+#include "TPM0.h"
 
 #ifdef __cplusplus
 extern "C" {

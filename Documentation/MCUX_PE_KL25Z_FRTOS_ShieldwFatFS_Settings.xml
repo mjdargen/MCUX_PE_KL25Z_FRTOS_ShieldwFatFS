@@ -1148,7 +1148,7 @@ PE_DEBUGHALT();
           <boolgroup name="DMA" v="Enabled">
             <group name="DMA requests">
               <Buffer_start v="Disabled" />
-              <Buffer_end v="Enabled" />
+              <Buffer_end v="Disabled" />
             </group>
             <enumgroup name="DMA version" v="Recommended">
               <inhrbean type="DMAChannel_LDD">
@@ -1163,7 +1163,7 @@ PE_DEBUGHALT();
                   <enumgroup name="Channel select" v="Fixed">
                     <DMA_controller_device v="DMA1" />
                     <Channel v="DMA_Channel0" />
-                    <Allocate_channel v="yes" />
+                    <Allocate_channel v="no" />
                     <enumgroup name="Arbitration type" v="Fixed">
                       <Priority v="0" />
                     </enumgroup>
@@ -1178,13 +1178,13 @@ PE_DEBUGHALT();
                     <StrgList></StrgList>
                   </External_object_declaration>
                   <group name="Source transaction settings">
-                    <Start_address v="0" />
+                    <Start_address v="(uint32_t) Reload_DMA_Source[read_buffer_num]" />
                     <Transaction_size v="16-bits" />
                     <Address_adjustment v="2" />
                     <Address_modulo v="Buffer disabled" />
                   </group>
                   <group name="Destination transaction settings">
-                    <Start_address v="&amp;amp;DAC0_DAT0L" />
+                    <Start_address v="(uint32_t) (&amp;amp;DAC0_BASE_PTR-&amp;gt;DAT[0]))" />
                     <Transaction_size v="16-bits" />
                     <Address_adjustment v="0" />
                     <Address_modulo v="Buffer disabled" />
@@ -1193,7 +1193,7 @@ PE_DEBUGHALT();
                     <Auto_align_mode v="Disabled" />
                     <Asynchronous_requests v="Disabled" />
                     <Transaction_size v="16-bits" />
-                    <Transactions_count v="1" />
+                    <Transactions_count v="2" />
                     <Request_count v="1" />
                     <group name="After request complete actions">
                       <boolgroup name="Channel linking" v="Disabled" />
@@ -2658,8 +2658,8 @@ PE_DEBUGHALT();
       <list name="Statically allocated channels" v="1">
         <group name="Channel settings">
           <Channel v="DMA_Channel0" />
-          <Allocate_channel v="no" />
-          <Channel_shared v="no" />
+          <Allocate_channel v="yes" />
+          <Channel_shared v="yes" />
           <Used_by_component_s_ v="DacLdd1_DMA0" />
           <enumgroup name="Arbitration type" v="Fixed">
             <Priority v="0" />
@@ -2684,18 +2684,18 @@ PE_DEBUGHALT();
     </Events>
   </Bean>
   <Bean name="TPM0" type="Init_TPM">
-    <Enabled v="N" />
+    <Enabled v="Y" />
     <Properties>
       <Component_name v="TPM0" />
       <Device v="TPM0" />
       <group name="Settings">
-        <Clock_gate v="Do not initialize" />
+        <Clock_gate v="Enabled" />
         <group name="Clock settings">
-          <Clock_source v="No clock" />
+          <Clock_source v="TPM counter clock" />
           <Prescaler v="divide by 1" />
-          <Counter_frequency v="STOP" />
-          <Modulo_counter v="65535" />
-          <Period v="Counter stopped" />
+          <Counter_frequency v="48 MHz" />
+          <Modulo_counter v="2400" />
+          <Period v="50.021 us" />
         </group>
         <DBG_mode v="TPM counter stopped; output pins remain the same" />
         <Global_time_base v="Disabled" />
@@ -2705,7 +2705,18 @@ PE_DEBUGHALT();
         <Counter_in_Doze_mode v="Enabled" />
       </group>
       <group name="Channels">
-        <boolgroup name="Channel 0" v="Disabled" />
+        <boolgroup name="Channel 0" v="Enabled">
+          <enumgroup name="Channel mode" v="Output compare">
+            <Output_action v="Disconnected" />
+            <Channel_value_register v="0" />
+          </enumgroup>
+          <boolgroup name="Pin" v="Disabled" />
+          <group name="Interrupt/DMA">
+            <Interrupt v="INT_TPM0" />
+            <Channel_interrupt v="Disabled" />
+            <DMA_request v="Enabled" />
+          </group>
+        </boolgroup>
         <boolgroup name="Channel 1" v="Disabled" />
         <boolgroup name="Channel 2" v="Disabled" />
         <boolgroup name="Channel 3" v="Disabled" />

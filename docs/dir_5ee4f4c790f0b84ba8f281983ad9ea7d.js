@@ -131,6 +131,8 @@ var dir_5ee4f4c790f0b84ba8f281983ad9ea7d =
     [ "TMOUT1.c", "_t_m_o_u_t1_8c.html", "_t_m_o_u_t1_8c" ],
     [ "TMOUT1.h", "_t_m_o_u_t1_8h.html", "_t_m_o_u_t1_8h" ],
     [ "TMOUT1config.h", "_t_m_o_u_t1config_8h_source.html", null ],
+    [ "TPM0.c", "_t_p_m0_8c.html", "_t_p_m0_8c" ],
+    [ "TPM0.h", "_t_p_m0_8h.html", "_t_p_m0_8h" ],
     [ "TPM1_0.c", "_t_p_m1__0_8c.html", "_t_p_m1__0_8c" ],
     [ "TPM1_0.h", "_t_p_m1__0_8h.html", "_t_p_m1__0_8h" ],
     [ "UTIL1.c", "_u_t_i_l1_8c.html", "_u_t_i_l1_8c" ],

@@ -12,6 +12,7 @@
 #include "WAIT1.h"
 #include "DacLdd1.h"
 //#include "TPM0.h"
+#include "DMAMUX_PDD.h"
 
 uint16_t * Reload_DMA_Source[2]={0,0};
 uint32_t Reload_DMA_Byte_Count=0;
@@ -68,13 +69,13 @@ void Init_Voices(void) {
 	}
 }
 
-void TPM0_Init(void) {
+/*void TPM0_Init(void) {
 	//turn on clock to TPM
 	SIM->SCGC6 |= SIM_SCGC6_TPM0_MASK;
 
 	//set clock source for tpm
 	SIM->SOPT2 |= (SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK);
-}
+}*/
 
 void TPM0_Start(void) {
 // Enable counter
@@ -92,6 +93,32 @@ void Configure_TPM0_for_DMA(uint32_t period_us) {
 
 }
 
+static void InitDMA(void) {
+  /* enable DMA MUX0: */
+  DMAMUX_PDD_EnableChannel(DMAMUX0_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE); /* enable DMA MUX0 */
+  /* PIT triggering for DMA0: */
+  DMAMUX_PDD_EnableTrigger(DMAMUX0_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_DISABLE); /* disable PIT Trigger */
+  /* use TPM0 overflow for DMA0 request: */
+  DMAMUX_PDD_SetChannelSource(DMAMUX0_BASE_PTR, DMA_PDD_CHANNEL_0, 54); /* KL25Z reference manual, 3.4.8.1, p64: source number 43 TPM0 Overflow DMA source */
+
+
+  /* DMA channel 0 source configuration: */
+  DMA_PDD_SetSourceAddress(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, (uint32_t) Reload_DMA_Source[read_buffer_num]); /* set source address */
+  DMA_PDD_SetSourceAddressModulo(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, DMA_PDD_CIRCULAR_BUFFER_DISABLED); /* no circular buffer */
+  DMA_PDD_EnableSourceAddressIncrement(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_DISABLE); /* source address will be incremented by transfer size */
+  DMA_PDD_SetSourceDataTransferSize(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, DMA_PDD_8_BIT); /* Transfer size from source  */
+
+  /* DMA channel 0 destination configuration: */
+  DMA_PDD_SetDestinationAddress(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, (uint32_t) (&(DAC0->DAT[0]))); /* set destination address */
+  DMA_PDD_SetDestinationAddressModulo(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, DMA_PDD_CIRCULAR_BUFFER_DISABLED); /* no circular buffer */
+  DMA_PDD_EnableDestinationAddressIncrement(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE); /* auto-increment for destination address */
+  DMA_PDD_SetDestinationDataTransferSize(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, DMA_PDD_8_BIT); /* Transfer to destination size */
+
+  /* DMA channel 0 transfer configuration: */
+  DMA_PDD_EnableTransferCompleteInterrupt(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE); /* request interrupt at the end of the DMA transfer */
+  (void)DMA_PDD_GetRequestAutoDisableEnabled(DMA_BASE_PTR, DMA_PDD_CHANNEL_0); /* disable DMA request at the end of the sequence */
+}
+
 /* Initialize sound hardware, sine table, and waveform buffer. */
 void Sound_Init(void) {
 	SineTable_Init();
@@ -99,13 +126,15 @@ void Sound_Init(void) {
 	Init_Voices();
 	write_buffer_num = 0; // Start writing to waveform buffer 0
 
+	//DacLdd1_Init(NULL);
+
 	//hopefully already initialized
 	//DAC_Init();
-	//DMA_Init();
-	TPM0_Init();
+	InitDMA();
+	/*TPM0_Init();
 	Configure_TPM0_for_DMA(AUDIO_SAMPLE_PERIOD_US);
 
-	SIM->SOPT2 |= (SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK);
+	SIM->SOPT2 |= (SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK);*/
 
 	/*SIM->SCGC5 |= (1UL << SIM_SCGC5_PORTE_SHIFT);
 
@@ -211,7 +240,7 @@ void Play_Waveform_with_DMA(void) {
 void Configure_DMA_For_Playback(uint16_t * source1, uint16_t * source2, uint32_t count, uint32_t num_playbacks) {
 
 	// Disable DMA channel in order to allow changes
-	DMAMUX0->CHCFG[0] = 0;
+	DMAMUX_PDD_EnableChannel(DMAMUX0_BASE_PTR, 0, PDD_DISABLE); /* disable DMA MUX0 */
 
 	Reload_DMA_Source[0] = source1;
 	Reload_DMA_Source[1] = source2;
@@ -227,36 +256,38 @@ void Configure_DMA_For_Playback(uint16_t * source1, uint16_t * source2, uint32_t
 											DMA_DCR_SSIZE(2) | DMA_DCR_DSIZE(2) |
 											DMA_DCR_ERQ_MASK | DMA_DCR_CS_MASK;
 
-
-	// Configure NVIC for DMA ISR
-	/*NVIC_SetPriority(DMA0_IRQn, 128); // 0, 64, 128 or 192
-	NVIC_ClearPendingIRQ(DMA0_IRQn);
-	NVIC_EnableIRQ(DMA0_IRQn);*/
+	DMA_PDD_EnablePeripheralRequest(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE); /* enable request from peripheral */
 
 
 	// Enable DMA MUX channel without periodic triggering
 	// select TPM0 overflow as trigger
-	DMAMUX0->CHCFG[0] = DMAMUX_CHCFG_SOURCE(54);
+	DMAMUX_PDD_SetChannelSource(DMAMUX0_BASE_PTR, 0, 54); /* KL25Z reference manual, 3.4.8.1, p64: source number 43 TPM0 Overflow DMA source */
+
+
 }
 
 void Start_DMA_Playback() {
 
-	// Select TPM0 as trigger for DMA
-	DMAMUX0->CHCFG[0] = DMAMUX_CHCFG_SOURCE(54);
-
 	// initialize source and destination pointers
-	DMA0->DMA[0].SAR = DMA_SAR_SAR((uint32_t) Reload_DMA_Source[read_buffer_num]);
-	DMA0->DMA[0].DAR = DMA_DAR_DAR((uint32_t) (&(DAC0->DAT[0])));
+	DMA_PDD_SetSourceAddress(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, (uint32_t) Reload_DMA_Source[read_buffer_num]); /* set source address */
+	DMA_PDD_SetDestinationAddress(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, (uint32_t) (&(DAC0->DAT[0]))); /* set destination address */
 
 	// byte count
-	DMA0->DMA[0].DSR_BCR = DMA_DSR_BCR_BCR(Reload_DMA_Byte_Count);
+	DMA_PDD_SetByteCount(DMA_BASE_PTR, DMA_PDD_CHANNEL_0, Reload_DMA_Byte_Count); /* set number of bytes to transfer */
+
+	// Select TPM0 as trigger for DMA
+	DMAMUX_PDD_SetChannelSource(DMAMUX0_BASE_PTR, DMA_PDD_CHANNEL_0, 54); /* KL25Z reference manual, 3.4.8.1, p64: source number 43 TPM0 Overflow DMA source */
+
 
 	// verify done flag is cleared
-	DMA0->DMA[0].DSR_BCR &= ~DMA_DSR_BCR_DONE_MASK;
+	//DMA0->DMA[0].DSR_BCR &= ~DMA_DSR_BCR_DONE_MASK;
 
 	// Enable DMA
-	DMAMUX0->CHCFG[0] |= DMAMUX_CHCFG_ENBL_MASK;
+	DMAMUX_PDD_EnableChannel(DMAMUX0_BASE_PTR, DMA_PDD_CHANNEL_0, PDD_ENABLE); /* enable DMA MUX0 */
 
 	// start the timer running
-	TPM0_Start();
+  TPM_PDD_ClearOverflowInterruptFlag(TPM0_BASE_PTR);
+  //TPM_PDD_InitializeCounter(TPM0_BASE_PTR); /* reset timer counter */
+  //TPM_PDD_SelectPrescalerSource(TPM0_BASE_PTR, TPM_PDD_SYSTEM); /* enable timer so I can reset the value below */
+
 }

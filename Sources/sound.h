@@ -54,6 +54,9 @@ extern uint16_t Waveform[2][NUM_WAVEFORM_SAMPLES];
 extern VOICE_T Voice[NUM_VOICES];
 extern uint8_t write_buffer_num;
 
+extern uint16_t * Reload_DMA_Source[2];
+extern uint8_t read_buffer_num;
+
 extern uint32_t DMA_Playback_Count;
 
 #endif // SOUND_H

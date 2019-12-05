@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38
 **     Abstract    :
 **
 **     Settings    :
@@ -302,6 +302,7 @@
 #include "CI2C1.h"
 #include "HBLED.h"
 #include "DMA1.h"
+#include "TPM0.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -491,6 +492,8 @@ void PE_low_level_init(void)
   /* SMC_PMPROT: ??=0,??=0,AVLP=0,??=0,ALLS=0,??=0,AVLLS=0,??=0 */
   SMC_PMPROT = 0x00U;                  /* Setup Power mode protection register */
   /* Common initialization of the CPU registers */
+  /* NVIC_IPR4: PRI_17=0 */
+  NVIC_IPR4 &= (uint32_t)~(uint32_t)(NVIC_IP_PRI_17(0xFF));
   /* PORTA_PCR20: ISF=0,MUX=7 */
   PORTA_PCR20 = (uint32_t)((PORTA_PCR20 & (uint32_t)~(uint32_t)(
                  PORT_PCR_ISF_MASK
@@ -557,6 +560,10 @@ void PE_low_level_init(void)
 #endif
   /* ### BitIO_LDD "HBLED" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)HBLED_Init(NULL);
+  /* ### Init_TPM "TPM0" init code ... */
+  TPM0_Init();
+
+
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

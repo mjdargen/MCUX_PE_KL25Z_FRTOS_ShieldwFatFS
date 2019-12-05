@@ -7,7 +7,7 @@
 **     Version     : Component 01.039, Driver 01.02, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-21, 11:21, # CodeGen: 1
+**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38
 **     Abstract    :
 **          This embedded component implements initialization
 **          and runtime handling of an on-chip DMA controller.
@@ -18,7 +18,7 @@
 **          RWTransactionSizeGtThenOne                     : yes
 **          RWTransactionSize                              : 2
 **          RWTransactionUnitSameInAllComponent            : yes
-**          HasCycleStealMode                              : yes
+**          HasCycleStealMode                              : no
 **          HasHalfCompleteInterrupt                       : no
 **          Device                                         : DMA
 **          Channel arbitration type                       : Fixed
@@ -26,8 +26,8 @@
 **          Statically allocated channels                  : 1
 **            Channel settings                             : Chan: 0
 **              Channel                                    : DMA_Channel0
-**              Allocate channel                           : no
-**              Channel shared                             : no
+**              Allocate channel                           : yes
+**              Channel shared                             : yes
 **              Used by component(s)                       : DacLdd1_DMA0
 **              Arbitration type                           : Fixed
 **                Priority                                 : 0

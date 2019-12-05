@@ -46,6 +46,7 @@
 - \subpage DBG_7
 - \subpage CI2C1
 - \subpage HBLED
+- \subpage TPM0
 
 */
 
