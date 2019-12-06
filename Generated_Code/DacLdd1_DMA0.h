@@ -7,7 +7,7 @@
 **     Version     : Component 01.053, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-28, 13:40, # CodeGen: 38
+**     Date/Time   : 2019-12-05, 19:12, # CodeGen: 41
 **     Abstract    :
 **          This embedded component implements
 **          a DMA transfer channel descriptor definition.
@@ -28,12 +28,12 @@
 **                Interrupt priority                       : 2
 **          External object declaration                    : (string list)
 **          Source transaction settings                    : 
-**            Start address                                : (uint32_t) Reload_DMA_Source[read_buffer_num]
+**            Start address                                : 
 **            Transaction size                             : 16-bits
 **            Address adjustment                           : 2
 **            Address modulo                               : Buffer disabled
 **          Destination transaction settings               : 
-**            Start address                                : (uint32_t) (&DAC0_BASE_PTR->DAT[0]))
+**            Start address                                : 
 **            Transaction size                             : 16-bits
 **            Address adjustment                           : 0
 **            Address modulo                               : Buffer disabled

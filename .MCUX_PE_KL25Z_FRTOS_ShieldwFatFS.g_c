@@ -648,7 +648,7 @@
     </GenFiles>
     <SignalListFile>Documentation\MCUX_PE_KL25Z_FRTOS_ShieldwFatFS_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>256</ProjectModificationStamp>
+    <ProjectModificationStamp>257</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>
@@ -6641,8 +6641,8 @@
         <GenComponentVersion>01.053</GenComponentVersion>
         <GenDriverVersion>01.01</GenDriverVersion>
         <GenEventModule>Events</GenEventModule>
-        <HeaderAge>1333554460</HeaderAge>
-        <CodeAge>1334098821</CodeAge>
+        <HeaderAge>1334155671</HeaderAge>
+        <CodeAge>1334155671</CodeAge>
         <AsemblAge>-1</AsemblAge>
         <GenNumMethods>25</GenNumMethods>
         <Init>true</Init>
@@ -6702,14 +6702,14 @@
           <MethodType>method</MethodType>
           <ModuleType>Code</ModuleType>
           <LineBeg>142</LineBeg>
-          <LineEnd>184</LineEnd>
+          <LineEnd>180</LineEnd>
         </MethodPos>
         <MethodPos>
           <MethodPos3>EnableRequest</MethodPos3>
           <MethodType>method</MethodType>
           <ModuleType>Code</ModuleType>
-          <LineBeg>185</LineBeg>
-          <LineEnd>207</LineEnd>
+          <LineBeg>181</LineBeg>
+          <LineEnd>203</LineEnd>
         </MethodPos>
         <GenExtraFilesCount>0</GenExtraFilesCount>
       </InhrCompID_123>

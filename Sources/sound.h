@@ -36,7 +36,6 @@ typedef struct {
 	uint32_t Volume, Frequency, Decay, Duration, Delay;
 } NOTE_T;
 
-void DAC_Init(void);
 void Play_Tone(void);
 void Sound_Init(void);
 

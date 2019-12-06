@@ -3,7 +3,7 @@
   <Header>
     <Name>MCUX_PE_KL25Z_FRTOS_ShieldwFatFS</Name>
     <SavedBy>Michael</SavedBy>
-    <ModificationStamp>256</ModificationStamp>
+    <ModificationStamp>257</ModificationStamp>
     <Date>2019-10-16</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.2.RT7_b1550-0615</PEversion>
@@ -16748,7 +16748,7 @@
                     <ItemSymbol>SrcStartAddress</ItemSymbol>
                     <ReadOnly>false</ReadOnly>
                     <UserReadOnly>false</UserReadOnly>
-                    <Value>(uint32_t) Reload_DMA_Source[read_buffer_num]</Value>
+                    <Value />
                   </ItemState>
                   <ItemState>
                     <ItemSymbol>SrcTransactionSize</ItemSymbol>
@@ -16792,7 +16792,7 @@
                     <ItemSymbol>DstStartAddress</ItemSymbol>
                     <ReadOnly>false</ReadOnly>
                     <UserReadOnly>false</UserReadOnly>
-                    <Value>(uint32_t) (&amp;DAC0_BASE_PTR-&gt;DAT[0]))</Value>
+                    <Value />
                   </ItemState>
                   <ItemState>
                     <ItemSymbol>DstTransactionSize</ItemSymbol>
@@ -36051,7 +36051,7 @@
         <ItemSymbol>StaticChannelComponentNameList0</ItemSymbol>
         <ReadOnly>true</ReadOnly>
         <ListItemCount>1</ListItemCount>
-        <UserReadOnly>true</UserReadOnly>
+        <UserReadOnly>false</UserReadOnly>
         <Expanded>true</Expanded>
       </ItemState>
       <ItemState>

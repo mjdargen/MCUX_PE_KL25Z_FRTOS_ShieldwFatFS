@@ -7,7 +7,7 @@
 **     Version     : Component 01.053, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-12-04, 23:27, # CodeGen: 40
+**     Date/Time   : 2019-12-05, 19:12, # CodeGen: 41
 **     Abstract    :
 **          This embedded component implements
 **          a DMA transfer channel descriptor definition.
@@ -28,12 +28,12 @@
 **                Interrupt priority                       : 2
 **          External object declaration                    : (string list)
 **          Source transaction settings                    : 
-**            Start address                                : (uint32_t) Reload_DMA_Source[read_buffer_num]
+**            Start address                                : 
 **            Transaction size                             : 16-bits
 **            Address adjustment                           : 2
 **            Address modulo                               : Buffer disabled
 **          Destination transaction settings               : 
-**            Start address                                : (uint32_t) (&DAC0_BASE_PTR->DAT[0]))
+**            Start address                                : 
 **            Transaction size                             : 16-bits
 **            Address adjustment                           : 0
 **            Address modulo                               : Buffer disabled
@@ -110,7 +110,6 @@
 #include "DacLdd1.h"
 #include "DacLdd1_DMA0.h"
 #include "FreeRTOS.h" /* FreeRTOS interface */
-#include "sound.h"
 
 #define DacLdd1_DMA0_INIT_EVENTS_MASK ((LDD_TEventMask)( \
           LDD_DMA_ON_COMPLETE))
@@ -120,8 +119,8 @@ DMA1_TChnInit const DacLdd1_DMA0_ChInit = {
   /* Logical channel number */
   DMA1_STATIC_CHANNEL_0,               /* Phy channel: DMA_Channel0 */
   { /* TCD initial settings */
-    DMA_SAR_SAR(0x00),                 /* Initial value is not constant expresion. See Init() method to see initial value. */
-    DMA_DAR_DAR(0x00),                 /* Initial value is not constant expresion. See Init() method to see initial value. */
+    DMA_SAR_SAR(0x00),                 /* SAR register initial value */
+    DMA_DAR_DAR(0x00),                 /* DAR register initial value */
     DMA_DSR_BCR_BCR(0x04),             /* DSR_BCR register initial value */
     ( DMA_DCR_EINT_MASK |
       DMA_DCR_SINC_MASK |
@@ -164,7 +163,6 @@ LDD_TDeviceData* DacLdd1_DMA0_Init(LDD_TUserData *UserDataPtr)
 {
   LDD_TDeviceData                 *DevDataPtr; /* DMA device data structure pointer */
   LDD_TDeviceData                 *ChnDevDataPtr; /* DMA channel device data structure pointer */
-  DMA1_TChnInit                    ChnInit;
 
   DevDataPtr = PE_LDD_DeviceDataList[PE_LDD_COMPONENT_DMA1_ID]; /* Get DMA peripheral handle */
   if (DevDataPtr == NULL) {            /* Is DMA peripheral initialized? */
@@ -173,11 +171,8 @@ LDD_TDeviceData* DacLdd1_DMA0_Init(LDD_TUserData *UserDataPtr)
       return NULL;                     /* Yes, return NULL */
     }
   }
-  ChnInit = DacLdd1_DMA0_ChInit;       /* Initialize local copy of init. structure */
-  ChnInit.TCD.DMA_SAR_Reg = DMA_SAR_SAR((uint32_t) Reload_DMA_Source[read_buffer_num]); /* SAR register initial value */
-  ChnInit.TCD.DMA_DAR_Reg = DMA_DAR_DAR((uint32_t) (&DAC0_BASE_PTR->DAT[0])); /* DAR register initial value */
   /* Initialize DMA channel device and get DMA channel handle */
-  ChnDevDataPtr = DMA1_InitChannel(DevDataPtr, (DMA1_TChnInit *)(void *)&ChnInit, UserDataPtr);
+  ChnDevDataPtr = DMA1_InitChannel(DevDataPtr, (DMA1_TChnInit *)(void *)&DacLdd1_DMA0_ChInit, UserDataPtr);
   /* Registration of the device structure */
   PE_LDD_RegisterDeviceStructure(PE_LDD_COMPONENT_DacLdd1_DMA0_ID,ChnDevDataPtr);
   /* Return pointer to the channel data structure */

@@ -1178,13 +1178,13 @@ PE_DEBUGHALT();
                     <StrgList></StrgList>
                   </External_object_declaration>
                   <group name="Source transaction settings">
-                    <Start_address v="(uint32_t) Reload_DMA_Source[read_buffer_num]" />
+                    <Start_address v="" />
                     <Transaction_size v="16-bits" />
                     <Address_adjustment v="2" />
                     <Address_modulo v="Buffer disabled" />
                   </group>
                   <group name="Destination transaction settings">
-                    <Start_address v="(uint32_t) (&amp;amp;DAC0_BASE_PTR-&amp;gt;DAT[0]))" />
+                    <Start_address v="" />
                     <Transaction_size v="16-bits" />
                     <Address_adjustment v="0" />
                     <Address_modulo v="Buffer disabled" />
