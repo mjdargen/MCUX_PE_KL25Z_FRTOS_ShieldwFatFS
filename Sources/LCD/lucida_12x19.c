@@ -7,7 +7,7 @@
 //GLCD FontName : Lucida_Console12x19
 //GLCD FontSize : 12 x 19
 
-/* __align(4) */ const uint8_t Lucida_Console12x19[] = {
+const uint8_t Lucida_Console12x19[] __attribute__ ((aligned (4))) = {
    0x00,
    0x00,
    0x20,0x00,

@@ -7,7 +7,7 @@
 //GLCD FontName : Lucida_Console20x31
 //GLCD FontSize : 20 x 31
 
-const uint8_t Lucida_Console20x31[] = {
+const uint8_t Lucida_Console20x31[] __attribute__ ((aligned (4))) = {
    0x00,
    0x00,
    0x20,0x00,
